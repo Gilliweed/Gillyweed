@@ -32,6 +32,10 @@ a:link {
 }
 
 a:hover {
+  background-color:white;
+  font-size: 17px;
+}
+#links:hover{
   background-color: white;
   font-size: 17px;
 }
