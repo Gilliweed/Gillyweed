@@ -1,0 +1,39 @@
+.footer {
+  color: black;
+  background-color: rgb(224, 219, 219);
+  padding: 4px;
+}
+.left {
+}
+.mid {
+  /* background-color: aquamarine; */
+  padding: 5px;
+}
+.right {
+  /* background-color: blue; */
+  padding: 5px;
+}
+.gilly {
+  color: green;
+  background-position: 2px;
+  padding: 20px;
+  padding-left: 20%;
+}
+.para {
+  position: relative;
+  margin-top: -17px;
+  padding-left: 23%;
+}
+/* unvisited link */
+a:link {
+  color: #070707;
+  text-decoration: solid;
+  text-shadow: #080808;
+}
+
+a:hover {
+  background-color: white;
+  font-size: 17px;
+}
+
+/* selected link */
