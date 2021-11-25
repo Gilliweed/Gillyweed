@@ -44,9 +44,10 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-mainbg">
-      <NavLink className="navbar-brand navbar-logo ml-10" to="/" exact>
-        Gillyweed
+      <NavLink className="navbar-brand navbar-logo" to="/" exact>
+        GillyWeed
       </NavLink>
+
       <button
         className="navbar-toggler"
         onClick={function () {
@@ -71,7 +72,7 @@ const Navbar = () => {
             <div className="right"></div>
           </div>
 
-          <li className="nav-item active ">
+          <li className="nav-item active">
             <NavLink className="nav-link" to="/" exact>
               Home
             </NavLink>
