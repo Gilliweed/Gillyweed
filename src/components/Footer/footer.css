@@ -1,28 +1,24 @@
 .footer {
   color: black;
-  background-color: rgb(224, 219, 219);
-  padding: 4px;
+  background-color: #e0dbdb;
+  position: absolute;
 }
 .left {
+  
+  /* background-color: bisque; */
+  
 }
-.mid {
-  /* background-color: aquamarine; */
-  padding: 5px;
-}
-.right {
-  /* background-color: blue; */
-  padding: 5px;
-}
+
 .gilly {
   color: green;
   background-position: 2px;
-  padding: 20px;
+  padding: 10px;
   padding-left: 20%;
 }
 .para {
   position: relative;
   margin-top: -17px;
-  padding-left: 23%;
+  padding-left: 20%;
 }
 /* unvisited link */
 a:link {
@@ -38,6 +34,10 @@ a:hover {
 #links:hover{
   background-color: white;
   font-size: 17px;
+}
+#links{
+  position: relative;
+  padding-left: 6%;
 }
 
 /* selected link */
