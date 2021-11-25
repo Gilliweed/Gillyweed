@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
-
+import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <>
@@ -16,73 +16,82 @@ const Footer = () => {
             <Row className="para">
               <Col>
                 <a href="" style={{ color: "black" }}>
-                  <img src="" href="" alt="fb" />{" "}
+                  <img src="" alt="fb" />{" "}
                 </a>
               </Col>
               <Col>
                 <a href="" style={{ color: "black" }}>
-                  <img src="" href="" alt="Insta" />{" "}
+                  <img src="" alt="Insta" />{" "}
                 </a>
               </Col>
               <Col>
                 <a href="" style={{ color: "black" }}>
-                  <img src="" href=" " alt="Twitt" />
+                  <img src="" alt="Twitt" />
                 </a>
               </Col>
               <Col>
                 <a href="" style={{ color: "black" }}>
-                  <img src="" href="" alt="Tele" />
+                  <img src="" alt="Tele" />
                 </a>
               </Col>
               <Col>
                 <a href="" style={{ color: "black" }}>
                   {" "}
-                  <img src="" href="" alt="Link" />{" "}
+                  <img src="" alt="Link" />{" "}
                 </a>
               </Col>
               <Col>
                 <a href="" style={{ color: "black" }}>
-                  <img src="" href="" alt="Utube" />{" "}
+                  <img src="" alt="Utube" />{" "}
                 </a>
               </Col>
             </Row>
           </Col>
           <Col className="mid" fluid>
             <h3 className="gilly ">Links</h3>
-            <Row className="para">
-              <a href="" style={{ color: "black" }}>
-                Blog
-              </a>
-              <a href="" style={{ color: "black" }}>
-                Shop
-              </a>
-              <a href="" style={{ color: "black" }}>
-                Write a blog
-              </a>
-            </Row>
+            <Col className="para">
+              <Row id="links">
+                <a href="" style={{ color: "black" }}>
+                  Blog
+                </a>
+              </Row>
+              <Row id="links">
+                <a href="" style={{ color: "black" }}>
+                  Shop
+                </a>
+              </Row>
+              <Row id="links">
+                <a href="" style={{ color: "black" }}>
+                  Write a blog
+                </a>
+              </Row>
+            </Col>
           </Col>
           <Col className="right" fluid>
             <h3 className="gilly ">Company</h3>
-            <Row className="para">
-              <a href="" style={{ color: "black" }}>
-                About Us
-              </a>
-            </Row>
-            <Row className="para">
-              <a href="" style={{ color: "black" }}>
-                Contact Us
-              </a>
-            </Row>
-            <Row className="para">
-              <a href="" style={{ color: "black" }}>
-                Privacy and Policy
-              </a>
-            </Row>
-            <Row className="para">
-              <a href="" style={{ color: "black" }}>
-                Terms of Service
-              </a>
-            </Row>
+            <Col className="para">
+              <Row id="links">
+                <a href="/about" style={{ color: "black" }} to="/about" exact>
+                  About Us
+                </a>
+                
+              </Row>
+              <Row id="links">
+                <a href="" style={{ color: "black" }}>
+                  Contact Us
+                </a>
+              </Row>
+              <Row id="links">
+                <a href="" style={{ color: "black" }}>
+                  Privacy and Policy
+                </a>
+              </Row>
+              <Row id="links">
+                <a href="" style={{ color: "black" }}>
+                  Terms of Service
+                </a>
+              </Row>
+            </Col>
           </Col>
         </Row>
         <Row style={{ paddingTop: "50px" }}>
