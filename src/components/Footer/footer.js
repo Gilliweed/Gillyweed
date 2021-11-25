@@ -3,6 +3,7 @@ import "./footer.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
     <>
@@ -15,9 +16,10 @@ const Footer = () => {
             </p>
             <Row className="para">
               <Col>
-                <a href="" style={{ color: "black" }}>
+                <NavLink to="/shop" exact style={{ color: "black" }}>
                   <img src="" alt="fb" />{" "}
-                </a>
+                </NavLink>
+                {/* <a href=""></a> */}
               </Col>
               <Col>
                 <a href="" style={{ color: "black" }}>
@@ -74,7 +76,6 @@ const Footer = () => {
                 <a href="/about" style={{ color: "black" }} to="/about" exact>
                   About Us
                 </a>
-                
               </Row>
               <Row id="links">
                 <a href="" style={{ color: "black" }}>
