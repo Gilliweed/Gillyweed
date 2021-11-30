@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 
@@ -24,7 +24,7 @@ const Mid = () => {
                         <NavLink to="/shop" exact style={{ color: "white" }}>Shop</NavLink>
                     </Row>
                     <Row id="links">
-                        <a href="" style={{ color: "white" }}>
+                        <a href="#" style={{ color: "white" }}>
                             Write a blog
                         </a>
                     </Row>

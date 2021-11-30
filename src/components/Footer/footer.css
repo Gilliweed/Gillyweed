@@ -1,23 +1,21 @@
 .footer {
   color: rgb(255, 254, 254);
-  /* background-color: #172336; */ 
-  
   background-color: #172337;
-  border-top: 1px solid #ddd;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: rgb(221, 221, 221);
-  margin-top: 25px;
+  
+ 
  
 }
 .left {
   border-width: 2px;
   border-right: #b3afaf;
+  margin-top: 15vh;
+  /* margin-left: -52px; */
+  padding-left: -10px;
   /* background-color: aqua; */
 }
 .gilly {
   color: green;
-  /* background-position: 4px; */
+  background-position: 4px;
   padding: auto;
   padding-block-start: 4px;
   padding-top: 12px;
@@ -54,8 +52,7 @@ a:link {
   color: white;
 }
 #leftBlock{
-  padding-top: 54px;
-  
+  padding-top: 28px;  
 }
 .Icon{
   margin-left: -3px;
@@ -85,5 +82,14 @@ a:link {
   box-shadow: #faf7f7;
   font-size: 28px;
 }
-
+.logo{
+  
+    height: 200px; 
+    width: 210px;
+    padding-right: 10px;
+    padding: auto;
+    margin-bottom: -25vh;
+    margin-top: -10vh;
+   
+}
 /* selected link */

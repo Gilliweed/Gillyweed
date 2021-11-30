@@ -15,6 +15,8 @@ import Blog from "./pages/Blog/blog";
 
 import Footer from "./components/Footer/footer";
 
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +33,7 @@ function App() {
 
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
+       
         <Footer/>
       </main>
     </BrowserRouter>
