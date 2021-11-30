@@ -16,8 +16,8 @@ const Footer = () => {
           <Right/>
         </Row>
         <Row style={{ paddingTop: "50px" }}>
-          <Col style={{ marginBottom: "-18px" }}>
-            <p style={{ marginBottom: "-130px" }}>
+          <Col >
+            <p >
               <img src="" alt="globe"></img>
               India(English)
             </p>
