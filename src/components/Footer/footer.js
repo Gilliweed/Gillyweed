@@ -14,8 +14,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import Globe from '@mui/icons-material/PublicOutlined';
 import { ReactComponent as Logo } from '../../assets/gillyweed.svg';
-import FeedbackIcon from '@mui/icons-material/Feedback';
-import background from "../../assets/back.svg";
+
 const Footer = () => {
 
   const currentYear = new Date().getFullYear()

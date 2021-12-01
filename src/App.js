@@ -15,7 +15,7 @@ import Blog from "./pages/Blog/blog";
 
 import Footer from "./components/Footer/footer";
 
-
+import OoO from "./components/4o4/OoO";
 
 function App() {
   return (
@@ -35,6 +35,7 @@ function App() {
         </Routes>
        
         <Footer/>
+        <OoO/>
       </main>
     </BrowserRouter>
   );
