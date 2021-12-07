@@ -33,9 +33,8 @@ function App() {
 
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
-       
-        <Footer/>
-        <OoO/>
+
+        <Footer />
       </main>
     </BrowserRouter>
   );
