@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^4.6.1",
     "jquery": "^3.6.0",
+    "mdb-react-ui-kit": "^2.1.0",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",

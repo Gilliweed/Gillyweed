@@ -24,7 +24,7 @@ const Mid = () => {
                         <NavLink to="/shop" exact style={{ color: "white" }}>Shop</NavLink>
                     </Row>
                     <Row id="links">
-                        <a href="#" style={{ color: "white" }}>
+                        <a href="/#" style={{ color: "white" }}>
                             Write a blog
                         </a>
                     </Row>
