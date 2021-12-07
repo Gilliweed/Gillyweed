@@ -1,4 +1,4 @@
-import img1 from "./img1.jpg"
+import img1 from "../img1.jpg"
 const CaroData=[
     {
         img:img1,

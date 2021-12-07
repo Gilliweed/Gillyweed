@@ -1,12 +1,12 @@
 import React from "react";
-import Caro from "./Caro";
-
+import Caro from "./Carousel/Caro";
+import Card from "./Card/Card";
 const Home = () => {
-    return (
-        <>
-            <Caro />
-        </>
-    )
-
-}
+  return (
+    <>
+      <Caro />;
+      <Card />
+    </>
+  );
+};
 export default Home;

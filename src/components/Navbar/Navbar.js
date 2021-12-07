@@ -66,8 +66,8 @@ const Navbar = () => {
       </button>
 
       <div className="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-        <ul className="navbar-nav ml-auto">
-          <div className="hori-selector">
+        <ul className="navbar-nav ml-auto " >
+          <div className="hori-selector" style={{height:"50px"}}>
             <div className="left"></div>
             <div className="right"></div>
           </div>

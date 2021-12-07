@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-
+import SignIn from "./pages/Signin/Signin";
 import Home from "./pages/Home/Home";
 
 import About from "./pages/AboutUs/about";
@@ -14,6 +14,7 @@ import Shop from "./pages/Shop/shop";
 import Blog from "./pages/Blog/blog";
 
 import Footer from "./components/Footer/footer";
+
 
 function App() {
   return (
@@ -30,8 +31,10 @@ function App() {
           <Route exact path="/blog" element={<Blog />} />
 
           <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/signIn" element={<SignIn />} />
         </Routes>
-        <Footer/>
+
+        <Footer />
       </main>
     </BrowserRouter>
   );
