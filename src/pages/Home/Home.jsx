@@ -1,11 +1,11 @@
 import React from "react";
 import Caro from "./Caro";
 
-const Home=()=>{
-    return(
+const Home = () => {
+    return (
         <>
-            <Caro/>
-    </>
+            <Caro />
+        </>
     )
 
 }

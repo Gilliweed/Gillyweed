@@ -65,7 +65,7 @@ const Navbar = () => {
         <i className="fas fa-bars text-white"></i>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
           <div className="hori-selector">
             <div className="left"></div>

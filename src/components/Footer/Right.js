@@ -7,29 +7,30 @@ import { NavLink } from "react-router-dom";
 
 const Right = () =>{
     return(
-        <Col className="right" fluid>
-        <h3 className="gilly ">Company</h3>
-        <Col className="para">
-          <Row id="links" >
-            
-            <NavLink to="/about" exact style={{ color: "black" }}>About Us</NavLink>
+      <>
+        {/* // <Col className="right" fluid> */}
+        <h4 className="gilly ">Company</h4>
+        <Col className="para" >
+          <Row id="links">
+            <NavLink to="/about" exact style={{ color: "white" }}>About Us</NavLink>
           </Row>
           <Row id="links">
            
-            <NavLink to="/contact" exact style={{ color: "black" }}>Contact Us</NavLink>
+            <NavLink to="/contact" exact style={{ color: "white" }}>Contact Us</NavLink>
           </Row>
           <Row id="links">
-            <a href="" style={{ color: "black" }}>
+            <a href="#" style={{ color: "white" }}>
               Privacy and Policy
             </a>
           </Row>
           <Row id="links">
-            <a href="" style={{ color: "black" }}>
+            <a href="#" style={{ color: "white" }}>
               Terms of Service
             </a>
           </Row>
         </Col>
-      </Col>
+      {/* // </Col> */}
+      </>
     )
 }
 export default Right;
