@@ -34,7 +34,7 @@ const SignIn = () => {
   <div >
     <div class="form-structor mx-auto my-5 shadow-lg">
       <div class="signup">
-        <h2 class="form-title" id="signup" onClick={()=>{ani()}}><span>or</span>Sign up</h2>
+        <h2 class="form-title" id="signup" onClick={ani}><span>or</span>Sign up</h2>
         <div class="form-holder">
           <input type="text" class="input" placeholder="Name" />
           <input type="email" class="input" placeholder="Email" />

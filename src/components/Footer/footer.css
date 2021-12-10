@@ -1,63 +1,67 @@
 .footer {
-  color: rgb(255, 254, 254);
-  background-color: #172337;
-  
- 
- 
+  color: rgb(8, 8, 8);
+  /* background-color: #172337; */
+  background-position: -2px;
+  margin-left: 6%;
+  padding-right: 19%;
+}
+.row{
+  padding: 15px;
 }
 .left {
   border-width: 2px;
   border-right: #b3afaf;
   margin-top: 15vh;
   /* margin-left: -52px; */
-  padding-left: -10px;
+  padding-left: 15%;
+
   /* background-color: aqua; */
 }
 .gilly {
   color: green;
-  background-position: 4px;
+  /* background-position: 0px; */
   padding: auto;
   padding-block-start: 4px;
   padding-top: 12px;
   
 }
 .para {
-  position: relative;
-  color: white;
+  /* position: center; */
+  text-align: left;
+  color: rgb(12, 12, 12);
  
 }
 /* unvisited link */
-a:link {
+/* #links{
   color: #b3afaf;
   text-decoration: solid;
   text-shadow: #080808;
-}
+  text-align: left;
+} */
 
 
 #links:hover{
   background-color: rgb(88, 87, 87);
-  /* font-size: 10px; */
   color: darkgoldenrod;
-  /* text-transform: uppercase; */
   text-decoration:underline;
-  
+  transform: rotateX('22');
 }
 #links{
- 
   font-size: 15px;
+  /* text-decoration: none; */
   font-family: Arial, Helvetica, sans-serif;
-
- /* text-align: center; */
+  font-weight: 200;
+  text-align: left;
   padding: 1.5%;
-  color: white;
+  color: rgb(10, 10, 10);
 }
 #leftBlock{
   padding-top: 28px;  
 }
 .Icon{
   margin-left: -3px;
-  padding: 3px;
-  color: #b3afaf;
+  /* padding: 3px; */
+  color: #0e0d0d;
 }
 #add{
   font-size: small;
@@ -68,6 +72,10 @@ a:link {
   text-shadow: #faf7f7;
   box-shadow: #faf7f7;
   font-size: 28px;
+  /* transition: ease-out;
+  text-shadow: #0e0d0d;
+  transform:rotateX('37');
+  transition-property: all; */
 }
 #fb:hover{
   color: rgba(11, 128, 238, 0.89);
@@ -83,13 +91,14 @@ a:link {
   font-size: 28px;
 }
 .logo{
-  
     height: 200px; 
     width: 210px;
     padding-right: 10px;
     padding: auto;
     margin-bottom: -25vh;
     margin-top: -10vh;
-   
+}
+.logocol{
+  margin-top: -6px;
 }
 /* selected link */

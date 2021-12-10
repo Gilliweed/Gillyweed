@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
@@ -31,6 +32,7 @@ function App() {
           <Route exact path="/blog" element={<Blog />} />
 
           <Route exact path="/contact" element={<Contact />} />
+
           <Route exact path="/signIn" element={<SignIn />} />
         </Routes>
 

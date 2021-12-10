@@ -14,67 +14,63 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import Globe from '@mui/icons-material/PublicOutlined';
 import { ReactComponent as Logo } from '../../assets/gillyweed.svg';
-
+// import { ReactComponent as Backgrd } from '../../assets/background.jpg';
+import background from '../../assets/backgroundd.webp';
 const Footer = () => {
 
   const currentYear = new Date().getFullYear()
   return (
-    <div className="">
-      <Container className="footer" fluid>
-        <Row className="">
-          <Col id ="logo"> <Logo className="logo" /> </Col>
-        </Row>
-        <Row>
-          <Col sm={5}>
-            <Left />
-          </Col>
+    <div className="" style={{ backgroundImage: `url(${background})` }} >
+      <Container className="footer"  fluid>
+          <Row className="">
+            <Col id="logocol"> <Logo className="logo" /> </Col>
+          </Row>
+          <Row>
+            <Col sm={5}>
+              <Left />
+            </Col>
 
-          <Col id="leftBlock">
+            <Col id="leftBlock">
+              <Row>
+                <Col>
+                  <Mid />
+                </Col>
+                <Col>
+                  <Right />
+                </Col>
+                <Col>
+                  <RightMost />
+                </Col>
+              </Row>
+            </Col>
+
+          </Row>
+        {/* </Row> */}
+        <Row >
+          <Col lg style={{ }}>
             <Row>
-              <Col>
-                <Mid />
+              <Col >
+                <Facebook color="black" id="fb" />
+              </Col>
+              <Col >
+                <InstagramIcon color="black" id="insta" />
+              </Col>
+              <Col >
+                <LinkedInIcon color="black" id="fb" />
               </Col>
               <Col>
-                <Right />
+                <TelegramIcon color="black" id="fb"></TelegramIcon>
               </Col>
               <Col>
-                <RightMost />
+                <TwitterIcon color="black" id="fb"></TwitterIcon>
+              </Col>
+              <Col>
+                <YouTubeIcon color="black" id="utube" />
               </Col>
             </Row>
           </Col>
 
-        </Row>
-        <Row style={{ paddingTop: "50px" }}>
-          <Col>
-            <p>
-              <Globe />   India(English)
-            </p>
-          </Col>
-
-          <Col>
-            <Row>
-              <Col >
-                <Facebook color="white" id="fb" />
-              </Col>
-              <Col >
-                <InstagramIcon color="white" id="insta" />
-              </Col>
-              <Col >
-                <LinkedInIcon color="white" id="fb" />
-              </Col>
-              <Col>
-                <TelegramIcon color="white" id="fb"></TelegramIcon>
-              </Col>
-              <Col>
-                <TwitterIcon color="white" id="fb"></TwitterIcon>
-              </Col>
-              <Col>
-                <YouTubeIcon color="white" id="utube" />
-              </Col>
-            </Row>
-          </Col>
-
-          <Col>
+          <Col style={{  }, { textAlign: "center" }}>
             <p >
               {" "}
               &copy; All rights are reserved{" - " + currentYear}
@@ -82,6 +78,7 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
+
     </div>
   );
 };
