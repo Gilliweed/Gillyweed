@@ -11,7 +11,7 @@ import "./Card.css";
 
 const CardT = (props) => {
   return (
-    <MDBCard style={{ maxWidth: "18rem" }}>
+    <MDBCard className="shadow-lg rounded" style={{ maxWidth: "18rem" }}>
       <MDBCardBody>
         <MDBCardTitle>{props.text}</MDBCardTitle>
         <MDBCardText>

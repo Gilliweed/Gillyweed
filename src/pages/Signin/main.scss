@@ -1,28 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
 
-html,body {
-  position: relative;
-  min-height: 100vh;
-  background: url("https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558/Codepen/waldemar-brandt-aThdSdgx0YM-unsplash_cnq4sb.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 
 .form-structor {
+  // position: relative;
+  // min-height: 100vh;
+  // background-image: url("https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558/Codepen/waldemar-brandt-aThdSdgx0YM-unsplash_cnq4sb.jpg");
+  // background-attachment: fixed;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   background-color: #222;
   border-radius: 15px;
   height: 550px;
   width: 350px;
   position: relative;
   overflow: hidden;
+  :hover{
+    
+  }
   
   &::after {
     content: '';
