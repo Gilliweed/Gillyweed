@@ -1,6 +1,5 @@
 import React from "react";
 import "./footer.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
@@ -8,8 +7,6 @@ import { NavLink } from "react-router-dom";
 const Mid = () => {
     return (
         <>
-           
-                
                 <Col className="para">
                 <h4 className="gilly">Links</h4>
                     <Row id="links">

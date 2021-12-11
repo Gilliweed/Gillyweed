@@ -20,35 +20,15 @@ const Footer = () => {
 
   const currentYear = new Date().getFullYear()
   return (
-    <div className="" style={{ backgroundImage: `url(${background})` }} >
-      <Container className="footer"  fluid>
-          <Row className="">
-            <Col id="logocol"> <Logo className="logo" /> </Col>
-          </Row>
-          <Row>
-            <Col sm={5}>
-              <Left />
-            </Col>
-
-            <Col id="leftBlock">
-              <Row>
-                <Col>
-                  <Mid />
-                </Col>
-                <Col>
-                  <Right />
-                </Col>
-                <Col>
-                  <RightMost />
-                </Col>
-              </Row>
-            </Col>
-
-          </Row>
-        {/* </Row> */}
-        <Row >
-          <Col lg style={{ }}>
-            <Row>
+    <div className="" style={{borderStyle: 'solid'},{backgroundImage: `url(${background})` }} >
+      <Container className="footer">
+        <Row className="">
+          <Col id="logocol"> <Logo className="logo" /> </Col>
+        </Row>
+        <Row>
+          <Col sm={3}>
+            <Left />
+            <Row lg className="social" >
               <Col >
                 <Facebook color="black" id="fb" />
               </Col>
@@ -58,9 +38,9 @@ const Footer = () => {
               <Col >
                 <LinkedInIcon color="black" id="fb" />
               </Col>
-              <Col>
+              {/* <Col>
                 <TelegramIcon color="black" id="fb"></TelegramIcon>
-              </Col>
+              </Col> */}
               <Col>
                 <TwitterIcon color="black" id="fb"></TwitterIcon>
               </Col>
@@ -70,15 +50,27 @@ const Footer = () => {
             </Row>
           </Col>
 
-          <Col style={{  }, { textAlign: "center" }}>
-            <p >
-              {" "}
-              &copy; All rights are reserved{" - " + currentYear}
-            </p>
+          <Col id="leftBlock">
+            <Row>
+              <Col>
+                <Mid />
+              </Col>
+              <Col>
+                <Right />
+              </Col>
+              <Col>
+                <RightMost />
+              </Col>
+            </Row>
           </Col>
-        </Row>
-      </Container>
 
+        </Row>
+        {/* </Row> */}
+        
+      </Container>
+      <Row style = {{marginRight:'1px', backgroundColor: "darkgray",textAlign:"right"}} >
+              &copy; All rights are reserved{" - " + currentYear}
+      </Row>
     </div>
   );
 };

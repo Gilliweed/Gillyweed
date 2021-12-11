@@ -1,21 +1,24 @@
 .footer {
   color: rgb(8, 8, 8);
-  /* background-color: #172337; */
   background-position: -2px;
   margin-left: 6%;
   padding-right: 19%;
+  border-top: #0e0d0d;
 }
 .row{
   padding: 15px;
 }
 .left {
   border-width: 2px;
-  border-right: #b3afaf;
-  margin-top: 15vh;
-  /* margin-left: -52px; */
-  padding-left: 15%;
+  border-right: #050505;
+  margin-top: 18vh;
+  margin-left: -16vw;
+  /* padding-left: 15%; */
 
   /* background-color: aqua; */
+}
+.social{
+  margin-left: -16vw;
 }
 .gilly {
   color: green;
@@ -26,29 +29,21 @@
   
 }
 .para {
-  /* position: center; */
+  position: center;
   text-align: left;
   color: rgb(12, 12, 12);
  
 }
-/* unvisited link */
-/* #links{
-  color: #b3afaf;
-  text-decoration: solid;
-  text-shadow: #080808;
-  text-align: left;
-} */
-
 
 #links:hover{
-  background-color: rgb(88, 87, 87);
+  background-color: rgb(163, 155, 155);
   color: darkgoldenrod;
   text-decoration:underline;
   transform: rotateX('22');
 }
 #links{
   font-size: 15px;
-  /* text-decoration: none; */
+  
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 200;
   text-align: left;
@@ -56,7 +51,8 @@
   color: rgb(10, 10, 10);
 }
 #leftBlock{
-  padding-top: 28px;  
+  padding-top: 28px; 
+  margin-right: -6vw; 
 }
 .Icon{
   margin-left: -3px;
@@ -71,34 +67,33 @@
   color: rgb(245, 6, 6);
   text-shadow: #faf7f7;
   box-shadow: #faf7f7;
-  font-size: 28px;
-  /* transition: ease-out;
-  text-shadow: #0e0d0d;
-  transform:rotateX('37');
-  transition-property: all; */
+
+  transform: scale(1.5);
 }
 #fb:hover{
   color: rgba(11, 128, 238, 0.89);
   text-shadow: #faf7f7;
   box-shadow: #faf7f7;
-  font-size: 28px;
+  
+  transform: scale(1.5);
 }
 
 #insta:hover{
   color: rgba(184, 15, 147, 0.507);
   text-shadow: #faf7f7;
   box-shadow: #faf7f7;
-  font-size: 28px;
+  
+  transform: scale(1.5);
 }
 .logo{
     height: 200px; 
     width: 210px;
-    padding-right: 10px;
+    /* padding-right: 10px; */
     padding: auto;
     margin-bottom: -25vh;
     margin-top: -10vh;
 }
 .logocol{
-  margin-top: -6px;
+  /* margin-top: -6px; */
 }
 /* selected link */

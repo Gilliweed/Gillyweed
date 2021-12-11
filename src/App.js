@@ -5,6 +5,9 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import SignIn from "./pages/Signin/Signin";
 import Home from "./pages/Home/Home";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 import About from "./pages/AboutUs/about";
 
