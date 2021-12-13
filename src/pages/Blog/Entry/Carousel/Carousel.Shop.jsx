@@ -1,64 +1,50 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import "./Carousel.css";
 
 import CaroData from "../../../Home/Carousel/CaroData";
 const Trend = () => {
   return (
-    <div
-      id="carouselExampleCaptions"
-      className="carousel slide"
-      data-ride="true"
-    >
-      <ol className="carousel-indicators">
-        <li
-          data-target="#carouselExampleCaptions"
-          data-slide-to="0"
-          className="active"
-        ></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      </ol>
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img src={CaroData[0].img} className="d-block w-100" alt="..." />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Our Great Ventures</h5>
-            <p>Throught Out The India We are The Best.</p>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={CaroData[1].img} className="d-block w-100" alt="..." />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Themes</h5>
-            <p>Our themes are one of the bests.</p>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={CaroData[2].img} className="d-block w-100" alt="..." />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Avaliability</h5>
-            <p>We Have availability of every possible arragements.</p>
-          </div>
-        </div>
-      </div>
-      <a
-        className="carousel-control-prev"
-        href="#carouselExampleCaptions"
-        role="button"
-        data-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="sr-only">Previous</span>
-      </a>
-      <a
-        className="carousel-control-next"
-        href="#carouselExampleCaptions"
-        role="button"
-        data-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="sr-only">Next</span>
-      </a>
+    <div className="trend">
+      <Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
+            alt="Second slide"
+          />
+
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://mdbootstrap.com/img/Photos/Slides/img%20(21).jpg"
+            alt="Third slide"
+          />
+
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 };
