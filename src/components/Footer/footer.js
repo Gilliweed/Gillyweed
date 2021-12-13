@@ -14,19 +14,40 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import Globe from '@mui/icons-material/PublicOutlined';
 import { ReactComponent as Logo } from '../../assets/gillyweed.svg';
-
+// import { ReactComponent as Backgrd } from '../../assets/background.jpg';
+import background from '../../assets/backgroundd.webp';
 const Footer = () => {
 
   const currentYear = new Date().getFullYear()
   return (
-    <div className="">
-      <Container className="footer" fluid>
+    <div className="" style={{borderStyle: 'solid'},{backgroundImage: `url(${background})` }} >
+      <Container className="footer">
         <Row className="">
-          <Col id ="logo"> <Logo className="logo" /> </Col>
+          <Col id="logocol"> <Logo className="logo" /> </Col>
         </Row>
         <Row>
-          <Col sm={5}>
+          <Col sm={3}>
             <Left />
+            <Row lg className="social" >
+              <Col >
+                <Facebook color="black" id="fb" />
+              </Col>
+              <Col >
+                <InstagramIcon color="black" id="insta" />
+              </Col>
+              <Col >
+                <LinkedInIcon color="black" id="fb" />
+              </Col>
+              {/* <Col>
+                <TelegramIcon color="black" id="fb"></TelegramIcon>
+              </Col> */}
+              <Col>
+                <TwitterIcon color="black" id="fb"></TwitterIcon>
+              </Col>
+              <Col>
+                <YouTubeIcon color="black" id="utube" />
+              </Col>
+            </Row>
           </Col>
 
           <Col id="leftBlock">
@@ -44,44 +65,12 @@ const Footer = () => {
           </Col>
 
         </Row>
-        <Row style={{ paddingTop: "50px" }}>
-          <Col>
-            <p>
-              <Globe />   India(English)
-            </p>
-          </Col>
-
-          <Col>
-            <Row>
-              <Col >
-                <Facebook color="white" id="fb" />
-              </Col>
-              <Col >
-                <InstagramIcon color="white" id="insta" />
-              </Col>
-              <Col >
-                <LinkedInIcon color="white" id="fb" />
-              </Col>
-              <Col>
-                <TelegramIcon color="white" id="fb"></TelegramIcon>
-              </Col>
-              <Col>
-                <TwitterIcon color="white" id="fb"></TwitterIcon>
-              </Col>
-              <Col>
-                <YouTubeIcon color="white" id="utube" />
-              </Col>
-            </Row>
-          </Col>
-
-          <Col>
-            <p >
-              {" "}
-              &copy; All rights are reserved{" - " + currentYear}
-            </p>
-          </Col>
-        </Row>
+        {/* </Row> */}
+        
       </Container>
+      <Row style = {{marginRight:'1px', backgroundColor: "darkgray",textAlign:"right"}} >
+              &copy; All rights are reserved{" - " + currentYear}
+      </Row>
     </div>
   );
 };
