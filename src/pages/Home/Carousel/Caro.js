@@ -1,48 +1,90 @@
 import React from "react";
 import CaroData from "./CaroData";
+import "./Caro.css";
 const Caro = () => {
   return (
-    <>
-      <div
-        id="carouselExampleCaptions"
-        className="carousel slide"
-        data-ride="true"
-      >
+    <div>
+      <div id="myCarousel" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
           <li
-            data-target="#carouselExampleCaptions"
+            data-target="#myCarousel"
             data-slide-to="0"
             className="active"
           ></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={CaroData[0].img} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Our Great Ventures</h5>
-              <p>Throught Out The India We are The Best.</p>
+            <img
+              className="first-slide img-size-home"
+              src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/pasta.jpg"
+              alt="First slide"
+            />
+            <div className="container">
+              <div className="carousel-caption text-left">
+                <h1>Example headline.</h1>
+                <p>
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  Donec id elit non mi porta gravida at eget metus. Nullam id
+                  dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  <a className="btn btn-lg btn-primary" href="/#" role="button">
+                    Sign up today
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
           <div className="carousel-item">
-            <img src={CaroData[1].img} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Themes</h5>
-              <p>Our themes are one of the bests.</p>
+            <img
+              className="second-slide img-size-home"
+              src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821__340.jpg"
+              alt="Second slide"
+            />
+            <div className="container">
+              <div className="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  Donec id elit non mi porta gravida at eget metus. Nullam id
+                  dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  <a className="btn btn-lg btn-primary" href="/#" role="button">
+                    Learn more
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
-          <div className="carousel-item">
-            <img src={CaroData[2].img} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Avaliability</h5>
-              <p>We Have availability of every possible arragements.</p>
+          <div className="carousel-item ">
+            <img
+              className="third-slide img-size-home"
+              src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821__340.jpg"
+              alt="Third slide"
+            />
+            <div className="container">
+              <div className="carousel-caption text-right">
+                <h1>One more for good measure.</h1>
+                <p>
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                  Donec id elit non mi porta gravida at eget metus. Nullam id
+                  dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  <a className="btn btn-lg btn-primary" href="/#" role="button">
+                    Browse gallery
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
         <a
           className="carousel-control-prev"
-          href="#carouselExampleCaptions"
+          href="#myCarousel"
           role="button"
           data-slide="prev"
         >
@@ -54,7 +96,7 @@ const Caro = () => {
         </a>
         <a
           className="carousel-control-next"
-          href="#carouselExampleCaptions"
+          href="#myCarousel"
           role="button"
           data-slide="next"
         >
@@ -65,7 +107,7 @@ const Caro = () => {
           <span className="sr-only">Next</span>
         </a>
       </div>
-    </>
+    </div>
   );
 };
 export default Caro;
