@@ -4,6 +4,10 @@ const Feeds = () => {
   return (
     <div class="feeds">
       <FeedC />
+      <FeedC />
+      <FeedC />
+      <FeedC />
+      <FeedC />
     </div>
   );
 };

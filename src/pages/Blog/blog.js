@@ -5,6 +5,7 @@ import "./blog.css";
 import Trend from "./Entry/Carousel/Carousel.Shop";
 import Recent from "./Recent/Recent";
 import Feeds from "./Feeds/Feeds";
+import Page from "./Pagination/Pagination";
 const Blog = () => {
   return (
     <div class="blog">
@@ -24,6 +25,9 @@ const Blog = () => {
       <div class="Feeds">
         <h1 class="Feed-headline">Todays Feeds</h1>
         <Feeds />
+      </div>
+      <div>
+        <Page />
       </div>
     </div>
   );
