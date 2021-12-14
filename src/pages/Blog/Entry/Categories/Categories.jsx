@@ -24,6 +24,11 @@ const Cate = () => {
           <Topic text="Natural" />
           <Topic text="Carbon" />
           <Topic text="Disaster" />
+          <Topic text="Organisation" />
+          <Topic text="Governments" />
+          <Topic text="Thinking" />
+          <Topic text="Awards" />
+          
         </div>
       </div>
     </div>
