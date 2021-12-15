@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.css"
+import "../node_modules/slick-carousel/slick/slick-theme.css";
+import "../node_modules/slick-carousel/slick/slick.css";
 import App from "./App";
 
 ReactDOM.render(
