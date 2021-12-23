@@ -1,16 +1,23 @@
 import React from "react";
-import Caro from "./Carousel/Caro";
-import Card from "./Card/Card";
-import Products from "./OurProducts/products";
+import Hero from "./components/Hero";
+import Feature from './components/Features';
+import Service from './components/Services';
+import About from './components/About';
+// import { ThemeProvider } from 'theme-ui';
+// import theme from '../theme';
+import Shop from './components/shop';
+import Masonary from './components/Mesonary';
+import './home.css';
 const Home = () => {
   return (
      <>
-      <Caro />
-      <Card />
-      <div className="container" style={{backgroundColor:"red"}}>
-      <Products/>
-      </div>
-
+       <Hero />
+      <Feature/>
+      <Service />
+      {/* <Shop/> */}
+      {/* <Masonary/> */}
+      <About />
+      
     </>
   );
 };
