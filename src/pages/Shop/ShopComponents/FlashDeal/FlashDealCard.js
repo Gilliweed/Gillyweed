@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button, Row, Col } from 'react-bootstrap';
-import '../carasoule.css';
+// import '../carasoule.css';
 const FlashDealCard = (props) => {
     return (
         <div style={{}}>

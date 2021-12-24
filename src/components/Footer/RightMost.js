@@ -1,5 +1,5 @@
 import React from "react";
-import "./footer.css";
+// import "./footer.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";

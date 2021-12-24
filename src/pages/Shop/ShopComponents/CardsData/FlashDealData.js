@@ -1,6 +1,7 @@
-const head =  "17% off ";
-const tex = " Lorem Ipsum";
-const FlashDealData = [
+const tex =  "17% off ";
+const head = " FlashDeal";
+const FlashDealData = {
+products : [
     {
         img: 'https://images.unsplash.com/photo-1524993242431-9de0d2d86e85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
         h1:head,
@@ -8,7 +9,7 @@ const FlashDealData = [
     },
     {
         img:'https://images.unsplash.com/photo-1524993242431-9de0d2d86e85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
-        title:'title2',
+        h1:head,
         text: tex
     },
     {
@@ -27,5 +28,6 @@ const FlashDealData = [
         text: tex
     },
     
-]
+],
+};
 export default FlashDealData;

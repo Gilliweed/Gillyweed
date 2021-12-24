@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Row ,Col ,Button,Card} from 'react-bootstrap';
 import Paper from '@mui/material/Paper';
-import './TopCategories.css';
+// import './TopCategories.css';
 const TopRatingCard = (props) => {
     return (
         <div style={{}}>

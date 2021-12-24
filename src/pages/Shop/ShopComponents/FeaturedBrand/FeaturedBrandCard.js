@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button, Row, Col } from 'react-bootstrap';
-import './FeaturedBrand.css';
+// import './FeaturedBrand.css';
 const FlashDealCard = (props) => {
     return (
         <div style={{}}>
@@ -11,7 +11,7 @@ const FlashDealCard = (props) => {
                         <img style={{ width: '6rem' }, { height: '8rem' }} src={props.img} />
                         <Row>
                             <Col>
-                                <h5>{props.head}Name</h5>
+                                <h5>{props.head}</h5>
 
                             </Col>
                             <Col sm={4}>

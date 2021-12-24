@@ -1,16 +1,16 @@
 import React from "react";
 import Slider from "react-slick";
 import { Card, Row, Col, Button } from "react-bootstrap";
-import TopRatingCard from "./TopCategoriesCard";
+import FlashDealCard from "./FlashDealCard";
 import FlashDealCardData from "../CardsData/FlashDealData";
-import './TopCategories.css';
+// import './FlashDeal.css';
 import Icon from '@mui/icons-material/BoltOutlined';
-const TopCategoriesSlider = () => {
+const FlashSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
@@ -43,29 +43,18 @@ const TopCategoriesSlider = () => {
     <Card className="container border-0" style = {{backgroundColor:"rgb(167, 170, 170)"}}>
       <Row>
         <Col className ="headi" >
-          <h1 className ="headi" ><Icon style={{fontSize:"46px",marginLeft:"-7px"}} />TopCategories</h1>
+          <h1 className ="headi" ><Icon style={{fontSize:"46px",marginLeft:"-7px"}} />Flash Deal</h1>
         </Col>
-       
       </Row>
-     
       <Slider {...settings} >
-        <div className="itemcard" style={{ backgroundColor: "white", marginLeft: "6px" }}>
-          <TopRatingCard img={FlashDealCardData[0].img} para={FlashDealCardData[0].text} head={FlashDealCardData[0].h1} />
-        </div>
-        <div className="itemcard">
-          <TopRatingCard img={FlashDealCardData[4].img} para={FlashDealCardData[4].text} head={FlashDealCardData[4].h1} />
 
-        </div>
-        <div className="itemcard">
-          <TopRatingCard img={FlashDealCardData[2].img} para={FlashDealCardData[2].text} head={FlashDealCardData[2].h1} />
-
-        </div>
-        <div className="itemcard">
-          <TopRatingCard img={FlashDealCardData[3].img} para={FlashDealCardData[3].text} head={FlashDealCardData[3].h1} />
-        </div>
+          {FlashDealCardData.products.map((product) => 
+                  <FlashDealCard img={product.img} para={product.text} head={product.h1}></FlashDealCard>
+          )}
+       
 
       </Slider>
     </Card>
   );
 }
-export default TopCategoriesSlider;
+export default FlashSlider;
