@@ -5,9 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import SignIn from "./pages/Signin/Signin";
 import Home from "./pages/Home/Home";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 
 import About from "./pages/AboutUs/about";
 
@@ -19,6 +18,7 @@ import Blog from "./pages/Blog/blog";
 
 import Footer from "./components/Footer/footer";
 
+import Article from "./pages/Blog/Article/article";
 
 function App() {
   return (
@@ -33,6 +33,8 @@ function App() {
           <Route exact path="/shop" element={<Shop />} />
 
           <Route exact path="/blog" element={<Blog />} />
+          
+          <Route exact path="/article" elemnet={<Article />} />
 
           <Route exact path="/contact" element={<Contact />} />
 

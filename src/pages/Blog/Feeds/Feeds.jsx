@@ -6,8 +6,6 @@ const Feeds = () => {
       <FeedC />
       <FeedC />
       <FeedC />
-      <FeedC />
-      <FeedC />
     </div>
   );
 };
