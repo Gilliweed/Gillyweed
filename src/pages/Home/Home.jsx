@@ -6,7 +6,7 @@ import About from './components/About';
 // import { ThemeProvider } from 'theme-ui';
 // import theme from '../theme';
 import Shop from './components/shop';
-import Masonary from './components/Mesonary';
+import Masonary from './components/BlogHome';
 import './home.css';
 const Home = () => {
   return (
@@ -14,8 +14,8 @@ const Home = () => {
        <Hero />
       <Feature/>
       <Service />
-      {/* <Shop/> */}
-      {/* <Masonary/> */}
+      <Shop/>
+      <Masonary/>
       <About />
       
     </>

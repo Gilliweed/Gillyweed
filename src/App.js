@@ -7,9 +7,9 @@ import SignIn from "./pages/Signin/Signin";
 import Home from "./pages/Home/Home";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-// import "../node_modules/swiper/css";
-// import "swiper/css/effect-cards";
-
+import "../node_modules/swiper/swiper.scss";
+import "../node_modules/swiper/swiper.min.css";
+import "swiper/modules/effect-cards/effect-cards.min.css";
 import About from "./pages/AboutUs/about";
 
 import Contact from "./pages/ContactUs/contact";
