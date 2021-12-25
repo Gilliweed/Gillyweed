@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import "./Carousel.css";
 
-import CaroData from "../../../Home/Carousel/CaroData";
+
 const Trend = () => {
   return (
     <div className="trend">
