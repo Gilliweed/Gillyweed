@@ -16,7 +16,7 @@ import About from "./pages/AboutUs/about";
 
 import Contact from "./pages/ContactUs/contact";
 
-import Shop from "./pages/Shop/shop";
+import Shop from "./pages/Shop/Shop";
 
 import Blog from "./pages/Blog/blog";
 

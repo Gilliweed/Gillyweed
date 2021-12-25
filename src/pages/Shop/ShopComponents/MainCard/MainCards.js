@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
-import './Carasoule.css'
+// import './Carasoule.css'
 const MainCard = (props) => {
     return (
         <div className="" style={{}}>
