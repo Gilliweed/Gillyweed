@@ -1,10 +1,11 @@
 import React from "react";
-
+import Article from "../Article/article";
+import { NavLink } from "react-router-dom";
 import "./Feeds.css";
 const FeedC = (props) => {
   return (
     <div class="row mb-2">
-      <div class="col-md-12">
+      <div class="col-md-6">
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-primary">World</strong>
@@ -18,7 +19,10 @@ const FeedC = (props) => {
               This is a wider card with supporting text below as a natural
               lead-in to additional content.
             </p>
-            <a href="/#">Continue reading</a>
+            <NavLink className="nav-link" to="/article" exact>
+              Continue reading
+            </NavLink>
+            {/* <a href="/#"></a> */}
           </div>
           <img
             class="card-img-right flex-auto d-none d-md-block img-size"
@@ -27,7 +31,7 @@ const FeedC = (props) => {
           />
         </div>
       </div>
-      <div class="col-md-12">
+      <div class="col-md-6">
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-success">Design</strong>

@@ -1,27 +1,37 @@
 import react from 'react';
 import './css/blogCard.scss';
-const BlogCard = () => {
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
+
+const BlogCard = ({image,text,title,Date}) => {
 
     return (
         <>
-            <div class="blog-card spring-fever">
-                <div class="title-content">
-                    <h3>SPRING FEVER</h3>
-                    <hr />
-                    <div class="intro">Yllamco laboris nisi ut aliquip ex ea commodo.</div>
-                </div>
-                <div class="card-info">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-                </div>
-                <div class="utility-info">
-                    <ul class="utility-list">
-                        <li class="comments">12</li>
-                        <li class="date">03.12.2015</li>
-                    </ul>
-                </div>
-                <div class="gradient-overlay"></div>
-                <div class="color-overlay"></div>
-            </div>
+              <Card className="rounded-2 shadow-lg my-5" style={{backgroundImage: "url(" + image + ")" ,maxWidth: 345, backgroundSize: 'cover'}}>
+      {/* <CardMedia
+        component="img"
+        alt="green iguana"
+        height="140"
+        image="/static/images/cards/contemplative-reptile.jpg"
+      /> */}
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {text}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
         </>
     )
 
