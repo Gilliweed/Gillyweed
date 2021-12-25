@@ -42,13 +42,16 @@ const TopRatingSlider = () => {
   };
   
   return (
-    <Card className="container border-0" style = {{backgroundColor:"rgb(167, 170, 170)"}}>
-      <Row>
-        <Col className ="headi" >
-          <h1 className ="headi" ><Icon style={{fontSize:"35px",marginLeft:"-7px",color:"red"}} />Top Rating</h1>
-        </Col>
-       
-      </Row>
+    <Card
+      className="container "
+      border="success"
+      style={{ backgroundColor: 'rgb(196 224 191 / 38%)' }}
+    >
+      <Card.Header className="border-0">
+        <h2>
+          <Icon style={{ fontSize: '35px' }} /> Top Rated
+        </h2>
+      </Card.Header>
      
       <Slider {...settings} >
       {TopRatingData.products.map((product) => 
@@ -57,6 +60,11 @@ const TopRatingSlider = () => {
         
 
       </Slider>
+      <Card.Header className="border-0 text-right">
+        <Card.Link className="text-right" href="#">
+          More
+        </Card.Link>
+      </Card.Header>
     </Card>
   );
 }

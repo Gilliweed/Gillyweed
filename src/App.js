@@ -1,25 +1,22 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./components/Navbar/Header";
-import { BrowserRouter } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
-import SignIn from "./pages/Signin/Signin";
-import Home from "./pages/Home/Home";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-// import "../node_modules/swiper/css";
-// import "swiper/css/effect-cards";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar/Header';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import SignIn from './pages/Signin/Signin';
+import Home from './pages/Home/Home';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import About from "./pages/AboutUs/about";
+import About from './pages/AboutUs/about';
 
-import Contact from "./pages/ContactUs/contact";
+import Contact from './pages/ContactUs/contact';
 
-import Shop from "./pages/Shop/Shop";
+import Shop from './pages/Shop/Shop';
 
-import Blog from "./pages/Blog/blog";
+import Blog from './pages/Blog/blog';
 
-import Footer from "./components/footer/footer";
-
+import Footer from './components/Footer/footer';
 
 function App() {
   return (
@@ -40,7 +37,7 @@ function App() {
           <Route exact path="/signIn" element={<SignIn />} />
         </Routes>
 
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </BrowserRouter>
   );
