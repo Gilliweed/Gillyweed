@@ -7,11 +7,8 @@ import SignIn from "./pages/Signin/Signin";
 import Home from "./pages/Home/Home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-<<<<<<< HEAD
-=======
 // import "../node_modules/swiper/css";
 // import "swiper/css/effect-cards";
->>>>>>> 4a53d5f6ae7783e8f120ebef47e03a62dd6e728a
 
 import About from "./pages/AboutUs/about";
 
@@ -21,9 +18,9 @@ import Shop from "./pages/Shop/shop";
 
 import Blog from "./pages/Blog/blog";
 
-import Footer from "./components/footer/footer";
+import Footer from "./components/Footer/footer";
 
-import Article from "./pages/Blog/Article/article";
+import Article from "./pages/Blog/Article/article.jsx";
 
 function App() {
   return (
@@ -38,7 +35,7 @@ function App() {
           <Route exact path="/shop" element={<Shop />} />
 
           <Route exact path="/blog" element={<Blog />} />
-          
+
           <Route exact path="/article" elemnet={<Article />} />
 
           <Route exact path="/contact" element={<Contact />} />

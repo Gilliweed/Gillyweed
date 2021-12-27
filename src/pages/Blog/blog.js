@@ -10,11 +10,12 @@ const Blog = () => {
   return (
     <div class="blog">
       <div class="Entry">
+        
         <Grid item container spacing={2}>
-          <Grid item lg={9}>
+          <Grid item lg={9} sm={9}>
             <Trend></Trend>
           </Grid>
-          <Grid item lg={3}>
+          <Grid item lg={3} sm={3}>
             <Cate />
           </Grid>
         </Grid>
