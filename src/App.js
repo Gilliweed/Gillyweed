@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "../node_modules/swiper/swiper.scss";
 import "../node_modules/swiper/swiper.min.css";
-import "swiper/modules/effect-cards/effect-cards.min.css";
+// import "swiper/modules/effect-cards/effect-cards.min.css";
 
 import About from "./pages/AboutUs/about";
 
@@ -23,13 +23,14 @@ import Blog from "./pages/Blog/blog";
 import Footer from "./components/footer/footer";
 
 import Article from "./pages/Blog/Article/article";
+import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
       <main>
         <Navbar />
-        <Routes>
+        <Routes>       
           <Route exact path="/" element={<Home />} />
 
           <Route exact path="/about" element={<About />} />
