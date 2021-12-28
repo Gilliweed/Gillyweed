@@ -1,29 +1,37 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./components/Navbar/Header";
-import { BrowserRouter } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
-import SignIn from "./pages/Signin/Signin";
-import Home from "./pages/Home/Home";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import About from "./pages/AboutUs/about";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar/Header';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import SignIn from './pages/Signin/Signin';
+import Home from './pages/Home/Home';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import About from './pages/AboutUs/about';
 
-import Contact from "./pages/ContactUs/contact";
+import Contact from './pages/ContactUs/contact';
 
-import Shop from "./pages/Shop/Shop";
+import Shop from './pages/Shop/Shop';
 
-import Blog from "./pages/Blog/blog";
+import Blog from './pages/Blog/blog';
 
-import Footer from "./components/Footer/footer";
+// import Footer from './components/Footer/footer';
 
-import Article from "./pages/Blog/Article/article";
+import Cart from './pages/Shop/ShopPages/Cart';
+
+import MoreProductList from './pages/Shop/ShopPages/MoreProductList';
+
+import Article from './pages/Blog/Article/article';
+
+import ProductDesc from './pages/Shop/ShopPages/ProductDesc';
+
+import NewsLetter from './components/NewsLetter';
 
 function App() {
   return (
     <BrowserRouter>
       <main>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
 
@@ -32,15 +40,21 @@ function App() {
           <Route exact path="/shop" element={<Shop />} />
 
           <Route exact path="/blog" element={<Blog />} />
-          
+
           <Route exact path="/article" elemnet={<Article />} />
 
           <Route exact path="/contact" element={<Contact />} />
 
           <Route exact path="/signIn" element={<SignIn />} />
-        </Routes>
 
-        <Footer />
+          <Route exact path="/cart" element={<Cart />} />
+
+          <Route exact path="/moreProducts" element={<MoreProductList />} />
+
+          <Route exact path="/productDesc" element={<ProductDesc />} />
+        </Routes>
+        {/* <NewsLetter /> */}
+        {/* <Footer /> */}
       </main>
     </BrowserRouter>
   );
