@@ -29,7 +29,7 @@ const MainCardData = [
   // },
   {
     id: 1,
-    img: 'https://cdn.yourpng.com/uploads/preview/indian-girl-in-saree-png-download-11593714291zap1pscmv6.png',
+    img: 'https://rukminim1.flixcart.com/image/714/857/klicfww0/bra/s/b/r/heavily-padded-36-yes-regular-regular-polypad514-polypad04-original-imagymexfbdjhghq.jpeg?q=50',
     h1: 'SUMMER SALE',
     text: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.Best Saree collection is Here",
     bg: 'f5fafd',

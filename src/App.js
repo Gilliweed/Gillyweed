@@ -37,7 +37,7 @@ function App() {
       <main>
         {/* <Navbar /> */}
 
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route exact path="/" element={<Home />} />
 
