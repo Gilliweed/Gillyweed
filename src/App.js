@@ -18,7 +18,7 @@ import Shop from './pages/Shop/Shop';
 
 import Blog from './pages/Blog/blog';
 
-// import Footer from "./components/footer/footer";
+import Footer from "./components/Footer/footer";
 
 import Article from './pages/Blog/Article/article';
 
@@ -37,7 +37,7 @@ function App() {
       <main>
         {/* <Navbar /> */}
 
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
 
@@ -60,7 +60,7 @@ function App() {
           <Route exact path="/productDesc" element={<ProductDesc />} />
         </Routes>
         {/* <NewsLetter /> */}
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </BrowserRouter>
   );

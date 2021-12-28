@@ -29,7 +29,8 @@ const MainCardData = [
   // },
   {
     id: 1,
-    img: 'https://rukminim1.flixcart.com/image/714/857/klicfww0/bra/s/b/r/heavily-padded-36-yes-regular-regular-polypad514-polypad04-original-imagymexfbdjhghq.jpeg?q=50',
+    // img: 'https://rukminim1.flixcart.com/image/714/857/klicfww0/bra/s/b/r/heavily-padded-36-yes-regular-regular-polypad514-polypad04-original-imagymexfbdjhghq.jpeg?q=50',
+    img :'https://c.neh.tw/thumb/f/720/comhiclipartxmtan.jpg',
     h1: 'SUMMER SALE',
     text: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.Best Saree collection is Here",
     bg: 'f5fafd',

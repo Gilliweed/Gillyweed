@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import MCard from './ShopCard';
 // Import Swiper styles
 

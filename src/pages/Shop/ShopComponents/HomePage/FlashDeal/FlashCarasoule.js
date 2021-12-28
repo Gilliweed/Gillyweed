@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import FlashDealCard from './FlashDealCard';
 import FlashDealCardData from '../CardsData/FlashDealData';
 import { Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Icon from '@mui/icons-material/BoltOutlined';
 import { NavLink } from 'react-router-dom';
 

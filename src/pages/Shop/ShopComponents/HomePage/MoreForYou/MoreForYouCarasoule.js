@@ -3,7 +3,7 @@ import TopRatingCard from './MoreForYouCard';
 import MoreForYouData from '../CardsData/MoreForYouData';
 // import './MoreForYou.css';
 import { Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { NavLink } from 'react-router-dom';
 
 import Icon from '@mui/icons-material/BoltOutlined';

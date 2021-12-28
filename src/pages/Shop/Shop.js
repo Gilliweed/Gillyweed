@@ -1,5 +1,5 @@
-import 'swiper/swiper.min.css';
-import 'swiper/modules/pagination/pagination.min.css';
+// import 'swiper/swiper.min.css';
+// import 'swiper/modules/pagination/pagination.min.css';
 import Home from './ShopPages/Home';
 import Cart from '../Shop/ShopPages/Cart';
 import Navbar from './ShopComponents/Navbar';

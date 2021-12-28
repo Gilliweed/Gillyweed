@@ -1,5 +1,5 @@
 import { Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Card } from 'react-bootstrap';
 import NewArrival from './NewArrivalCard';
 import NewArrivalData from '../CardsData/NewArrival';

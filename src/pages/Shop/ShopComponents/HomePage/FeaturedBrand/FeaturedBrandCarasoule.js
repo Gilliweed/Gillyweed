@@ -4,7 +4,7 @@ import FeaturedBrandData from '../CardsData/FeaturedBrandData';
 // import './FeaturedBrand.css';
 import Icon from '@mui/icons-material/BrandingWatermark';
 import { Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { NavLink } from 'react-router-dom';
 const FeaturedBrandSlider = () => {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import { Card } from 'react-bootstrap';
 import { Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import MainCard from './MainCards';
 import MainCardData from '../CardsData/MainCardData';
 const ItemSlider = () => {
