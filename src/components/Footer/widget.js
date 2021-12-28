@@ -1,18 +1,16 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, Box, Heading, Image,Link } from 'theme-ui';
-// import { Link } from 'components/link';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
 import { rgba } from 'polished';
 
 const Widget = ({ title, items }) => {
   return (
-    <Box sx={styles.footerWidget}>
-      <Heading as="h4">{title}</Heading>
+    <Box className="pl-3">
+      <h1 className=" text-2xl text-white">{title}</h1>
       <ul>
         {items.map(({ path, label, icon }, i) => (
-          <li key={i}>
-            {icon && <Image src={icon} alt={label} />}
-            <Link path={path} key={i} variant="footer">{label}</Link>
+          <li key={i} className="my-3">
+            <Link href={path} className="text-white">{label}</Link>
           </li>
         ))}
       </ul>
