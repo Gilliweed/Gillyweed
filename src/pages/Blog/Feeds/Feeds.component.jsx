@@ -33,7 +33,9 @@ const FeedsC = () => {
             ad minim veniam, quis nostrud exercitation ullamco laboris.
           </p>
           <button className="pt-2 text-white border-2 bg-blue-700 rounded-full px-4 py-2 mt-3 hover:bg-red-400">
-            Read More
+            <a href="/article">
+              Read More
+            </a>
           </button>
         </div>
       </div>

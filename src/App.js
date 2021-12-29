@@ -20,7 +20,7 @@ import Blog from './pages/Blog/blog';
 
 import Footer from "./components/Footer/footer";
 
-import Article from './pages/Blog/Article/article';
+import Article from "./pages/Blog/Article/Article";
 
 import Cart from './pages/Shop/ShopPages/Cart';
 
@@ -49,7 +49,7 @@ function App() {
 
           <Route exact path="/blog" element={<Blog />} />
 
-          <Route exact path="/article" elemnet={<Article />} />
+          <Route exact path="/article" element={<Article />} />
 
           <Route exact path="/contact" element={<Contact />} />
 
