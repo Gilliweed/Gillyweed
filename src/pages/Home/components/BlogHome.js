@@ -1,6 +1,4 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Card from '@mui/material/Card';
 import BlogCard from './BlogCard';
 const TESTIMONIALS_DATA = [
   [
