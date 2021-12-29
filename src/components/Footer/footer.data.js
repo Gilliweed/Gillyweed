@@ -103,28 +103,6 @@ export const menuItems = [
       },
     ],
   },
-  {
-    id: 5,
-    title: 'Policy',
-    items: [
-      {
-        path: '#!',
-        label: 'Application security',
-      },
-      {
-        path: '#!',
-        label: 'Software principles',
-      },
-      {
-        path: '#!',
-        label: 'Unwanted software policy',
-      },
-      {
-        path: '#!',
-        label: 'Responsible supply chain',
-      },
-    ],
-  },
 ];
 
 export const footerNav = [

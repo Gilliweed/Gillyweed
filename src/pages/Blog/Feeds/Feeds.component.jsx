@@ -1,60 +1,44 @@
 import React from "react";
-import Article from "../Article/article";
-import { NavLink } from "react-router-dom";
-import "./Feeds.css";
-const FeedC = (props) => {
+
+const FeedsC = () => {
   return (
-    <div class="row mb-2">
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <div class="card-body d-flex flex-column align-items-start">
-            <strong class="d-inline-block mb-2 text-primary">World</strong>
-            <h3 class="mb-0">
-              <a class="text-dark" href="/#">
-                Featured post
-              </a>
-            </h3>
-            <div class="mb-1 text-muted">Nov 12</div>
-            <p class="card-text mb-auto">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content.
-            </p>
-            <NavLink className="nav-link" to="/article" exact>
-              Continue reading
-            </NavLink>
-            {/* <a href="/#"></a> */}
-          </div>
+    <div className="pt-4">
+      <div className="max-w-3xl bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <a href="/#">
           <img
-            class="card-img-right flex-auto d-none d-md-block img-size"
-            src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821__340.jpg"
-            alt="Card cap"
+            className="rounded-t-lg"
+            src="https://flowbite.com/docs/images/blog/image-1.jpg"
+            alt=""
           />
+        </a>
+        <div className="grid grid-cols-4 border-bottom p-4">
+          <div className="col-end-0.5">
+            <h4 className="text-2xl">25</h4>
+            <h5 className="text-xl text-red-400">Dec</h5>
+          </div>
+          <div className="col-start-2 col-end-5">
+            <h3 className="text-xl text-blue-600">
+              <a href="/#">Climate Change is the Biggest Upcoming Threat</a>
+            </h3>
+            <div className="flex flex-row pt-2 pb-2 mt-2">
+              <h4 className="text-gray-400">By Admin</h4>
+              <h5 className="ml-14 text-gray-400">Fitness , Health</h5>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-          <div class="card-body d-flex flex-column align-items-start">
-            <strong class="d-inline-block mb-2 text-success">Design</strong>
-            <h3 class="mb-0">
-              <a class="text-dark" href="/#">
-                Post title
-              </a>
-            </h3>
-            <div class="mb-1 text-muted">Nov 11</div>
-            <p class="card-text mb-auto">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content.
-            </p>
-            <a href="/#">Continue reading</a>
-          </div>
-          <img
-            class="card-img-right flex-auto d-none d-md-block img-size"
-            src="https://i.pinimg.com/originals/a7/3d/6e/a73d6e4ac85c6a822841e449b24c78e1.jpg"
-            alt="Card cap"
-          />
+        <div className="px-10 py-4">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris.
+          </p>
+          <button className="pt-2 text-white border-2 bg-blue-700 rounded-full px-4 py-2 mt-3 hover:bg-red-400">
+            Read More
+          </button>
         </div>
       </div>
     </div>
   );
 };
-export default FeedC;
+
+export default FeedsC;
