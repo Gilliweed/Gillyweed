@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ButtonToolbar } from 'react-bootstrap';
-import logo from "../Footer/gillyLogo.png";
+import logo from '../Footer/gillyLogo.png'
 import {
   Container,
   Collapse,

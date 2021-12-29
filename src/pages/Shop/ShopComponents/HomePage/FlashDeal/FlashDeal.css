@@ -1,0 +1,27 @@
+
+.heading{
+    padding-left: 80%;
+    padding-top: 5px;
+}
+.headi{
+    margin-bottom: -15px;
+    margin-top: 11px;
+    
+}
+.but{
+    margin-top: 4px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+.custom-slick .slick-prev:before {
+    content: "";
+    font-family: 'FontAwesome';
+    font-size: 22px;
+}
+.custom-slick .slick-next:before {
+    content: "";
+    font-family: 'FontAwesome';
+    font-size: 22px;
+}
