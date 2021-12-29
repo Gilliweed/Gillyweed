@@ -1,13 +1,14 @@
-import React from 'react';
 import { Container, Row, Col } from "reactstrap";
+// import Logo from "../../../assets/s1.svg"
+import { ReactSVG } from 'react-svg'
 const Service = () => {
   const services = [
-    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" },
-    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" },
-    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" },
-    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" },
-    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" },
-    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" },
+    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" ,img:"../../../assets/s-1.svg"},
+    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" ,img:"../../../assets/s-2.svg"},
+    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" ,img:"../../../assets/s-3.svg"},
+    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" ,img:"../../../assets/s-4.svg"},
+    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" ,img:"../../../assets/s-5.svg"},
+    { title : "Lorem Ipsum", desc : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" ,img:"../../../assets/s-6.svg"},
   ]
   
   return (
@@ -27,7 +28,7 @@ const Service = () => {
               <Col key={key} lg={4} md={6}>
                 <div>
                   <div className="mb-5">
-                      <i className={service.icon}></i>
+                  <ReactSVG src="./s1.svg" />
                   </div>
                   <h5 className="text-dark font-weight-normal pt-1 mb-4">{service.title}</h5>
                   <p className="text-muted mb-4">{service.desc}</p>

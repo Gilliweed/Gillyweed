@@ -1,64 +1,45 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
 import Data from '../HeroImgData';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination"
-import { Container, Row, Col } from 'reactstrap';
-import SwiperCore, { Autoplay } from 'swiper';
-import Fade from 'react-reveal/Fade';
+import { Row, Col } from 'reactstrap';
+import SwiperCore, {Autoplay, EffectFade } from 'swiper';
+import "swiper/css/effect-fade"
+
 const Hero = () => {
-  SwiperCore.use([Autoplay])
+  SwiperCore.use([Autoplay,EffectFade])
   return (
-    <section className="py-10 bg-no-repeat bg-left-bottom md:bg-center" style={{ backgroundImage: "url(" + + ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} >
-      <Container className="shadow-red-500/50" >
-        <Swiper pagination={true} navigation={true} className="mySwiper py-14 rouded-2xl" autoplay={{
+    <section className="  bg-no-repeat bg-left-bottom md:bg-center rounded-2xl" >
+      <div className=" rounded-2xl" >
+        <Swiper  navigation={true}   className="mySwiper " autoplay={{
           delay: 4000,
           disableOnInteraction: false
-        }}>
-          <Fade left>
+        }} effect={'fade'}> 
             {Data.map((items, index) => {
               return (
-
-                <SwiperSlide className="rouded-2xl" >
-                  {/* <HeroCard img={items.img} stext={items.stext} /> */}
-                  <img src={items.img}/>
+                <SwiperSlide className=" rouded-lg bg-center pb-24" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(" +items.img+ ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }} >
                     <Row className="align-items-center">
-                      <Col lg={6}>
-
-                        <Swiper pagination={true} navigation={true} className="mySwiper py-14 rouded-2xl" autoplay={{
+                      <Col lg={8}>
+                        <Swiper  navigation={true} className="mySwiper py-32 rouded-2xl " autoplay={{
                           delay: 4000,
-                          disableOnInteraction: false
-                        }}>
-                          <Fade left>
+                          disableOnInteraction: false}}>                         
                             {Data.map((items, index) => {
                               return (
-
-                                <SwiperSlide className="rouded-2xl" >
-                                  {/* <HeroCard img={items.img} stext={items.stext} /> */}
-                                  <div className="text-4xl md:text-7xl py-16 capitalize">
-
+                                <SwiperSlide className="rouded-2xl p-6 md:p-14" >
+                                  <div className="text-4xl text-bold md:text-7xl py-16 capitalize text-white">
                                     {items.title}
-
-
-
                                   </div>
                                   <button className="px-4 py-2 bg-green-500 rounded-full">Read More</button>
                                 </SwiperSlide>
-
                               )
                             })}
-                          </Fade>
                         </Swiper>
                       </Col>
                     </Row>
                 </SwiperSlide>
-
               )
             })}
-          </Fade>
         </Swiper>
-
-      </Container>
+      </div>
     </section>
   );
 }

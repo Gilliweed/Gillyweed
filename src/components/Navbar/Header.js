@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { ButtonToolbar } from 'react-bootstrap';
-import logo from '../footer/gillyLogo.png'
+import logo from '../Footer/gillyLogo.png'
 import {
   Container,
   Collapse,
@@ -10,16 +9,16 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
-} from 'reactstrap';
-import './header.css';
+  NavLink,
+} from "reactstrap";
+import "./header.css";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
   });
 
   const handleScroll = () => {
@@ -28,7 +27,7 @@ const Header = () => {
     } else if (window.scrollY < 90) {
       setSticky(false);
     }
-  }
+  };
 
   return (
     <div className={`header${sticky ? ' sticky' : ''}`} >
@@ -59,6 +58,6 @@ const Header = () => {
       </Navbar>
     </div>
   );
-}
+};
 
 export default Header;

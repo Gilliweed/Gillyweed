@@ -1,16 +1,10 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, Text } from 'theme-ui';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-// import Logo from 'components/logo';
-// import { Link } from 'components/link';
 import FooterWidget from './widget';
 import { menuItems, footerNav } from './footer.data';
 import Link from '@mui/material/Link';
 import { rgba } from 'polished';
 import svg from './footersvg.svg';
-import logo from './gillyLogo.png';
+import logo from "./gillyLogo.png";
 import './footer.scss';
 export default function Footer() {
   return (
@@ -20,21 +14,21 @@ export default function Footer() {
           <img src={logo} className="mx-auto w-2/6" alt="logo" />
           <div className="grid grid-row-2">
 
-            <div class="social-buttons pt-12 pb-6">
-              <Link href="#" class="social-buttons__button social-button social-button--facebook" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
+            <div className="social-buttons pt-12 pb-6">
+              <Link href="#" className="social-buttons__button social-button social-button--facebook" aria-label="Facebook">
+                <i className="fab fa-facebook-f"></i>
               </Link>
-              <Link href="#" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <Link href="#" className="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+                <i className="fab fa-linkedin-in"></i>
               </Link>
-              <Link href="#" class="social-buttons__button social-button social-button--snapchat" aria-label="SnapChat">
-                <i class="fab fa-snapchat-ghost"></i>
+              <Link href="#" className="social-buttons__button social-button social-button--snapchat" aria-label="SnapChat">
+                <i className="fab fa-snapchat-ghost"></i>
               </Link>
-              <Link href="#" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
-                <i class="fab fa-github"></i>
+              <Link href="#" className="social-buttons__button social-button social-button--github" aria-label="GitHub">
+                <i className="fab fa-github"></i>
               </Link>
-              <Link href="#" class="social-buttons__button social-button social-button--codepen" aria-label="CodePen">
-                <i class="fab fa-codepen"></i>
+              <Link href="#" className="social-buttons__button social-button social-button--codepen" aria-label="CodePen">
+                <i className="fab fa-codepen"></i>
               </Link>
             </div>
             <div>
@@ -64,7 +58,9 @@ export default function Footer() {
           <Box as="ul" sx={styles.footerNav}>
             {footerNav.map(({ path, label }, i) => (
               <li key={i}>
-                <Link href={path} key={i} variant="footer">{label}</Link>
+                <Link className="text-lg" href={path} key={i} variant="footer">
+                  {label}
+                </Link>
               </li>
             ))}
           </Box>
@@ -76,59 +72,59 @@ export default function Footer() {
 
 const styles = {
   footer: {
-    backgroundColor: '#000000',
+    backgroundColor: "#000000",
     pt: 5,
   },
   footerTopInner: {
     gap: [50, null, null, null, 0, 50],
-    display: ['grid'],
+    display: ["grid"],
     gridTemplateColumns: [
-      'repeat(2, 1fr)',
-      'repeat(3, 1fr)',
+      "repeat(2, 1fr)",
+      "repeat(3, 1fr)",
       null,
-      'repeat(5, 1fr)',
-      'repeat(5, 1fr)',
+      "repeat(5, 1fr)",
+      "repeat(5, 1fr)",
     ],
     // mb: [null, null, null, 7],
   },
   footerInner: {
     borderTop: [null, null, null, `1px solid #D9E0E7`],
-    display: ['block', null, 'flex'],
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: ['30px 0 20px', null, null, '30px 0 35px', '35px 0 40px'],
+    display: ["block", null, "flex"],
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: ["30px 0 20px", null, null, "30px 0 35px", "35px 0 40px"],
   },
   copyright: {
-    display: ['flex'],
-    alignItems: 'center',
-    flexDirection: ['column', null, null, null, 'row'],
+    display: ["flex"],
+    alignItems: "center",
+    flexDirection: ["column", null, null, null, "row"],
     span: {
-      fontSize: '14px',
+      fontSize: "14px",
       lineHeight: 1.29,
-      color: rgba('#FCF5E5', 0.6),
-      mt: ['18px', '18px', '7px'],
+      color: rgba("#FCF5E5", 0.6),
+      mt: ["18px", "18px", "7px"],
     },
   },
   logo: {
     mr: 3,
   },
   footerNav: {
-    listStyle: 'none',
-    margin: ['15px 0 0', '15px 0 0', '0'],
+    listStyle: "none",
+    margin: ["15px 0 0", "15px 0 0", "0"],
     padding: 0,
-    display: ['flex'],
-    flexWrap: ['wrap', null, null, 'unset'],
-    justifyContent: ['center', null, 'flex-start'],
-    'li + li': {
-      ml: ['18px', null, '20px'],
-      '@media only screen and (max-width: 400px)': {
-        mb: '10px',
+    display: ["flex"],
+    flexWrap: ["wrap", null, null, "unset"],
+    justifyContent: ["center", null, "flex-start"],
+    "li + li": {
+      ml: ["18px", null, "20px"],
+      "@media only screen and (max-width: 400px)": {
+        mb: "10px",
       },
     },
     a: {
-      color: '#FCF5E5',
+      color: "#FCF5E5",
       fontSize: [1, null, null, 2],
-      textDecoration: 'none',
+      textDecoration: "none",
     },
   },
 };
