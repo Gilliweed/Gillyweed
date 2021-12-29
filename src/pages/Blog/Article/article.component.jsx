@@ -1,15 +1,7 @@
-import React from "react";
-import Link from "@mui/material/Link";
-import {
-  Facebook,
-  Instagram,
-  MailOutline,
-  Phone,
-  LinkedIn,
-  Room,
-  Twitter,
-} from "@mui/icons-material";
+import { Facebook, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
 import styled from "styled-components";
+import data from "../BlogData/blogdata";
+
 const SocialContainer = styled.div`
   display: flex;
 `;
@@ -28,17 +20,13 @@ const SocialIcon = styled.div`
 const Art = (props) => {
   return (
     <div className="pt-4">
-      <div className="max-w-3xl bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div className=" bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <a href="/#">
-          <img
-            className="rounded-t-lg"
-            src="https://flowbite.com/docs/images/blog/image-1.jpg"
-            alt=""
-          />
+          <img className="rounded-lg mx-auto p-2" src={data[0].img} alt="" />
         </a>
         <div className="grid gird-rows-2 p-2 border-bottom">
           <div className="cols-end text-black-500 text-3xl p-3">
-            <h3>Tips For Business Success 2017: Why To Online</h3>
+            <h3>{data[0].topic}</h3>
           </div>
           <div className="flex flex-row p-2 ml-2.5 space-x-4 text-gray-500">
             <h4>Posted By Admin</h4>
@@ -47,63 +35,23 @@ const Art = (props) => {
           </div>
         </div>
         <div className="p-4 border-bottom">
-          <h2 className="pb-2 text-black text-xl ">What its Mean</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex. Commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt.
-          </p>
-          <h4>Our</h4>
+          {/* <h2 className="pb-2 text-black text-xl ">What its Mean</h2> */}
+          <p>{data[0].mean[0]}</p>
+          <p className="pt-4">{data[0].mean[1]}</p>
         </div>
         <div className="p-4 border-bottom">
-          <h2 className="pb-2 text-black text-2xl ">Causes</h2>
-          <h3 className="pb-2 text-black text-xl pt-3">Cause 1</h3>
-          <p className="ml-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex. Commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt.
-          </p>
-          <h3 className="pb-2 text-black text-xl pt-4">Cause 2</h3>
-          <p className="ml-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex. Commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt.
-          </p>
+          {/* <h2 className="pb-2 text-black text-2xl ">Causes</h2> */}
+          <h3 className="pb-2 text-black text-xl pt-3">{data[0].causeT[0]}</h3>
+          <p className="ml-2">{data[0].causeE[0]}</p>
+          <h3 className="pb-2 text-black text-xl pt-4">{data[0].causeT[1]}</h3>
+          <p className="ml-2">{data[0].causeE[0]}</p>
         </div>
         <div className="p-4 border-bottom">
-          <h2 className="pb-2 text-black text-2xl ">Solutions</h2>
-          <h3 className="pb-2 text-black text-xl pt-3">Solution 1</h3>
-          <p className="ml-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex. Commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt.
-          </p>
-          <h3 className="pb-2 text-black text-xl pt-4">Solution 2</h3>
-          <p className="ml-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex. Commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt.
-          </p>
+          {/* <h2 className="pb-2 text-black text-2xl ">Solutions</h2> */}
+          <h3 className="pb-2 text-black text-xl pt-3">{data[0].solT[0]}</h3>
+          <p className="ml-2">{data[0].solE[0]}</p>
+          <h3 className="pb-2 text-black text-xl pt-4">{data[0].solT[1]}</h3>
+          <p className="ml-2">{data[0].solE[1]}</p>
         </div>
       </div>
       <diV className="p-4 border-bottom">

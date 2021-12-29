@@ -1,6 +1,4 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Card from '@mui/material/Card';
 import BlogCard from './BlogCard';
 const TESTIMONIALS_DATA = [
   [
@@ -134,7 +132,7 @@ export default function FixedColumns() {
     };
   return (
     <>
-    <div className="py-10 shadow-lg bg-gradient-to-b from-white via-neutral-400 rounded-2xl">
+    <div className="py-10 bg-gradient-to-b  rounded-2xl">
     <div className="text-3xl md:text-4xl font-bold tracking-wide text-sky-600 uppercase px-5"> Some Of Our Blogs </div>
     <Swiper {...testimonialCarousel} className="swiper">
     {TESTIMONIALS_DATA.map((item, index) => (
