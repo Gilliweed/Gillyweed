@@ -1,30 +1,11 @@
-import React from "react";
-import { Pagination } from "react-bootstrap";
-import "./Pagination.css";
-import PageC from "./Pagination.component";
+import * as React from "react";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 
-const Page = () => {
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export default function PaginationC() {
   return (
-    <nav aria-label="Page navigation example" className="page-adjust">
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="/#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        {arr.map((val, idx) => {
-          return <PageC num={val} />;
-        })}
-        <li class="page-item">
-          <a class="page-link" href="/#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <Stack spacing={2}>
+      <Pagination count={10} color="secondary" />
+    </Stack>
   );
-};
-export default Page;
+}

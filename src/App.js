@@ -20,9 +20,11 @@ import Blog from './pages/Blog/blog';
 
 import Footer from "./components/Footer/footer";
 
-import Article from './pages/Blog/Article/article';
+import Article from "./pages/Blog/Article/Article";
 
 import Cart from './pages/Shop/ShopPages/Cart';
+
+import Newsletter from './components/NewsLetter';
 
 import MoreProductList from './pages/Shop/ShopPages/MoreProductList';
 
@@ -47,7 +49,7 @@ function App() {
 
           <Route exact path="/blog" element={<Blog />} />
 
-          <Route exact path="/article" elemnet={<Article />} />
+          <Route exact path="/article" element={<Article />} />
 
           <Route exact path="/contact" element={<Contact />} />
 
@@ -59,7 +61,7 @@ function App() {
 
           <Route exact path="/productDesc" element={<ProductDesc />} />
         </Routes>
-        {/* <NewsLetter /> */}
+        <Newsletter />
         <Footer />
       </main>
     </BrowserRouter>

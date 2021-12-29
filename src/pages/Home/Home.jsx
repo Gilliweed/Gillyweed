@@ -7,7 +7,6 @@ import About from './components/About';
 // import theme from '../theme';
 import Shop from './components/shop';
 import Masonary from './components/BlogHome';
-import NewsLetter from '../../components/NewsLetter';
 import './home.css';
 const Home = () => {
   return (
@@ -18,7 +17,6 @@ const Home = () => {
       <Shop/>
       <Masonary/>
       <About />
-      <NewsLetter/>
     </>
   );
 };

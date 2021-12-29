@@ -1,28 +1,45 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import Data from '../HeroImgData';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination"
+import { Row, Col } from 'reactstrap';
+import SwiperCore, {Autoplay, EffectFade } from 'swiper';
+import "swiper/css/effect-fade"
+
 const Hero = () => {
+  SwiperCore.use([Autoplay,EffectFade])
   return (
-    <section className="section position-relative">
-      <Container>
-        <Row className="align-items-center">
-          <Col lg={6}>
-            <div className="pr-lg-5">
-              <p className="text-uppercase text-primary font-weight-medium f-14 mb-4">Lorem Ipsum</p>
-              <h1 className="mb-4 font-weight-normal line-height-1_4">Simply dummy text of the printing <span className="text-primary font-weight-medium">Name</span></h1>
-              <p className="text-purple-700">Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <a href="#" className="btn btn-warning">
-                Find Out How <span className="ml-2 right-icon">&#8594;</span>
-              </a>
-            </div>
-          </Col>
-          <Col lg={6}>
-            <div className="mt-5 mt-lg-0">
-              {/* <img src="/images/Group Members.png" alt="" className="img-fluid mx-auto d-block"/> */}
-            </div>
-          </Col>
-        </Row>
-      </Container>
+    <section className="  bg-no-repeat bg-left-bottom md:bg-center rounded-2xl" >
+      <div className=" rounded-2xl" >
+        <Swiper  navigation={true}   className="mySwiper " autoplay={{
+          delay: 4000,
+          disableOnInteraction: false
+        }} effect={'fade'}> 
+            {Data.map((items, index) => {
+              return (
+                <SwiperSlide className=" rouded-lg bg-center pb-24" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(" +items.img+ ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }} >
+                    <Row className="align-items-center">
+                      <Col lg={8}>
+                        <Swiper  navigation={true} className="mySwiper py-32 rouded-2xl " autoplay={{
+                          delay: 4000,
+                          disableOnInteraction: false}}>                         
+                            {Data.map((items, index) => {
+                              return (
+                                <SwiperSlide className="rouded-2xl p-6 md:p-14" >
+                                  <div className="text-4xl text-bold md:text-7xl py-16 capitalize text-white">
+                                    {items.title}
+                                  </div>
+                                  <button className="px-4 py-2 bg-green-500 rounded-full">Read More</button>
+                                </SwiperSlide>
+                              )
+                            })}
+                        </Swiper>
+                      </Col>
+                    </Row>
+                </SwiperSlide>
+              )
+            })}
+        </Swiper>
+      </div>
     </section>
   );
 }
