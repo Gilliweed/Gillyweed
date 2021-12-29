@@ -8,7 +8,7 @@ const Tags = () => {
       <div>
         {data.map((ele) => {
           return (
-            <button className=" border-1 border-gray-200 px-2 py-1 rounded-full hover:bg-red-400 hover:shadow-md float-left mr-2 mb-3">
+            <button className=" border-1 border-gray-200 px-2 py-1 rounded-full hover:bg-red-400 hover:shadow-md float-left mr-2 mb-3 text-gray-600 hover:text-white">
               {ele}
             </button>
           );

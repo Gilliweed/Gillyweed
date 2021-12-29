@@ -17,7 +17,6 @@ const Blog = () => {
       <div>
         <Recent />
       </div>
-
       <Feeds />
       <div className="p-3 ml-15">
         <PaginationC />
