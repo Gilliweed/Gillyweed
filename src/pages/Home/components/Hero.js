@@ -1,27 +1,63 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import Data from '../HeroImgData';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination"
 import { Container, Row, Col } from 'reactstrap';
+import SwiperCore, { Autoplay } from 'swiper';
+import Fade from 'react-reveal/Fade';
 const Hero = () => {
+  SwiperCore.use([Autoplay])
   return (
-    <section className="section position-relative">
-      <Container>
-        <Row className="align-items-center">
-          <Col lg={6}>
-            <div className="pr-lg-5">
-              <p className="text-uppercase text-primary font-weight-medium f-14 mb-4">Lorem Ipsum</p>
-              <h1 className="mb-4 font-weight-normal line-height-1_4">Simply dummy text of the printing <span className="text-primary font-weight-medium">Name</span></h1>
-              <p className="text-purple-700">Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <a href="#" className="btn btn-warning">
-                Find Out How <span className="ml-2 right-icon">&#8594;</span>
-              </a>
-            </div>
-          </Col>
-          <Col lg={6}>
-            <div className="mt-5 mt-lg-0">
-              {/* <img src="/images/Group Members.png" alt="" className="img-fluid mx-auto d-block"/> */}
-            </div>
-          </Col>
-        </Row>
+    <section className="py-10 bg-no-repeat bg-left-bottom md:bg-center" style={{ backgroundImage: "url(" + + ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} >
+      <Container className="shadow-red-500/50" >
+        <Swiper pagination={true} navigation={true} className="mySwiper py-14 rouded-2xl" autoplay={{
+          delay: 4000,
+          disableOnInteraction: false
+        }}>
+          <Fade left>
+            {Data.map((items, index) => {
+              return (
+
+                <SwiperSlide className="rouded-2xl" >
+                  {/* <HeroCard img={items.img} stext={items.stext} /> */}
+                  <img src={items.img}/>
+                    <Row className="align-items-center">
+                      <Col lg={6}>
+
+                        <Swiper pagination={true} navigation={true} className="mySwiper py-14 rouded-2xl" autoplay={{
+                          delay: 4000,
+                          disableOnInteraction: false
+                        }}>
+                          <Fade left>
+                            {Data.map((items, index) => {
+                              return (
+
+                                <SwiperSlide className="rouded-2xl" >
+                                  {/* <HeroCard img={items.img} stext={items.stext} /> */}
+                                  <div className="text-4xl md:text-7xl py-16 capitalize">
+
+                                    {items.title}
+
+
+
+                                  </div>
+                                  <button className="px-4 py-2 bg-green-500 rounded-full">Read More</button>
+                                </SwiperSlide>
+
+                              )
+                            })}
+                          </Fade>
+                        </Swiper>
+                      </Col>
+                    </Row>
+                </SwiperSlide>
+
+              )
+            })}
+          </Fade>
+        </Swiper>
+
       </Container>
     </section>
   );

@@ -115,7 +115,7 @@ export default function FixedColumns() {
       },
       breakpoints: {
         360: {
-          slidesPerView: 1.75,
+          slidesPerView: 1.25,
           spaceBetween: 20,
         },
         768: {
@@ -133,7 +133,10 @@ export default function FixedColumns() {
       },
     };
   return (
-    <><Swiper {...testimonialCarousel} className="swiper">
+    <>
+    <div className="py-10 shadow-lg bg-gradient-to-b from-white via-neutral-400 rounded-2xl">
+    <div className="text-3xl md:text-4xl font-bold tracking-wide text-sky-600 uppercase px-5"> Some Of Our Blogs </div>
+    <Swiper {...testimonialCarousel} className="swiper">
     {TESTIMONIALS_DATA.map((item, index) => (
       
       <SwiperSlide key={index}>
@@ -144,6 +147,8 @@ export default function FixedColumns() {
       </SwiperSlide>
     ))}
       </Swiper>
+    </div>
+    
     
     </>
   );
