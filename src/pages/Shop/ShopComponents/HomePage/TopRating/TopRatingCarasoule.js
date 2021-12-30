@@ -22,7 +22,7 @@ const TopRatingSlider = () => {
         <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
           <div className="flex ">
             <Icon style={{ fontSize: '55px' }} />
-            <h2 className=" text-5xl">Flash Sale</h2>
+            <h2 className=" text-5xl">Top Rated</h2>
           </div>
         </Card.Header>
         <Swiper
