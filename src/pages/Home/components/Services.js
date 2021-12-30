@@ -33,7 +33,7 @@ const Service = () => {
               <Col key={key} lg={4} sm={6}>
                 <div className="shadow-sm shadow-cyan-500 rounded-xl mx-auto mb-5 bg-gradient-to-b from-gray-300 via-gray-100">
                   <div className="mx-auto ">
-                  <img src={Ser1} className="mx-auto " alt="img"/>
+                  <img src={service.img} className="mx-auto " alt="img"/>
                   </div>
                   <div className="pb-10">
                   <h5 className="text-2xl text-center font-semibold">{service.title}</h5>

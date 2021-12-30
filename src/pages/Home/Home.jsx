@@ -16,7 +16,7 @@ const Home = () => {
       <Service />
       <Shop/>
       <Masonary/>
-      <About />
+      {/* <About /> */}
     </>
   );
 };
