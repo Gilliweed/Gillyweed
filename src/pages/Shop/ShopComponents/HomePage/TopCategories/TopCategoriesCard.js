@@ -10,7 +10,7 @@ const Container = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 100%;
+  height: 110%;
   object-fit: cover;
   ${mobile({ height: '20vh' })}
 `;
@@ -45,7 +45,9 @@ const TopCategoriesCard = (props) => {
   return (
     <Container>
       <NavLink to="/productDesc " exact style={{ color: 'black' }}>
-      <Image src={props.img} />
+        
+      <Image src={props.img} 
+      className = 'rounded-3xl p-2'/>
       <Info>
         <Title>{props.head}</Title>
         <Button>SHOP NOW</Button>

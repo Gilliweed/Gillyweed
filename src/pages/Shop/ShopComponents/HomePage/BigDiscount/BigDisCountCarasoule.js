@@ -64,6 +64,8 @@ const BigDiscountSlider = () => {
                 img={product.img}
                 para={product.text}
                 head={product.h1}
+                price ={product.price}
+                highprice = {product.highprice}
               ></BigDiscount>
             </SwiperSlide>
           ))}

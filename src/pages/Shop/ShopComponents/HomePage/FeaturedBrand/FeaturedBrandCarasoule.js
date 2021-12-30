@@ -14,9 +14,11 @@ const FeaturedBrandSlider = () => {
       // style={{ backgroundColor: 'rgb(196 224 191 / 38%)' }}
     >
       <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
-        <h2>
-          <Icon style={{ fontSize: '35px' }} /> Featured Brand
-        </h2>
+        
+        <div className='flex ml-1'>
+          <Icon style={{ fontSize: '55px' }} /> 
+          <h2 className=' text-5xl'>Featured Products</h2>
+          </div>
       </Card.Header>
       <Swiper
         pagination={{
@@ -55,6 +57,7 @@ const FeaturedBrandSlider = () => {
               img={product.img}
               para={product.text}
               head={product.h1}
+              price = {product.price}
             ></FlashDealCard>
           </SwiperSlide>
         ))}

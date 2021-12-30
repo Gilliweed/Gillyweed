@@ -22,7 +22,7 @@ const TopRating = {
     },
     {
       id: 2,
-      img: 'https://i.ibb.co/DG69bQ4/2.png',
+      img: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-06.jpg',
       h1: 'AUTUMN COLL',
       text: '',
       bg: 'fcf1ed',
@@ -46,12 +46,7 @@ const TopRating = {
       h1: 'LOUNGEWEAR LOVE',
       text: tex,
     },
-    {
-      id: 5,
-      img: 'https://kreditings.com/wp-content/uploads/2021/06/Sexy-Jannat-Zubair-Indian-Girls-Png-Hd.png',
-      h1: 'Top quality',
-      text: tex,
-    },
+    
   ],
 };
 export default TopRating;

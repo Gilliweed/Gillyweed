@@ -8,7 +8,7 @@ import FeaturedBrandSlider from '../ShopComponents/HomePage/FeaturedBrand/Featur
 import Categories from '../ShopComponents/HomePage/Categories/Categories';
 import BigDiscountSlider from '../ShopComponents/HomePage/BigDiscount/BigDisCountCarasoule';
 // import  Navbar  from './ShopComponents/Navbar';
-// import  Footer  from './ShopComponents/Footer';
+
 
 const Home = () => {
   return (
@@ -22,11 +22,11 @@ const Home = () => {
         <div style={{ marginTop: '22px' }}></div>
         <TopCategoriesSlider />
         <div style={{ marginTop: '22px' }}></div>
-        <MoreForYouSlider />
+        {/* <MoreForYouSlider /> */}
         <div style={{ marginTop: '22px' }}></div>
         <NewArrivalSlider />
         <div style={{ marginTop: '22px' }}></div>
-        <Categories />
+        {/* <Categories /> */}
         <div style={{ marginTop: '22px' }}></div>
         <TopRatingSlider />
         <div style={{ marginTop: '22px' }}></div>

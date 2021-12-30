@@ -15,13 +15,15 @@ const FlashSlider = () => {
             // width: '95%',
           }}>
         <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
-          <h2>
-            <Icon style={{ fontSize: '35px' }} /> Flash Sale
-          </h2>
+          <div className='flex '>
+          <Icon style={{ fontSize: '55px' }} /> 
+          <h2 className=' text-5xl'>Flash Sale</h2>
+          </div>
         </Card.Header>
         <Swiper
           pagination={{
             clickable: true,
+            pagination:true
           }}
           breakpoints={{
             '@0.00': {
@@ -33,7 +35,7 @@ const FlashSlider = () => {
               spaceBetween: 20,
             },
             '@1.00': {
-              slidesPerView: 5,
+              slidesPerView: 4,
               spaceBetween: 20,
             },
             '@1.50': {
@@ -56,6 +58,7 @@ const FlashSlider = () => {
                 img={product.img}
                 para={product.text}
                 head={product.h1}
+                price = {product.price}
               ></FlashDealCard>
             </SwiperSlide>
           ))}

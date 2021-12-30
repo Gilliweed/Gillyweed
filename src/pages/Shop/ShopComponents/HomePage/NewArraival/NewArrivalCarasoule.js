@@ -16,9 +16,11 @@ const NewArrivalSlider = () => {
             // width: '95%',
           }}>
         <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
-          <h2>
-            <Icon style={{ fontSize: '35px' }} /> New Arrived
-          </h2>
+         
+          <div className='flex '>
+          <Icon style={{ fontSize: '55px' }} /> 
+          <h2 className=' text-5xl'>New Arrival</h2>
+          </div>
         </Card.Header>
         <Swiper
           pagination={{
@@ -57,6 +59,8 @@ const NewArrivalSlider = () => {
                 img={product.img}
                 para={product.text}
                 head={product.h1}
+                price = {product.price}
+                detail = {product.detail}
               ></NewArrival>
             </SwiperSlide>
           ))}
