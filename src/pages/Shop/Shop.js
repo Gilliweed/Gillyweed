@@ -6,21 +6,11 @@ import Navbar from './ShopComponents/Navbar';
 import Footer from './ShopComponents/Footer';
 import MoreProductList from './ShopComponents/Products';
 import NewsLetter from '../../components/NewsLetter';
-import {Example} from './ShopComponents/HomePage/FlashDeal/FlashDealCard';
+
 const Shop = () => {
   return (
-    <div style={{}}>
-      <Navbar />
-      <div className="" style={{}}>
+    <div >
         <Home/>
-        {/* <MoreProductList /> */}
-        <div className='bg-blue'>
-          here it is imported
-          <Example />
-        </div>
-      </div>
-      <NewsLetter />
-      {/* <Footer /> */}
     </div>
   );
 };

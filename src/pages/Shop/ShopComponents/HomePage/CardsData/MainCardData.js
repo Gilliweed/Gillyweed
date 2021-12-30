@@ -63,7 +63,7 @@ const MainCardData = [
   },
   {
     id: 5,
-    img: 'https://kreditings.com/wp-content/uploads/2021/06/Sexy-Jannat-Zubair-Indian-Girls-Png-Hd.png',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtxQJE0njCUlufji0bqAj7fDdqdYZlkJyf-g&usqp=CAU',
     h1: 'Top quality',
     text: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
   },

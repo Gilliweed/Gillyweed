@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-// import FlashDealCard from './FlashDealCard';
+import FlashDealCard from './FlashDealCard';
 import FlashDealCardData from '../CardsData/FlashDealData';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -52,11 +52,11 @@ const FlashSlider = () => {
         >
           {FlashDealCardData.products.map((product) => (
             <SwiperSlide style={{ backgroundColor: '' }}>
-              {/* <FlashDealCard
+              <FlashDealCard
                 img={product.img}
                 para={product.text}
                 head={product.h1}
-              ></FlashDealCard> */}
+              ></FlashDealCard>
             </SwiperSlide>
           ))}
         </Swiper>
