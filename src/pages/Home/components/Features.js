@@ -27,15 +27,15 @@ const Feature = () => {
             Isn't it too much you can do here?<br/><br/>
             come on let me drive you to other pages..
           </div>
-          <div className="col-start-3 col-end-5 p-24 rounded-xl my-4 inline-block capitalize text-white text-center text-3xl align-middle" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(" +features[2].img+ ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }}>
-            <p className="mx-auto capitalize ">Your Shop</p>
+          <div className="col-start-3 col-end-5 p-auto rounded-xl mt-4 mb-6 inline-block capitalize text-white text-center text-3xl align-middle" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(" +features[2].img+ ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }}>
+            <p className="my-auto capitalize text-center align-bottom">Your Shop</p>
           </div>
           <div className="col-start-5 col-end-8 grid grid-rows-2 grid-col-2 gap-4">
-            <div className="col-start-1 col-end-8 row-span-1 p-32 rounded-xl text-white py-auto capitalize text-center text-3xl"  style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(" +features[1].img+ ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }} >
+            <div className="col-start-1 col-end-8 row-span-1 p-auto rounded-xl text-white py-auto capitalize text-center text-3xl"  style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(" +features[1].img+ ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }} >
             {/* <img src={features[1].img}/> */}
             Write Blogs
             </div>
-            <div className="col-start-1 col-end-4 row-span-2 h-fit p-24 rounded-xl text-white capitalize py-auto text-center text-3xl"  style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(" +features[0].img+ ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }}>
+            <div className="col-start-1 col-end-4 row-span-2 h-fit p-24 rounded-xl text-white capitalize py-auto text-center text-3xl"  style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(" +features[0].img+ ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }}>
             {/* <img src={features[0].img} className=""/> */}
              Whats tranding?
             </div>
