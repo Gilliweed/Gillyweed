@@ -3,7 +3,7 @@ import Navbar from "../ShopComponents/Navbar";
 // import Announcement from "../components/Announcement";
 import MoreProducts from "../ShopComponents/Products";
 // import Newsletter from "../components/Newsletter";
-import Footer from "../ShopComponents/Footer";
+
 import { mobile } from "../ShopComponents/responsive";
 
 const Container = styled.div``;
@@ -79,7 +79,7 @@ const ProductList = () => {
 
       <MoreProducts />
       {/* <Newsletter />*/}
-      <Footer /> 
+   
     </Container>
   );
 };

@@ -23,9 +23,11 @@ const BigDiscountSlider = () => {
         }
       >
         <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
-          <h2>
-            <Icon style={{ fontSize: '35px' }} /> Big Discount
-          </h2>
+          
+          <div className='flex ml-2'>
+          <Icon style={{ fontSize: '55px' }} /> 
+          <h2 className=' text-5xl'>Big Discount</h2>
+          </div>
         </Card.Header>
         <Swiper
           pagination={{
@@ -64,6 +66,8 @@ const BigDiscountSlider = () => {
                 img={product.img}
                 para={product.text}
                 head={product.h1}
+                price ={product.price}
+                highprice = {product.highprice}
               ></BigDiscount>
             </SwiperSlide>
           ))}

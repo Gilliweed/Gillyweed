@@ -15,19 +15,19 @@ export default function Footer() {
           <div className="grid grid-row-2">
 
             <div className="social-buttons pt-12 pb-6">
-              <Link href="#" className="social-buttons__button social-button social-button--facebook" aria-label="Facebook">
+              <Link href="#" className="social-buttons__button social-button social-button--facebook ml-1" aria-label="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </Link>
-              <Link href="#" className="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+              <Link href="#" className="social-buttons__button social-button social-button--linkedin ml-1" aria-label="LinkedIn">
                 <i className="fab fa-linkedin-in"></i>
               </Link>
-              <Link href="#" className="social-buttons__button social-button social-button--snapchat" aria-label="SnapChat">
+              <Link href="#" className="social-buttons__button social-button social-button--snapchat ml-1" aria-label="SnapChat">
                 <i className="fab fa-snapchat-ghost"></i>
               </Link>
-              <Link href="#" className="social-buttons__button social-button social-button--github" aria-label="GitHub">
+              <Link href="#" className="social-buttons__button social-button social-button--github ml-1" aria-label="GitHub">
                 <i className="fab fa-github"></i>
               </Link>
-              <Link href="#" className="social-buttons__button social-button social-button--codepen" aria-label="CodePen">
+              <Link href="#" className="social-buttons__button social-button social-button--codepen ml-1" aria-label="CodePen">
                 <i className="fab fa-codepen"></i>
               </Link>
             </div>
@@ -58,7 +58,7 @@ export default function Footer() {
           <Box as="ul" sx={styles.footerNav}>
             {footerNav.map(({ path, label }, i) => (
               <li key={i}>
-                <Link className="text-lg" href={path} key={i} variant="footer">
+                <Link style={{fontSize:"1.125rem"}} href={path} key={i} variant="footer">
                   {label}
                 </Link>
               </li>

@@ -1,7 +1,7 @@
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
 // import Announcement from "../components/Announcement";
-import Footer from "../ShopComponents/Footer";
+
 import Navbar from "../ShopComponents/Navbar";
 // import Newsletter from "../components/Newsletter";
 import { mobile } from "../ShopComponents/responsive";
@@ -162,7 +162,7 @@ const Product = () => {
         </InfoContainer>
       </Wrapper>
        {/* <Newsletter /> */}
-      <Footer /> 
+
     </Container>
   );
 };

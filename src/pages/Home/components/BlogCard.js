@@ -24,7 +24,6 @@ const BlogCard = ({ image, text, title, Date }) => {
 
             <div class="mt-1">
               {text}
-              <span class="text-gray-600 text-sm">   /wk</span>
             </div>
             <div class="mt-4">
               <button class="text-gray-200 text-md font-semibold bg-stone-800 rounded-full px-3 py-1 hover:bg-stone-300 hover:text-black">Read Me More </button>

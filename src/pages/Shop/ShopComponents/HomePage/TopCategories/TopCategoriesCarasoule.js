@@ -16,7 +16,10 @@ const Container = styled.div`
 const TopCategoriesSlider = () => {
   return (
     <>
-      <h2 style={{ marginLeft: '16px' }}>Top Categories</h2>
+      <div className='flex '>
+          
+          <h2 className=' text-5xl'>Collections</h2>
+          </div>
       <Container>
         {TopCategroiesData.products.map((product) => (
           <TopCategoriesCard
