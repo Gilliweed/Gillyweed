@@ -1,10 +1,9 @@
 import React from "react";
+import AboutC from "./about.component";
 const About = () => {
   return (
     <div className="container">
-      <h1 className="text-center" style={{ paddingTop: "30%" }}>
-        About
-      </h1>
+      <AboutC />
     </div>
   );
 };
