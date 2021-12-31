@@ -1,120 +1,3 @@
-// import { Badge } from '@material-ui/core';
-// import { Search, ShoppingCartOutlined } from '@mui/icons-material';
-// import styled from 'styled-components';
-// import { mobile } from './responsive';
-// import { NavLink } from 'react-router-dom';
-// const Container = styled.div`
-//   height: 80px;
-//   border-bottom: 1px solid black;
-
-//   ${mobile({ height: '50px' })}
-// `;
-
-// const Wrapper = styled.div`
-//   padding: 10px 20px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   ${mobile({ padding: '10px 0px' })}
-// `;
-
-// const Left = styled.div`
-//   flex: 1;
-//   display: flex;
-//   align-items: center;
-// `;
-
-// const Language = styled.span`
-//   font-size: 14px;
-//   cursor: pointer;
-//   ${mobile({ display: 'none' })}
-// `;
-
-// const SearchContainer = styled.div`
-//   border: 0.5px solid lightgray;
-//   display: flex;
-//   align-items: center;
-//   margin-left: 25px;
-//   padding: 5px;
-// `;
-
-// const Input = styled.input`
-//   border: none;
-//   ${mobile({ width: '50px' })}
-// `;
-
-// const Center = styled.div`
-//   flex: 1;
-//   text-align: center;
-// `;
-
-// const Logo = styled.h1`
-//   font-weight: bold;
-//   ${mobile({ fontSize: '24px' })}
-// `;
-// const Right = styled.div`
-//   flex: 1;
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-end;
-//   ${mobile({ flex: 2, justifyContent: 'center' })}
-// `;
-
-// const MenuItem = styled.div`
-//   font-size: 14px;
-//   cursor: pointer;
-//   margin-left: 25px;
-//   ${mobile({ fontSize: '12px', marginLeft: '10px' })}
-// `;
-
-// const Navbar = () => {
-//   return (
-//     <Container>
-//       <Wrapper>
-//         <Left>
-//           <Language>EN</Language>
-//           <SearchContainer>
-//             <Input placeholder="Search" />
-//             <Search style={{ color: 'gray', fontSize: 16 }} />
-//           </SearchContainer>
-//         </Left>
-//         <Center>
-//           <Logo>GillyWeed</Logo>
-//         </Center>
-//         <Right>
-//           <MenuItem>REGISTER</MenuItem>
-//           <MenuItem>SIGN IN</MenuItem>
-//           <NavLink to="/cart " exact>
-//             <MenuItem>
-//               <Badge badgeContent={4} color="primary">
-//                 <ShoppingCartOutlined />
-//               </Badge>
-//             </MenuItem>
-//           </NavLink>
-//         </Right>
-//       </Wrapper>
-//     </Container>
-//   );
-// };
-
-// export default Navbar;
-
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState } from 'react';
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
 import {
@@ -262,7 +145,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white z-50 relative">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog
@@ -406,14 +289,14 @@ export default function Navbar() {
               
 
               <div className="border-t border-gray-200 py-6 px-4">
-                <a href="#" className="-m-2 p-2 flex items-center">
+                <a href="/" className="-m-2 p-2 flex items-center">
                   <img
-                    src="https://tailwindui.com/img/flags/flag-india.svg"
+                    src="https://cdn.britannica.com/97/1597-004-05816F4E/Flag-India.jpg"
                     alt=""
                     className="w-5 h-auto block flex-shrink-0"
                   />
                   <span className="ml-3 block text-base font-medium text-gray-900">
-                    CAD
+                   IND
                   </span>
                   <span className="sr-only">, change currency</span>
                 </a>
@@ -431,7 +314,7 @@ export default function Navbar() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
           <div className="border-b border-gray-200">
-            <div className="h-16 flex items-center">
+            <div className="h-16 flex items-center justify-end">
               <button
                 type="button"
                 className="bg-white p-2 rounded-md text-gray-400 lg:hidden"
@@ -445,7 +328,7 @@ export default function Navbar() {
              
 
               {/* Flyout menus */}
-              <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
+              <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch mr-auto">
                 <div className="h-full flex space-x-8">
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
@@ -570,20 +453,7 @@ export default function Navbar() {
 
              
 
-                <div className="hidden lg:ml-8 lg:flex">
-                  <a
-                    href="#"
-                    className="text-gray-700 hover:text-gray-800 flex items-center"
-                  >
-                    <img
-                      src="https://tailwindui.com/img/flags/flag-india.svg"
-                      alt=""
-                      className="w-5 h-auto block flex-shrink-0"
-                    />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
-                    <span className="sr-only">, change currency</span>
-                  </a>
-                </div>
+                
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
@@ -594,7 +464,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Cart */}
-                <div className="ml-4 flow-root lg:ml-6">
+                <div className="ml-4 flow-root lg:ml-auto">
                   <a href="#" className="group -m-2 p-2 flex items-center">
                     <ShoppingBagIcon
                       className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
@@ -604,6 +474,20 @@ export default function Navbar() {
                       0
                     </span>
                     <span className="sr-only">items in cart, view bag</span>
+                  </a>
+                </div>
+                <div className="hidden lg:ml-8 lg:flex items-end ">
+                  <a
+                    href="#"
+                    className="text-gray-700 hover:text-gray-800 flex items-center"
+                  >
+                    <img
+                      src="https://cdn.britannica.com/97/1597-004-05816F4E/Flag-India.jpg"
+                      alt=""
+                      className="w-5 h-auto block flex-shrink-0"
+                    />
+                    <span className="ml-3 block text-sm font-medium">IND</span>
+                    <span className="sr-only">, change currency</span>
                   </a>
                 </div>
               </div>

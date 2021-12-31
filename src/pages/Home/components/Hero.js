@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className="  bg-no-repeat bg-left-bottom md:bg-center rounded-2xl" >
       <div className=" rounded-2xl" >
-        <Swiper  navigation={true}   className="mySwiper " autoplay={{
+        <Swiper className="mySwiper " autoplay={{
           delay: 4000,
           disableOnInteraction: false
         }} effect={'fade'}> 
@@ -19,7 +19,7 @@ const Hero = () => {
                 <SwiperSlide className=" rouded-lg bg-center pb-24" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(" +items.img+ ")", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }} >
                     <Row className="align-items-center">
                       <Col lg={8}>
-                        <Swiper  navigation={true} className="mySwiper py-32 rouded-2xl " autoplay={{
+                        <Swiper className="mySwiper py-32 rouded-2xl " autoplay={{
                           delay: 4000,
                           disableOnInteraction: false}}>                         
                             {Data.map((items, index) => {
