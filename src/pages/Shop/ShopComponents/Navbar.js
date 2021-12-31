@@ -279,7 +279,7 @@ export default function Navbar() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-25" />
+            <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-100" />
           </Transition.Child>
 
           <Transition.Child
@@ -403,29 +403,12 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="border-t border-gray-200 py-6 px-4 space-y-6">
-                <div className="flow-root">
-                  <a
-                    href="#"
-                    className="-m-2 p-2 block font-medium text-gray-900"
-                  >
-                    Sign in
-                  </a>
-                </div>
-                <div className="flow-root">
-                  <a
-                    href="#"
-                    className="-m-2 p-2 block font-medium text-gray-900"
-                  >
-                    Create account
-                  </a>
-                </div>
-              </div>
+              
 
               <div className="border-t border-gray-200 py-6 px-4">
                 <a href="#" className="-m-2 p-2 flex items-center">
                   <img
-                    src="https://tailwindui.com/img/flags/flag-canada.svg"
+                    src="https://tailwindui.com/img/flags/flag-india.svg"
                     alt=""
                     className="w-5 h-auto block flex-shrink-0"
                   />
@@ -441,9 +424,7 @@ export default function Navbar() {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="bg-indigo-600 h-10 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
-          Get free delivery on orders over $100
-        </p>
+        
 
         <nav
           aria-label="Top"
@@ -461,16 +442,7 @@ export default function Navbar() {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
-                <a href="#">
-                  <span className="sr-only">Workflow</span>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                    alt=""
-                  />
-                </a>
-              </div>
+             
 
               {/* Flyout menus */}
               <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
@@ -596,22 +568,7 @@ export default function Navbar() {
                 </div>
               </Popover.Group>
 
-              <div className="ml-auto flex items-center">
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a
-                    href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                  >
-                    Sign in
-                  </a>
-                  <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a
-                    href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                  >
-                    Create account
-                  </a>
-                </div>
+             
 
                 <div className="hidden lg:ml-8 lg:flex">
                   <a
@@ -619,7 +576,7 @@ export default function Navbar() {
                     className="text-gray-700 hover:text-gray-800 flex items-center"
                   >
                     <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
+                      src="https://tailwindui.com/img/flags/flag-india.svg"
                       alt=""
                       className="w-5 h-auto block flex-shrink-0"
                     />
@@ -650,7 +607,7 @@ export default function Navbar() {
                   </a>
                 </div>
               </div>
-            </div>
+
           </div>
         </nav>
       </header>

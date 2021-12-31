@@ -12,7 +12,7 @@ const FeaturedBrandSlider = () => {
   SwiperCore.use([Autoplay,Navigation]);
   return (
     <Card
-      className="border-0 "
+      className="border-0 mx-4"
       // border="success"
       // style={{ backgroundColor: 'rgb(196 224 191 / 38%)' }}
     >
@@ -31,15 +31,15 @@ const FeaturedBrandSlider = () => {
             spaceBetween: 10,
           },
           '@0.75': {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 20,
           },
           '@1.00': {
-            slidesPerView: 5,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
           '@1.50': {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 20,
           },
           '@2.00': {

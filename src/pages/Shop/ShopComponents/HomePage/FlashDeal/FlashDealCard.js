@@ -15,7 +15,7 @@ const FlashDealCard = (props) => {
               <img
                 src={props.img}
                 alt={props.img}
-                className=" w-full h-96 object-center object-cover z-40"
+                className=" w-full h-96 md:h-70 sm:h-46  object-center object-fill  z-40"
               />
             </div>
           </div>
