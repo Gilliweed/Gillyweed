@@ -1,6 +1,7 @@
-import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import SwiperCore, {Autoplay,Pagination,Navigation} from 'swiper';
+import "swiper/css";
+import "swiper/css/navigation";
 import { Card } from 'react-bootstrap';
 import TopRatingCard from './TopRatingCard';
 import TopRatingData from '../CardsData/TopRating';
@@ -9,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 import Icon from '@mui/icons-material/StarBorderPurple500';
 
 const TopRatingSlider = () => {
+  SwiperCore.use([Autoplay,Pagination,Navigation]);
   return (
     <>
       <div
@@ -26,9 +28,7 @@ const TopRatingSlider = () => {
           </div>
         </Card.Header>
         <Swiper
-          pagination={{
-            clickable: true,
-          }}
+          navigation={true}
           breakpoints={{
             '@0.00': {
               slidesPerView: 2,

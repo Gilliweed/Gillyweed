@@ -3,10 +3,13 @@ import FlashDealCard from './FeaturedBrandCard';
 import FeaturedBrandData from '../CardsData/FeaturedBrandData';
 // import './FeaturedBrand.css';
 import Icon from '@mui/icons-material/BrandingWatermark';
-import { Pagination } from 'swiper';
+import SwiperCore, {Autoplay,Navigation} from 'swiper';
+import "swiper/css";
+import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { NavLink } from 'react-router-dom';
 const FeaturedBrandSlider = () => {
+  SwiperCore.use([Autoplay,Navigation]);
   return (
     <Card
       className="border-0 "
@@ -21,9 +24,7 @@ const FeaturedBrandSlider = () => {
           </div>
       </Card.Header>
       <Swiper
-        pagination={{
-          clickable: true,
-        }}
+       navigation={true}
         breakpoints={{
           '@0.00': {
             slidesPerView: 2,

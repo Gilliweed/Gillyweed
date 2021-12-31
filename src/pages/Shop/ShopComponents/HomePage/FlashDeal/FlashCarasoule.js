@@ -2,13 +2,14 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import FlashDealCard from './FlashDealCard';
 import FlashDealCardData from '../CardsData/FlashDealData';
-import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Icon from '@mui/icons-material/BoltOutlined';
 import { NavLink } from 'react-router-dom';
-
-
+import SwiperCore, {Autoplay,Pagination,Navigation} from 'swiper';
+import "swiper/css";
+import "swiper/css/navigation";
 const FlashSlider = () => {
+  SwiperCore.use([Autoplay,Pagination,Navigation]);
   return (
     <>
       <div className=" border-0 " style={{
@@ -25,6 +26,7 @@ const FlashSlider = () => {
             clickable: true,
             pagination:true
           }}
+          navigation={true}
           breakpoints={{
             '@0.00': {
               slidesPerView: 2,

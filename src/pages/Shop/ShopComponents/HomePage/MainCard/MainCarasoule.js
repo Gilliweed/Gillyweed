@@ -3,19 +3,21 @@ import Slider from 'react-slick';
 import { Card } from 'react-bootstrap';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay, EffectFade } from 'swiper';
+import SwiperCore, { Autoplay } from 'swiper';
 import 'swiper/css/effect-fade';
 import MainCard from './MainCards';
 import MainCardData from '../CardsData/MainCardData';
+import "swiper/css";
 const ItemSlider = () => {
+  SwiperCore.use([Autoplay]);
   return (
     <Card className="container border-0 ">
       <Swiper
         style={{ width: '100%' }}
-        navigation={true}
+        // navigation={true}
         className="mySwiper "
         autoplay={{
-          delay: 4000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         effect={'fade'}

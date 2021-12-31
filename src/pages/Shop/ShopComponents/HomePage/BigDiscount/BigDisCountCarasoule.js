@@ -1,15 +1,15 @@
 import React from 'react';
-import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { NavLink } from 'react-router-dom';
-
+import SwiperCore, {Autoplay,Navigation} from 'swiper';
+import "swiper/css";
+import "swiper/css/navigation";
 import { Card } from 'react-bootstrap';
 import BigDiscount from './BigDiscountCard';
 import BigDiscountData from '../CardsData/BigDiscountData';
-import SwiperCore from 'swiper';
 import Icon from '@mui/icons-material/BrandingWatermark';
 
-SwiperCore.use([Pagination]);
+SwiperCore.use([Autoplay,Navigation]);
 
 const BigDiscountSlider = () => {
   return (
@@ -30,9 +30,7 @@ const BigDiscountSlider = () => {
           </div>
         </Card.Header>
         <Swiper
-          pagination={{
-            clickable: true,
-          }}
+         navigation={true}
           breakpoints={{
             '@0.00': {
               slidesPerView: 2,
