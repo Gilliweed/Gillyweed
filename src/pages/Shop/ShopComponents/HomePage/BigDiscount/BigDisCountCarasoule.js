@@ -8,7 +8,7 @@ import { Card } from 'react-bootstrap';
 import BigDiscount from './BigDiscountCard';
 import BigDiscountData from '../CardsData/BigDiscountData';
 import Icon from '@mui/icons-material/BrandingWatermark';
-
+import Btn from '../../../../../components/btn/btn';
 SwiperCore.use([Autoplay,Navigation]);
 
 const BigDiscountSlider = () => {
@@ -22,13 +22,15 @@ const BigDiscountSlider = () => {
           }
         }
       >
-        <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
+      <div className="bg-indigo-600 rounded-t-3xl my-3 text-white">
+      <Card.Header className="border-0" >
           
-          <div className='flex ml-2'>
-          <Icon style={{ fontSize: '55px' }} /> 
-          <h2 className=' text-5xl'>Big Discount</h2>
+          <div className='flex my-4'>
+          <h2 className=' text-5xl mx-auto'>Big Discount</h2>
           </div>
         </Card.Header>
+      </div>
+        
         <Swiper
          navigation={true}
           breakpoints={{
@@ -45,11 +47,11 @@ const BigDiscountSlider = () => {
               spaceBetween: 20,
             },
             '@1.50': {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 20,
             },
             '@2.00': {
-              slidesPerView: 5,
+              slidesPerView: 3,
               spaceBetween: 20,
             },
           }}
@@ -75,9 +77,7 @@ const BigDiscountSlider = () => {
           style={{ backgroundColor: 'white' }}
         >
           <Card.Link className="text-right" href="#">
-            <NavLink to="/moreProducts" exact style={{ color: 'black' }}>
-              More
-            </NavLink>
+          <Btn link="/moreProducts" title="More" styles="bg-red-400 text-white"/>
            
             
           </Card.Link>

@@ -7,7 +7,7 @@ const FlashDealCard = (props) => {
   return (
     <div>
       <Card
-        className=" text-dark border-0"
+        className=" text-dark border-0 rounded-3xl"
       >
         <NavLink to="/productDesc " exact>
           <div>
@@ -15,7 +15,7 @@ const FlashDealCard = (props) => {
               <img
                 src={props.img}
                 alt={props.img}
-                className=" w-full h-96 md:h-70 sm:h-46  object-center object-fill  z-40"
+                className=" w-full h-64 md:h-70 sm:h-46  object-center object-fill  z-40"
               />
             </div>
           </div>
@@ -30,11 +30,11 @@ const FlashDealCard = (props) => {
             </div>
             <div className="text-xl flex m-2 justify-center">{props.price}</div>
           </div>
-          <div className="flex m-2 justify-center">
+          {/* <div className="flex m-2 justify-center">
             <div className="w-6 h-6 m-1 bg-slate-800 rounded-full" />
             <div className="w-6 h-6 m-1 bg-blue-600 rounded-full" />
             <div className="w-6 h-6 m-1 bg-red-400 rounded-full" />
-          </div>
+          </div> */}
         </div>
       </Card>
     </div>

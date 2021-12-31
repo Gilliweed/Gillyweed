@@ -20,10 +20,10 @@ const ItemSlider = () => {
           delay: 2000,
           disableOnInteraction: false,
         }}
-        effect={'fade'}
+        effect={"fade"}
       >
         {MainCardData.map((product) => (
-          <SwiperSlide style={{ backgroundColor: '' }}>
+          <SwiperSlide style={{ backgroundColor: "" }}>
             <MainCard
               img1={product.img1}
               img2={product.img2}

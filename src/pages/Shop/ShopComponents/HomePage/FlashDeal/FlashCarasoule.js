@@ -5,26 +5,34 @@ import FlashDealCardData from '../CardsData/FlashDealData';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Icon from '@mui/icons-material/BoltOutlined';
 import { NavLink } from 'react-router-dom';
-import SwiperCore, {Autoplay,Pagination,Navigation} from 'swiper';
-import "swiper/css";
-import "swiper/css/navigation";
+import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
+import Btn from '../../../../../components/btn/btn';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 const FlashSlider = () => {
-  SwiperCore.use([Autoplay,Pagination,Navigation]);
+  SwiperCore.use([Autoplay, Pagination, Navigation]);
   return (
     <>
-      <div className="mx-4 border-0 " style={{
+      <div
+        className="mx-4 border-0 "
+        style={
+          {
             // width: '95%',
-          }}>
+          }
+        }
+      >
         <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
-          <div className='flex '>
-          <Icon style={{ fontSize: '55px' }} /> 
-          <h2 className=' text-5xl'>Flash Sale</h2>
+          <div className="block bg-slate-400 pb-32 pt-8 px-8 rounded-t-3xl">
+            <h2 className=" text-5xl font-semibold text-white italic font-mono">
+              Flash Sale
+            </h2>
           </div>
         </Card.Header>
         <Swiper
           pagination={{
             clickable: true,
-            pagination:true
+            pagination: true,
           }}
           navigation={true}
           breakpoints={{
@@ -49,18 +57,21 @@ const FlashSlider = () => {
               spaceBetween: 20,
             },
           }}
-          className="mySwiper"
+          className="mySwiper relative -mt-20"
           style={{
             width: '95%',
           }}
         >
           {FlashDealCardData.products.map((product) => (
-            <SwiperSlide style={{ backgroundColor: '' }}>
+            <SwiperSlide
+              style={{ backgroundColor: '' }}
+              className="rounded-3xl"
+            >
               <FlashDealCard
                 img={product.img}
                 para={product.text}
                 head={product.h1}
-                price = {product.price}
+                price={product.price}
               ></FlashDealCard>
             </SwiperSlide>
           ))}
@@ -70,7 +81,8 @@ const FlashSlider = () => {
           style={{ backgroundColor: 'white' }}
         >
           <Card.Link className="text-right" href="#">
-          <NavLink to="/moreProducts" exact style={{ color: "black" }}>More</NavLink>
+            <Btn link="/moreProducts" title="More" styles="bg-red-400 text-white" />
+
           </Card.Link>
         </Card.Header>
       </div>

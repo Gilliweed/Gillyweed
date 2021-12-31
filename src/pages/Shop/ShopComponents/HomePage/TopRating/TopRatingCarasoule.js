@@ -5,26 +5,15 @@ import "swiper/css/navigation";
 import { Card } from 'react-bootstrap';
 import TopRatingCard from './TopRatingCard';
 import TopRatingData from '../CardsData/TopRating';
-// import './TopRating.css';
-import { NavLink } from 'react-router-dom';
-import Icon from '@mui/icons-material/StarBorderPurple500';
-
+import Btn from '../../../../../components/btn/btn';
 const TopRatingSlider = () => {
   SwiperCore.use([Autoplay,Pagination,Navigation]);
   return (
     <>
-      <div
-        className="mx-4 border-0 "
-        style={
-          {
-            // width: '95%',
-          }
-        }
-      >
+      <div className="mx-10 border-0 "style={{}}>
         <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
           <div className="flex ">
-            <Icon style={{ fontSize: '55px' }} />
-            <h2 className=" text-5xl">Top Rated</h2>
+            <h2 className=" text-5xl pl-4 py-4">Top Rated</h2>
           </div>
         </Card.Header>
         <Swiper
@@ -53,6 +42,7 @@ const TopRatingSlider = () => {
           }}
           className="mySwiper"
           style={{
+
             width: '95%',
           }}
         >
@@ -71,9 +61,8 @@ const TopRatingSlider = () => {
           style={{ backgroundColor: 'white' }}
         >
           <Card.Link className="text-right" href="#">
-            <NavLink to="/moreProducts" exact style={{ color: 'black' }}>
-              More
-            </NavLink>
+          <Btn link="/moreProducts" title="More" styles="bg-red-400 text-white"/>
+      
           </Card.Link>
         </Card.Header>
       </div>

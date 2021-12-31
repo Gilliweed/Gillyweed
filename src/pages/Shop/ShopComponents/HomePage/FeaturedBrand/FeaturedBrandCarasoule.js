@@ -1,13 +1,12 @@
 import { Card } from 'react-bootstrap';
 import FlashDealCard from './FeaturedBrandCard';
 import FeaturedBrandData from '../CardsData/FeaturedBrandData';
-// import './FeaturedBrand.css';
 import Icon from '@mui/icons-material/BrandingWatermark';
 import SwiperCore, {Autoplay,Navigation} from 'swiper';
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { NavLink } from 'react-router-dom';
+import Btn from '../../../../../components/btn/btn';
 const FeaturedBrandSlider = () => {
   SwiperCore.use([Autoplay,Navigation]);
   return (
@@ -18,9 +17,8 @@ const FeaturedBrandSlider = () => {
     >
       <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
         
-        <div className='flex ml-1'>
-          <Icon style={{ fontSize: '55px' }} /> 
-          <h2 className=' text-5xl'>Featured Products</h2>
+        <div className='flex my-4'>
+          <h2 className=' text-5xl mx-auto'>Featured Products</h2>
           </div>
       </Card.Header>
       <Swiper
@@ -39,11 +37,11 @@ const FeaturedBrandSlider = () => {
             spaceBetween: 20,
           },
           '@1.50': {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
           '@2.00': {
-            slidesPerView: 5,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
         }}
@@ -68,9 +66,8 @@ const FeaturedBrandSlider = () => {
         style={{ backgroundColor: 'white' }}
       >
         <Card.Link className="text-right" href="#">
-          <NavLink to="/moreProducts" exact style={{ color: 'black' }}>
-            More
-          </NavLink>
+        <Btn link="/moreProducts" title="More" styles="bg-red-400 text-white"/>
+      
         </Card.Link>
       </Card.Header>
     </Card>

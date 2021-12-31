@@ -1,7 +1,6 @@
 import { Button, Card } from 'react-bootstrap';
 import { ShoppingCartOutlined } from '@mui/icons-material';
-import StarIcon from '@mui/icons-material/Star';
-
+import StarRateRoundedIcon from '@mui/icons-material/StarRateRounded';
 import { NavLink } from 'react-router-dom';
 // import './TopRating.css';
 const TopRatingCard = (props) => {
@@ -22,7 +21,7 @@ const TopRatingCard = (props) => {
             <Card.Title>{props.para}</Card.Title>
           </Card.ImgOverlay>
         </NavLink>
-        <div className="mx-2 rounded-xl z-auto">
+        <div className="relative -mt-6 rounded-b-xl  z-auto bg-blue-600 text-white">
           <div className="">
             <div className="font-mono text-2xl font-semibold flex m-1 justify-center">
               {props.head}
@@ -34,11 +33,11 @@ const TopRatingCard = (props) => {
             <div className="w-6 h-6 m-1 bg-blue-600 rounded-full" />
             <div className="w-6 h-6 m-1 bg-red-400 rounded-full" /> */}
           </div>
-          <div className='flex justify-center text-2xl align-middle' >
-            <StarIcon style={{fontSize:'37px', color:'rgb(202 138 4 )'}}/>
-            <StarIcon style={{fontSize:'37px', color:'rgb(202 138 4 )'}}/>
-            <StarIcon style={{fontSize:'37px', color:'rgb(202 138 4 )'}}/>
-            <StarIcon style={{fontSize:'37px', color:'rgb(202 138 4 )'}}/>
+          <div className='flex justify-center text-2xl align-middle ' >
+            <StarRateRoundedIcon style={{fontSize:'22px', color:'rgb(202 138 4 )'}}/>
+            <StarRateRoundedIcon style={{fontSize:'22px', color:'rgb(202 138 4 )'}}/>
+            <StarRateRoundedIcon style={{fontSize:'22px', color:'rgb(202 138 4 )'}}/>
+            <StarRateRoundedIcon style={{fontSize:'22px', color:'rgb(202 138 4 )'}}/>
           </div>
           <div className='flex justify-center'>
             <p> 22 reviews  </p>

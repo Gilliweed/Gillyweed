@@ -145,7 +145,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white z-50 relative">
+    <div className="bg-white z-30 relative">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog
@@ -286,8 +286,6 @@ export default function Navbar() {
                 ))}
               </div>
 
-              
-
               <div className="border-t border-gray-200 py-6 px-4">
                 <a href="/" className="-m-2 p-2 flex items-center">
                   <img
@@ -296,7 +294,7 @@ export default function Navbar() {
                     className="w-5 h-auto block flex-shrink-0"
                   />
                   <span className="ml-3 block text-base font-medium text-gray-900">
-                   IND
+                    IND
                   </span>
                   <span className="sr-only">, change currency</span>
                 </a>
@@ -307,8 +305,6 @@ export default function Navbar() {
       </Transition.Root>
 
       <header className="relative bg-white">
-        
-
         <nav
           aria-label="Top"
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -325,7 +321,6 @@ export default function Navbar() {
               </button>
 
               {/* Logo */}
-             
 
               {/* Flyout menus */}
               <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch mr-auto">
@@ -451,47 +446,42 @@ export default function Navbar() {
                 </div>
               </Popover.Group>
 
-             
-
-                
-
-                {/* Search */}
-                <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Search</span>
-                    <SearchIcon className="w-6 h-6" aria-hidden="true" />
-                  </a>
-                </div>
-
-                {/* Cart */}
-                <div className="ml-4 flow-root lg:ml-auto">
-                  <a href="#" className="group -m-2 p-2 flex items-center">
-                    <ShoppingBagIcon
-                      className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    />
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                      0
-                    </span>
-                    <span className="sr-only">items in cart, view bag</span>
-                  </a>
-                </div>
-                <div className="hidden lg:ml-8 lg:flex items-end ">
-                  <a
-                    href="#"
-                    className="text-gray-700 hover:text-gray-800 flex items-center"
-                  >
-                    <img
-                      src="https://cdn.britannica.com/97/1597-004-05816F4E/Flag-India.jpg"
-                      alt=""
-                      className="w-5 h-auto block flex-shrink-0"
-                    />
-                    <span className="ml-3 block text-sm font-medium">IND</span>
-                    <span className="sr-only">, change currency</span>
-                  </a>
-                </div>
+              {/* Search */}
+              <div className="flex lg:ml-6">
+                <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">Search</span>
+                  <SearchIcon className="w-6 h-6" aria-hidden="true" />
+                </a>
               </div>
 
+              {/* Cart */}
+              <div className="ml-4 flow-root lg:ml-auto">
+                <a href="#" className="group -m-2 p-2 flex items-center">
+                  <ShoppingBagIcon
+                    className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                    aria-hidden="true"
+                  />
+                  <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+                    0
+                  </span>
+                  <span className="sr-only">items in cart, view bag</span>
+                </a>
+              </div>
+              <div className="hidden lg:ml-8 lg:flex items-end ">
+                <a
+                  href="#"
+                  className="text-gray-700 hover:text-gray-800 flex items-center"
+                >
+                  <img
+                    src="https://cdn.britannica.com/97/1597-004-05816F4E/Flag-India.jpg"
+                    alt=""
+                    className="w-5 h-auto block flex-shrink-0"
+                  />
+                  <span className="ml-3 block text-sm font-medium">IND</span>
+                  <span className="sr-only">, change currency</span>
+                </a>
+              </div>
+            </div>
           </div>
         </nav>
       </header>

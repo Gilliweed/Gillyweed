@@ -8,34 +8,24 @@ import FeaturedBrandSlider from '../ShopComponents/HomePage/FeaturedBrand/Featur
 import Categories from '../ShopComponents/HomePage/Categories/Categories';
 import BigDiscountSlider from '../ShopComponents/HomePage/BigDiscount/BigDisCountCarasoule';
 import  Navbar  from '../ShopComponents/Navbar';
+import { Col, Container, Row } from 'react-bootstrap';
 
 
 const Home = () => {
   return (
     <div style={{}}>
-      <div className="" style={{}}>
-        {/* <Navbar /> */}
-       <div style={{ marginTop: '22px' }}></div>
-        <MainSlider />
-        <div style={{ marginTop: '22px' }}></div>
-         <FlashSlider  />
-        <div style={{ marginTop: '22px' }}></div>
-        <TopCategoriesSlider />
-        <div style={{ marginTop: '22px' }}></div>
-        {/* <MoreForYouSlider /> */}
-        <div style={{ marginTop: '22px' }}></div>
-        <NewArrivalSlider />
-        <div style={{ marginTop: '22px' }}></div>
-        {/* <Categories /> */}
-        <div style={{ marginTop: '22px' }}></div>
-        <TopRatingSlider />
-        <div style={{ marginTop: '22px' }}></div>
-        <FeaturedBrandSlider />
-        <div style={{ marginTop: '22px' }}></div>
-        <BigDiscountSlider
-        ></BigDiscountSlider>
-        <div style={{ marginTop: '22px' }}></div>   
-        {/* <Footer /> */}
+      <div className="" style={{}}>       
+        <div className="my-14"><MainSlider /></div>
+        <div className="lg:mx-10">
+          <Row>
+            <Col xs={12}><div className="my-8"><FlashSlider  /></div> </Col>
+            <Col xs={12}><div classname="my-8"><TopCategoriesSlider /></div> </Col>
+            <Col xs={12}><div className="my-8"><NewArrivalSlider /></div> </Col>
+            <Col lg={6}><div className="my-8 "><FeaturedBrandSlider /></div> </Col>
+            <Col lg={6}><div className="my-8"> <BigDiscountSlider /></div> </Col>
+            <Col xs={12}><div className="my-8"> <TopRatingSlider /></div> </Col>
+          </Row>
+        </div>
       </div>
     </div>
   );

@@ -4,7 +4,11 @@ const TrendCard = (props) => {
   return (
     <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <a href="/#">
-        <img className="rounded-t-lg" src={props.img} alt="" />
+        <img
+          className="rounded-t-lg h-64 w-96"
+          src={props.img}
+          alt=""
+        />
       </a>
       <div className="p-5">
         <a href="/#">

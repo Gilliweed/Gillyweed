@@ -6,19 +6,18 @@ import NewArrivalData from '../CardsData/NewArrival';
 // import './NewArrival.css';
 import Icon from '@mui/icons-material/FlightLand';
 import { NavLink } from 'react-router-dom';
-
+import Btn from '../../../../../components/btn/btn';
 
 const NewArrivalSlider = () => {
   
   return (
     <>
-      <div className="mx-4 border-0 " style={{
+      <div className="mx-4 my-3 border-0 " style={{
             // width: '95%',
           }}>
         <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
          
           <div className='flex '>
-          <Icon style={{ fontSize: '55px' }} /> 
           <h2 className=' text-5xl'>New Arrival</h2>
           </div>
         </Card.Header>
@@ -70,7 +69,7 @@ const NewArrivalSlider = () => {
           style={{ backgroundColor: 'white' }}
         >
          <Card.Link className="text-right" href="#">
-          <NavLink to="/moreProducts" exact style={{ color: "black" }}>More</NavLink>
+         <Btn link="/moreProducts" title="More" styles="bg-red-400 text-white"/>
           </Card.Link>
         </Card.Header>
       </div>
