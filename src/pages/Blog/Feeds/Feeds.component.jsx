@@ -8,7 +8,7 @@ const FeedsC = () => {
           <img
             className="rounded-t-lg"
             src="https://flowbite.com/docs/images/blog/image-1.jpg"
-            alt=""
+            alt="just"
           />
         </a>
         <div className="grid grid-cols-4 border-bottom p-4">

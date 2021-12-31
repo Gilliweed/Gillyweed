@@ -61,7 +61,7 @@ function App() {
 
           <Route exact path="/productDesc" element={<ProductDesc />} />
         </Routes>
-        <Newsletter />
+        {/* <Newsletter /> */}
         <Footer />
       </main>
     </BrowserRouter>

@@ -1,10 +1,9 @@
 import React from "react";
+import ContactC from "./contact.component";
 const Contact = () => {
   return (
     <div className="container">
-      <h1 className="text-center" style={{ paddingTop: "30%" }}>
-        Contact Us
-      </h1>
+      <ContactC />
     </div>
   );
 };
