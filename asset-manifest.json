@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Gillyweed/static/css/main.ded850cb.css",
+    "main.js": "/Gillyweed/static/js/main.9aa87555.js",
+    "s1.svg": "/Gillyweed/b906d7287b1267e5507be685e3e0985c.svg",
+    "s-2.svg": "/Gillyweed/b3376873dc7c224388734cd65fb8e951.svg",
+    "s-3.svg": "/Gillyweed/e3f88424b13484a4ead97110d6b4ffcb.svg",
+    "s-4.svg": "/Gillyweed/cdfe9b93ec6578f095787e6f5016e678.svg",
+    "static/media/gillyLogo.png": "/Gillyweed/static/media/gillyLogo.b09ee35d119105d5d667.png",
+    "s-5.svg": "/Gillyweed/f7899849e4dd11c4acfa89e2d8388230.svg",
+    "s-6.svg": "/Gillyweed/017bcb208bae1c30d51a95a400fb82e9.svg",
+    "footersvg.svg": "/Gillyweed/d965b33d6611cf55839f4742d6ea1437.svg",
+    "static/media/slick.svg": "/Gillyweed/static/media/slick.2b540f21a51522af2331.svg",
+    "static/media/slick.eot": "/Gillyweed/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Gillyweed/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/Gillyweed/index.html",
+    "static/media/slick.woff": "/Gillyweed/static/media/slick.295183786cd8a1389865.woff",
+    "main.ded850cb.css.map": "/Gillyweed/static/css/main.ded850cb.css.map",
+    "main.9aa87555.js.map": "/Gillyweed/static/js/main.9aa87555.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ded850cb.css",
+    "static/js/main.9aa87555.js"
+  ]
+}
