@@ -1,14 +1,12 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import Btn from "../../../components/btn/btn";
 
 const TrendCard = (props) => {
   return (
     <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <a href="/#">
-        <img
-          className="rounded-t-lg h-64 w-96"
-          src={props.img}
-          alt=""
-        />
+        <img className="rounded-t-lg h-64 w-96" src={props.img} alt="" />
       </a>
       <div className="p-5">
         <a href="/#">
@@ -19,7 +17,8 @@ const TrendCard = (props) => {
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {props.short}
         </p>
-        <a
+        <Btn link="/article" title="Read More" styles="bg-cyan-500 text-white" />
+        {/* <a
           href="/article"
           className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-green-600  dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
@@ -36,7 +35,7 @@ const TrendCard = (props) => {
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
+        </a> */}
       </div>
     </div>
   );

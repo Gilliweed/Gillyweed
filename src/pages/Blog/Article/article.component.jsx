@@ -2,6 +2,8 @@ import { Facebook, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
 import styled from "styled-components";
 import data from "../BlogData/blogdata";
 
+import { NavLink } from "react-router-dom";
+
 const SocialContainer = styled.div`
   display: flex;
 `;
