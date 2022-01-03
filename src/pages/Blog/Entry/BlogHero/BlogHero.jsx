@@ -27,15 +27,16 @@ export default function BlogHero() {
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Resources are the gift of nature to human civilization but
-                sadly, resources are not extensive. Since our existence, we have
-                been utilizing these resources for our needs and comforts.
+                Since our existence, we have been exploiting natural resources
+                and now some resources are at the verge of exhaustion. Nature
+                has had its share of adversity. Now, it's time for us to step-up
+                and repair the biosphere. Here's how....
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md ">
                   <Link
                     href="/article"
-                    className="mt-3 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                    className="mt-3 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-green-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                   >
                     Read More
                   </Link>
@@ -48,7 +49,7 @@ export default function BlogHero() {
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://cdn.downtoearth.org.in/library/large/2018-10-09/0.23872300_1539071289_gettyimages-966863504.jpg"
+          src="https://media.mehrnews.com/d/2018/10/09/4/2922108.jpg"
           alt=""
         />
       </div>

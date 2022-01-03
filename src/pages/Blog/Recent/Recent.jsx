@@ -1,14 +1,14 @@
 import React from "react";
 
-import data from "./RecentData";
+import data from "../BlogData/blogdata";
 import TrendCard from "./Recent.component";
 const Recent = () => {
   return (
     <div className="grid grid-cols-3 gap-3 m-10 ml-20">
       <TrendCard
-        img={data[0].img}
-        topic={data[0].topic}
-        short={data[0].short}
+        img={data[4].img}
+        topic={data[4].topic}
+        short={data[4].short}
       />
       <TrendCard
         img={data[1].img}
@@ -19,6 +19,7 @@ const Recent = () => {
         img={data[2].img}
         topic={data[2].topic}
         short={data[2].short}
+        
       />
     </div>
   );

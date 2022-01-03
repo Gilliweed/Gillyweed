@@ -5,13 +5,13 @@ import SearchBar from '../SideBar/SearchBar';
 import RecentNews from '../SideBar/RecentNews';
 import Blog from "../../Home/components/BlogHome"
 import Tags from '../SideBar/Tags';
-const Article = () => {
+const Article = (props) => {
   return (
     <>
     <div className="h-full">
       <div className="grid grid-cols-6 gap-4 p-10">
         <div className="col-start-1 col-end-5">
-          <Art />
+          <Art/>
         </div>
         <div className="col-start-5 col-end-7 ">
           <div className="grid grid-rows-3 gap-4">
