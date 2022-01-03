@@ -133,7 +133,7 @@ export default function FixedColumns() {
   return (
     <>
     <div className="py-10 bg-gradient-to-b rounded-2xl">
-    <div className="text-3xl md:text-4xl font-bold tracking-wide text-sky-600 uppercase px-5"> Some Of Our Blogs </div>
+    <div className="text-3xl md:text-5xl font-semibold tracking-wide text-sky-600 text-center px-5"> Some Of Our Blogs </div>
     <Swiper {...testimonialCarousel} className="swiper">
     {TESTIMONIALS_DATA.map((item, index) => (
       
