@@ -1,18 +1,18 @@
-const tex = '17% off ';
+const tex = "17% off ";
 
 const TopCategories = {
   products: [
     {
-      img: 'https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      h1: 'SHIRT STYLE!',
+      img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS8yT_nZAfYvAfPkEvU2Hs5a8sDGAjYRKGPHX_wNxqabvvd37JYvdOablW8gsw6UT-OM9aRugmegzNGu4Lye1-S3xIfGbVmA0p9BIEYkJU&usqp=CAE",
+      h1: "Home Decor",
     },
     {
-      img: 'https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      h1: 'LOUNGEWEAR LOVE',
+      img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ6Aq3idzyBCUDdPSvC5hvK6jTpT4eJRCfemHpV88xSrvXxxAaFl2-mLmVfJ9EfZhBwft0vnWtlZLP_kNumBdNtqBTaNh0Y2RsBARHmLSt4Xw2micBwmNQ9gQ&usqp=CAE",
+      h1: "Paper Products",
     },
     {
-      img: 'https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
-      h1: 'LIGHT JACKETS',
+      img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRDIOLsLbTE5QkCBANtcuMA1A8PWgS2uausX5ZBHnC_hM9L4gOpbO5uiqjAdqjwgxpy4_cXYh7VXR14OElIfC9EPfV3RcEBpuPPciJxCSvxptdxWVXtDhyL4w&usqp=CAE",
+      h1: "Clothing",
       text: tex,
     },
   ],

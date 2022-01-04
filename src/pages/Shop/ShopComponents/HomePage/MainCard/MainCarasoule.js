@@ -17,7 +17,7 @@ const ItemSlider = () => {
         // navigation={true}
         className="mySwiper "
         autoplay={{
-          delay: 2000,
+          delay: 20000,
           disableOnInteraction: false,
         }}
         effect={"fade"}
