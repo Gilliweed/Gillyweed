@@ -1,25 +1,25 @@
-import react from 'react';
-import { mobile } from '../../responsive';
-import { Card } from 'react-bootstrap';
-import TopCategoriesCard from './TopCategoriesCard';
-import TopCategroiesData from '../CardsData/TopCategroiesData';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import react from "react";
+import { mobile } from "../../responsive";
+import { Card } from "react-bootstrap";
+import TopCategoriesCard from "./TopCategoriesCard";
+import TopCategroiesData from "../CardsData/TopCategroiesData";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import Btn from "../../../../../components/btn/btn";
 
 const Container = styled.div`
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  ${mobile({ padding: '0px', flexDirection: 'column' })}
+  ${mobile({ padding: "0px", flexDirection: "column" })}
 `;
 
 const TopCategoriesSlider = () => {
   return (
     <>
-      <div className='flex '>
-          
-          <h2 className=' text-5xl'>Collections</h2>
-          </div>
+      <div className="flex ">
+        <h2 className=" text-5xl">Collections</h2>
+      </div>
       <Container>
         {TopCategroiesData.products.map((product) => (
           <TopCategoriesCard
@@ -32,13 +32,15 @@ const TopCategoriesSlider = () => {
 
       <Card.Header
         className="border-0 text-right"
-        style={{ backgroundColor: 'white' }}
+        style={{ backgroundColor: "white" }}
       >
-        <Card.Link className="text-right" href="#">
-          <NavLink to="/moreProducts" exact style={{ color: 'black' }}>
-            More
-          </NavLink>
-        </Card.Link>
+        {/* <Card.Link className="text-right" href="#">
+          <Btn
+            link="/moreProducts"
+            title="More"
+            styles="bg-red-400 text-white"
+          />
+        </Card.Link> */}
       </Card.Header>
     </>
   );

@@ -48,9 +48,9 @@ const TopCategoriesCard = (props) => {
         
       <Image src={props.img} 
       className = 'rounded-3xl p-2'/>
-      <Info>
-        <Title>{props.head}</Title>
-        <Button>SHOP NOW</Button>
+      <Info className="mt-40">
+        <Title className="text-2xl font-bold text-white">{props.head}</Title>
+        <Button className="rounded-full bg-green-400 ">SHOP NOW</Button>
       </Info>
       </NavLink>
     </Container>
