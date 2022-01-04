@@ -23,7 +23,7 @@ const FlashSlider = () => {
         }
       >
         <Card.Header className="border-0" style={{ backgroundColor: 'white' }}>
-          <div className="block bg-slate-400 pb-32 pt-8 px-8 rounded-t-3xl">
+          <div className="block pb-32 pt-8 px-8 bg-fixed rounded-lg " style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(https://as1.ftcdn.net/v2/jpg/03/10/98/24/1000_F_310982423_8X6aViesypKgcKBn94x3ojw6228teE5c.jpg)", position: "sticky", backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }}>
             <h2 className=" text-5xl font-semibold text-white italic font-mono">
               Flash Sale
             </h2>

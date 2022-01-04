@@ -9,11 +9,10 @@ import Navbar from './ShopComponents/Navbar';
 
 const Shop = () => {
   return (
-    <div >
-
-      <Navbar className = 'mb-90'/>
-      <div style = {{marginTop:'0%'}}/>
-        <Home/>
+    <div>
+      <Navbar className="mb-90" />
+      <div style={{ marginTop: '0%' }} />
+      <Home />
     </div>
   );
 };

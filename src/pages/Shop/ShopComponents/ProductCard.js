@@ -88,9 +88,7 @@ const Product = ({ item }) => {
     //   </Info>
     // </Container>
     <>
-      <Container>
-        <Row></Row>
-      </Container>
+
       <div>
         <Card className=" text-dark border-0">
           <NavLink to="/productDesc " exact>
