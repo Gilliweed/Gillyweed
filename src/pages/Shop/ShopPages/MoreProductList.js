@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Navbar from "../ShopComponents/Navbar";
 // import Announcement from "../components/Announcement";
-import MoreProducts from "../ShopComponents/Products";
+import MoreProducts from "../ShopComponents/HomePage/MoreProduct/Products";
 // import Newsletter from "../components/Newsletter";
 
 import { mobile } from "../ShopComponents/responsive";
