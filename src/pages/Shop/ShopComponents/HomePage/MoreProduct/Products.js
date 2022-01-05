@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { popularProducts } from './MoreProductsData';
+import  moreProduct  from '../CardsData/MoreProductsData';
 import Product from './ProductCard';
-import ProductList from '../ShopPages/MoreProductList';
-import Navbar from './Navbar';
-import { Col, Row } from 'react-bootstrap';
+import ProductList from '../../../ShopPages/MoreProductList';
+
 const Container = styled.div`
   padding: 20px;
   display: flex;
@@ -14,9 +13,8 @@ const Container = styled.div`
 const MoreProducts = () => {
   return (
     <Container>
-      
-      {popularProducts.map((item) => (
-        <Product item={item} key={item.id} />
+      {moreProduct.map((MoreProductsData) => (
+        <Product img = {MoreProductsData.img} title = {MoreProductsData.title} price = {MoreProductsData.price} desc = {MoreProductsData.desc}  />
       ))}
     </Container>
   );
