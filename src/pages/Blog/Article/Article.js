@@ -24,6 +24,7 @@ const Article = (props) => {
             </div>
           </div>
         </div>
+        <Blog/>
       </div>
     </>
   );
