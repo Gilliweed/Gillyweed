@@ -1,8 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React from "react";
 
-import Link from "@mui/material/Link";
 import "../../BlogData/blogdata";
+import { NavLink } from "react-router-dom";
 
 export default function BlogHero() {
   return (
@@ -34,12 +34,12 @@ export default function BlogHero() {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md ">
-                  <Link
-                    href="/article"
+                  <NavLink
+                    to="/article"
                     className="mt-3 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-green-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                   >
                     Read More
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
