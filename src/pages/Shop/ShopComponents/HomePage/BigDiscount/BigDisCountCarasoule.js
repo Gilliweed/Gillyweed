@@ -1,17 +1,32 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { NavLink } from 'react-router-dom';
-import SwiperCore, {Autoplay,Navigation} from 'swiper';
+import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { NavLink } from "react-router-dom";
+import SwiperCore, { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Card } from 'react-bootstrap';
-import BigDiscount from './BigDiscountCard';
-import BigDiscountData from '../CardsData/BigDiscountData';
-import Icon from '@mui/icons-material/BrandingWatermark';
-import Btn from '../../../../../components/btn/btn';
-SwiperCore.use([Autoplay,Navigation]);
+import { Card } from "react-bootstrap";
+import BigDiscount from "./BigDiscountCard";
+import BigDiscountData from "../CardsData/BigDiscountData";
+import Icon from "@mui/icons-material/BrandingWatermark";
+import Btn from "../../../../../components/btn/btn";
+import axios from "axios";
+SwiperCore.use([Autoplay, Navigation]);
 
 const BigDiscountSlider = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const res = await axios.get(`http://localhost:5000/api/bigdiscount`);
+        setProducts(res.data);
+        console.log("bigdiscount data ", res.data);
+      } catch (err) {}
+    };
+    getProducts();
+  }, []);
+
+  console.log("products ", products);
   return (
     <>
       <div
@@ -22,64 +37,66 @@ const BigDiscountSlider = () => {
           }
         }
       >
-      <div className="bg-indigo-600 rounded-t-3xl my-3 text-white">
-      <Card.Header className="border-0" >
-          
-          <div className='flex my-4'>
-          <h2 className=' text-5xl mx-auto'>Big Discount</h2>
-          </div>
-        </Card.Header>
-      </div>
-        
+        <div className="bg-indigo-600 rounded-t-3xl my-3 text-white">
+          <Card.Header className="border-0">
+            <div className="flex my-4">
+              <h2 className=" text-5xl mx-auto">Big Discount</h2>
+            </div>
+          </Card.Header>
+        </div>
+
         <Swiper
-         navigation={true}
+          navigation={true}
           breakpoints={{
-            '@0.00': {
+            "@0.00": {
               slidesPerView: 2,
               spaceBetween: 10,
             },
-            '@0.75': {
+            "@0.75": {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            '@1.00': {
+            "@1.00": {
               slidesPerView: 3,
               spaceBetween: 20,
             },
-            '@1.50': {
+            "@1.50": {
               slidesPerView: 3,
               spaceBetween: 20,
             },
-            '@2.00': {
+            "@2.00": {
               slidesPerView: 3,
               spaceBetween: 20,
             },
           }}
           className="mySwiper"
           style={{
-            width: '95%',
+            width: "95%",
           }}
         >
-          {BigDiscountData.products.map((product) => (
-            <SwiperSlide style={{ backgroundColor: '' }}>
-              <BigDiscount
+          {products.map((data) => (
+            <SwiperSlide style={{ backgroundColor: "" }}>
+              <BigDiscount data={data} />
+              {/* <BigDiscount
                 img={product.img}
                 para={product.text}
                 head={product.h1}
                 price ={product.price}
                 highprice = {product.highprice}
-              ></BigDiscount>
+              ></BigDiscount> */}
             </SwiperSlide>
           ))}
         </Swiper>
         <Card.Header
           className="border-0 text-right"
-          style={{ backgroundColor: 'white' }}
+          style={{ backgroundColor: "white" }}
         >
           <Card.Link className="text-right" href="#">
-          <Btn link="/moreProducts" title="More" styles="bg-red-400 text-white"/>
-           
-            
+            <Btn
+              link="/moreProducts/bigdiscount"
+              title="More"
+              styles="bg-red-400 text-white"
+            />
           </Card.Link>
         </Card.Header>
       </div>

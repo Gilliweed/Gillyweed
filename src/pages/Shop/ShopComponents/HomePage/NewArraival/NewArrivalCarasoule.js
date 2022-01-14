@@ -7,9 +7,24 @@ import NewArrivalData from '../CardsData/NewArrival';
 import Icon from '@mui/icons-material/FlightLand';
 import { NavLink } from 'react-router-dom';
 import Btn from '../../../../../components/btn/btn';
+import axios from "axios";
+import { useState,useEffect } from 'react';
 
 const NewArrivalSlider = () => {
-  
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const res = await axios.get(`http://localhost:5000/api/newarrival`);
+        setProducts(res.data);
+        console.log("bigdiscount data ", res.data);
+      } catch (err) {}
+    };
+    getProducts();
+  }, []);
+
+  console.log("new arrival products ", products);
   return (
     <>
       <div className="mx-4 my-3 border-0 " style={{
@@ -52,14 +67,10 @@ const NewArrivalSlider = () => {
             width: '95%',
           }}
         >
-          {NewArrivalData.products.map((product) => (
+          {products.map((data) => (
             <SwiperSlide style={{ backgroundColor: '' }}>
               <NewArrival
-                img={product.img}
-                para={product.text}
-                head={product.h1}
-                price = {product.price}
-                detail = {product.detail}
+                data = {data}
               ></NewArrival>
             </SwiperSlide>
           ))}
@@ -68,8 +79,8 @@ const NewArrivalSlider = () => {
           className="border-0 text-right"
           style={{ backgroundColor: 'white' }}
         >
-         <Card.Link className="text-right" href="#">
-         <Btn link="/moreProducts" title="More" styles="bg-red-400 text-white"/>
+         <Card.Link className="text-right">
+         <Btn link="/moreProducts/newarrival" title="More" styles="bg-red-400 text-white"/>
           </Card.Link>
         </Card.Header>
       </div>

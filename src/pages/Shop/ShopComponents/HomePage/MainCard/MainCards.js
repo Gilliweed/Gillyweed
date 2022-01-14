@@ -1,55 +1,4 @@
-// import React from 'react';
-// import { Row, Col } from 'react-bootstrap';
-// import { Card } from 'react-bootstrap';
-// import { NavLink } from 'react-router-dom';
-// // import './Carasoule.css'
-// const MainCard = (props) => {
-//   return (
-//     <NavLink to="/productDesc " exact style={{ color: 'black' }}>
-//     <div
-//       className=""
-//       style={{
-//         display: 'flex',
-//         justifyItems: 'flex-end',
-//         textAlign: 'center',
-//         alignContent: 'flexCenter',
-//         width: '100%',
-//       }}
-//     >
-      
-//         <Card
-//           className="container border-0"
-//           style={{
-//             flex: '1',
-//             alignContent: 'center',
-//             textAlign: 'center',
-//             justifyItems: 'flex-center',
-//             width: '100%',
-//             height: '6rem',
-//           }}
-//         >
-//           <Card className="container border-0" style={{ marginTop: '50px' }}>
-//             <h1>{props.head}</h1>
-//           </Card>
-//           <Card className="container border-0" style={{ marginTop: '25px' }}>
-//             <p>{props.para}</p>
-//           </Card>
-//         </Card>
-    
-//       <Card
-//         className="container border-0"
-//         style={{ flex: '1', width: '100%', height: '20rem' }}
-//       >
-//           <img style={{ width: '100%', height: '20rem' }} src={props.img} />
-//       </Card>
-//       {/* </NavLink> */}
-//     </div>
-//     </NavLink>
-//   );
-// // };
-// export default MainCard;
-/* This example requires Tailwind CSS v2.0+ */
-export default function MainCard(props) {
+export default function MainCard({data}) {
   return (
     <div >
     <div className="relative bg-white overflow-hidden">
@@ -57,10 +6,10 @@ export default function MainCard(props) {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
           <div className="sm:max-w-lg">
             <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-              {props.head}
+              {data.head}
             </h1>
             <p className="mt-4 text-xl text-gray-500">
-             {props.para}
+             {data.para}
             </p>
           </div>
           <div>
@@ -75,37 +24,14 @@ export default function MainCard(props) {
                     <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                         <img
-                          src={props.img1}
+                          src={data.img[0]}
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src={props.img2}
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src={props.img3}
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src={props.img4}
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src={props.img5}
+                          src={data.img[1]}
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
@@ -114,14 +40,37 @@ export default function MainCard(props) {
                     <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src={props.img6}
+                          src={data.img[2]}
+                          alt={data.title}
+                          className="w-full h-full object-center object-cover"
+                        />
+                      </div>
+                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <img
+                          src={data.img[3]}
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src={props.img7}
+                          src={data.img[4]}
+                          alt=""
+                          className="w-full h-full object-center object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <img
+                          src={data.img[5]}
+                          alt=""
+                          className="w-full h-full object-center object-cover"
+                        />
+                      </div>
+                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <img
+                          src={data.img[6]}
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />

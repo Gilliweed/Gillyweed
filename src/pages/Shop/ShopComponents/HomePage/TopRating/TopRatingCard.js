@@ -13,7 +13,7 @@ const TopRatingCard = (props) => {
               <img
                 src={props.img}
                 alt={props.img}
-                className=" w-full h-96 object-center object-cover z-40"
+                className=" w-full h-72 object-center object-contain z-40"
               />
             </div>
           </div>
