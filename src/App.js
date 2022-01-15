@@ -18,13 +18,15 @@ import Shop from './pages/Shop/Shop';
 
 import Blog from './pages/Blog/blog';
 
-import Footer from "./components/Footer/footer";
+import Footer from './components/Footer/footer';
 
-import Article from "./pages/Blog/Article/Article";
+import Article from './pages/Blog/Article/Article';
 
 import Cart from './pages/Shop/ShopPages/Cart';
 
 import Newsletter from './components/NewsLetter';
+
+import Admin from './pages/Admin/admin';
 
 import MoreProductList from './pages/Shop/ShopPages/MoreProductList';
 
@@ -58,6 +60,8 @@ function App() {
           <Route exact path="/cart" element={<Cart />} />
 
           <Route exact path="/moreProducts" element={<MoreProductList />} />
+
+          <Route exact path="/admin" element={<Admin />} />
 
           <Route exact path="/productDesc" element={<ProductDesc />} />
         </Routes>
