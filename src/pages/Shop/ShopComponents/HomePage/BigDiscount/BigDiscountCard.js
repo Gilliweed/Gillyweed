@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import React from 'react';
 // import './BigDiscount.css';
 const BigDiscountCard = ({data}) => {
+  console.log("big discount card ", data);
   return (
     <div>
       <Card className=" text-dark border-0">

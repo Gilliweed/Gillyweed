@@ -150,9 +150,8 @@ const Product = () => {
     }
   }
 
-
-
   console.log("nothing in " ,product);
+  console.log("id " ,id);
   return (
     <Container>
       <Navbar />
