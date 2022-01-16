@@ -12,21 +12,21 @@ import Btn from "../../../../../components/btn/btn";
 import axios from "axios";
 SwiperCore.use([Autoplay, Navigation]);
 
+const cat = "bigdiscount";
 const BigDiscountSlider = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/bigdiscount`);
+        const res = await axios.get("http://localhost:5000/api/products?category=bigdiscount");
         setProducts(res.data);
         console.log("bigdiscount data ", res.data);
       } catch (err) {}
     };
     getProducts();
   }, []);
-
-  console.log("products ", products);
+  console.log("bigdiscount data ", products);
   return (
     <>
       <div
@@ -77,13 +77,6 @@ const BigDiscountSlider = () => {
           {products.map((data) => (
             <SwiperSlide style={{ backgroundColor: "" }}>
               <BigDiscount data={data} />
-              {/* <BigDiscount
-                img={product.img}
-                para={product.text}
-                head={product.h1}
-                price ={product.price}
-                highprice = {product.highprice}
-              ></BigDiscount> */}
             </SwiperSlide>
           ))}
         </Swiper>

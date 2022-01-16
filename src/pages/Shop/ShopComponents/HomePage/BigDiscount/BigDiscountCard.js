@@ -20,13 +20,16 @@ const BigDiscountCard = ({data}) => {
             </div>
           </div>
           <Card.ImgOverlay className=" text-dark border-0">
-            <Card.Title>{data.desc}</Card.Title>
+            <Card.Title>12% off</Card.Title>
           </Card.ImgOverlay>
         </NavLink>
         <div className="mx-2 rounded-xl z-auto">
           <div className="">
             <div className="font-mono text-2xl font-semibold flex m-2 ">
               {data.title}
+            </div>
+            <div className="font-mono  font-semibold flex m-2 ">
+              {/* {data.desc} */}
             </div>
             <div className="flex m-2 ">
               <div className="line-through"> ₹{data.price}</div>
