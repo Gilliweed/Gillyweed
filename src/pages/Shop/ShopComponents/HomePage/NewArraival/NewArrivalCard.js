@@ -6,7 +6,7 @@ const TopRatingCard = ({data}) => {
   return (
     <div>
     <Card className=" text-dark border-0">
-      <NavLink to="/productDesc " exact>
+      <NavLink to={`/productDesc/${data._id}` } exact>
         <div>
           <div className=" w-full aspect-w-1 aspect-h-1 bg-white rounded-xl overflow-hidden xl:aspect-w-7 xl:aspect-h-8  hover:rounded-full">
             <img

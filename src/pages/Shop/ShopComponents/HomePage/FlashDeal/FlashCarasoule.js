@@ -9,25 +9,29 @@ import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import Btn from "../../../../../components/btn/btn";
 import "swiper/css";
 import "swiper/css/navigation";
-import axios from 'axios';
-
+import axios from "axios";
+import logo from "../../../../../components/Footer/gillyLogo.png";
 const FlashSlider = () => {
   SwiperCore.use([Autoplay, Pagination, Navigation]);
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     const getProducts = async () => {
       try {
+        setLoading(true);
         const res = await axios.get(
           "http://localhost:5000/api/products?category=flashsale"
         );
         setProducts(res.data);
+        setLoading(false);
         console.log("flashsale data ", res.data);
       } catch (err) {}
     };
     getProducts();
   }, []);
-
   console.log("new arrival products ", products);
+
   return (
     <>
       <div
@@ -87,16 +91,25 @@ const FlashSlider = () => {
             width: "95%",
           }}
         >
-          {products.map((data) => (
-            <SwiperSlide
-              style={{ backgroundColor: "" }}
-              className="rounded-3xl"
-            >
-              <FlashDealCard
-               data = {data}
-              ></FlashDealCard>
-            </SwiperSlide>
-          ))}
+          {loading ? (
+            <div className="flex justify-center m-5 mt-16">
+              <div to="/" className="animate-bounce">
+                <img src={logo} className="mx-auto w-14" alt="logo" />
+              </div>
+              <div className="mt-10 -ml-12 pt-4 pr-4">Loading ...</div>
+            </div>
+          ) : (
+            <div>
+              {products.map((data) => (
+                <SwiperSlide
+                  style={{ backgroundColor: "" }}
+                  className="rounded-3xl"
+                >
+                  <FlashDealCard data={data}></FlashDealCard>
+                </SwiperSlide>
+              ))}
+            </div>
+          )}
         </Swiper>
         <Card.Header
           className="border-0 text-right"

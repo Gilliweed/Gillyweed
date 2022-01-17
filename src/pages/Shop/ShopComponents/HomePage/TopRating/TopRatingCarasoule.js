@@ -7,24 +7,29 @@ import { Card } from "react-bootstrap";
 import TopRatingCard from "./TopRatingCard";
 import TopRatingData from "../CardsData/TopRating";
 import Btn from "../../../../../components/btn/btn";
-import axios from 'axios';
-
+import axios from "axios";
+import logo from "../../../../../components/Footer/gillyLogo.png";
 
 const TopRatingSlider = () => {
   SwiperCore.use([Autoplay, Pagination, Navigation]);
   const [products, setProducts] = useState([]);
-  
-    useEffect(() => {
-      const getProducts = async () => {
-        try {
-          const res = await axios.get("http://localhost:5000/api/products?category=toprated");
-          setProducts(res.data);
-          console.log("bigdiscount data ", res.data);
-        } catch (err) {}
-      };
-      getProducts();
-    }, []);
-    console.log("bigdiscount data ", products);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        setLoading(true);
+        const res = await axios.get(
+          "http://localhost:5000/api/products?category=toprated"
+        );
+        setProducts(res.data);
+        setLoading(false);
+        console.log("bigdiscount data ", res.data);
+      } catch (err) {}
+    };
+    getProducts();
+  }, []);
+  console.log("bigdiscount data ", products);
   return (
     <>
       <div className="mx-10 border-0 " style={{}}>
@@ -62,13 +67,22 @@ const TopRatingSlider = () => {
             width: "95%",
           }}
         >
-          {products.map((data) => (
-            <SwiperSlide style={{ backgroundColor: "" }}>
-              <TopRatingCard
-                data= {data}
-              ></TopRatingCard>
-            </SwiperSlide>
-          ))}
+          {loading ? (
+            <div className="flex justify-center m-5">
+              <div to="/" className="animate-bounce">
+                <img src={logo} className="mx-auto w-14" alt="logo" />
+              </div>
+              <div className="mt-10 -ml-12 pt-4 pr-4">Loading ...</div>
+            </div>
+          ) : (
+            <div>
+              {products.map((data) => (
+                <SwiperSlide style={{ backgroundColor: "" }}>
+                  <TopRatingCard data={data}></TopRatingCard>
+                </SwiperSlide>
+              ))}
+            </div>
+          )}
         </Swiper>
         <Card.Header
           className="border-0 text-right"

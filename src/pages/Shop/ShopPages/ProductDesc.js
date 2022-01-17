@@ -7,6 +7,7 @@ import Navbar from "../ShopComponents/Navbar";
 // import Newsletter from "../components/Newsletter";
 import { mobile } from "../ShopComponents/responsive";
 import { publicRequest } from "../../../requestMethods";
+import logo from "../../../../src/components/Footer/gillyLogo.png";
 
 const Container = styled.div``;
 
@@ -80,7 +81,8 @@ const FilterSize = styled.select`
 `;
 
 const FilterSizeOption = styled.option`
-  size: 40px`;
+  size: 40px;
+`;
 
 const AddContainer = styled.div`
   width: 50%;
@@ -124,75 +126,89 @@ const Product = () => {
 
   const [product, setProduct] = useState([]);
   const [quantity, setQuantity] = useState(1);
-  
+
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
-
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getProduct = async () => {
       try {
+        setLoading(true);
         const res = await publicRequest.get("products/find/" + id);
         // {`/productDesc/${data._id}`}
-        console.log("nothing in " ,res.data);
+        console.log("nothing in ", res.data);
         setProduct(res.data);
+        setLoading(false);
       } catch (err) {}
     };
     getProduct();
   }, [id]);
 
-  const handleQuantity = (type) =>{
-    if(type === "dec"){
-      quantity>1 &&setQuantity(quantity-1);
+  const handleQuantity = (type) => {
+    if (type === "dec") {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else {
+      setQuantity(quantity + 1);
     }
-    else{
-      setQuantity(quantity+1);
-    }
-  }
+  };
 
-  console.log("nothing in " ,product);
-  console.log("id " ,id);
+  console.log("nothing in ", product);
+  console.log("id ", id);
   return (
     <Container>
       <Navbar />
-      {/* <Announcement />  */}
-      <Wrapper>
-        <ImgContainer>
-          <Image src={product.img} />
-        </ImgContainer>
-        <InfoContainer>
-          <Title className ="text-4xl">{product.title}</Title>
-          <Desc>
-          {product.desc}
-          </Desc>
-          <Price>₹ {product.price}</Price>
-          <FilterContainer>
-            <Filter>
-              <FilterTitle>Color :</FilterTitle>
-              {product.color?.map((c) =>(
-                <FilterColor color={c} key={c} onClick = {() => setColor(c)} className = "border-2"/>
-              ) )}
-            </Filter>
-            <Filter>
-              <FilterTitle>Size :</FilterTitle>
-              <FilterSize onChange = {(e) => setSize(e.target.value).toUpperCase()}>
-              {product.size?.map((size) =>(
-                 <FilterSizeOption key = {size}>{size}</FilterSizeOption>
-              ) )}
-               
-              </FilterSize>
-            </Filter>
-          </FilterContainer>
-          <AddContainer>
-            <AmountContainer>
-              <Remove onClick = {() => handleQuantity("dec")} />
-              <Amount>{quantity} </Amount>
-              <Add onClick = {() => handleQuantity("inc")} />
-            </AmountContainer>
-            <Button>ADD TO CART</Button>
-          </AddContainer>
-        </InfoContainer>
-      </Wrapper>
+      {loading ? (
+        <div className="flex justify-center m-5 mt-16">
+          <div to="/" className="animate-bounce">
+            <img src={logo} className="mx-auto w-14" alt="logo" />
+          </div>
+          <div className="mt-10 -ml-12 pt-4 pr-4">Loading ...</div>
+        </div>
+      ) : (
+        <Wrapper>
+          <ImgContainer >
+            <Image src={product.img} className = "rounded-2xl" />
+          </ImgContainer>
+          <InfoContainer>
+            <Title className="text-4xl">{product.title}</Title>
+            <Desc>{product.desc}</Desc>
+            <Price>₹ {product.price}</Price>
+            <FilterContainer>
+              <Filter>
+                <FilterTitle>Color :</FilterTitle>
+                {product.color?.map((c) => (
+                  <FilterColor
+                    color={c}
+                    key={c}
+                    onClick={() => setColor(c)}
+                    className="border-2"
+                  />
+                ))}
+              </Filter>
+              <Filter>
+                <FilterTitle>Size :</FilterTitle>
+                <FilterSize
+                  onChange={(e) => setSize(e.target.value).toUpperCase()}
+                >
+                  {product.size?.map((size) => (
+                    <FilterSizeOption key={size}>{size}</FilterSizeOption>
+                  ))}
+                </FilterSize>
+              </Filter>
+            </FilterContainer>
+            <AddContainer>
+              <AmountContainer>
+                <Remove onClick={() => handleQuantity("dec")} />
+                <Amount>{quantity} </Amount>
+                <Add onClick={() => handleQuantity("inc")} />
+              </AmountContainer>
+              <Button className = "rounded-2xl">ADD TO CART</Button>
+            </AddContainer>
+          </InfoContainer>
+        </Wrapper>
+      )}
+
       {/* <Newsletter /> */}
     </Container>
   );

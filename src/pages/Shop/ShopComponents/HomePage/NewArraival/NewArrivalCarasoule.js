@@ -9,15 +9,20 @@ import { NavLink } from "react-router-dom";
 import Btn from "../../../../../components/btn/btn";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import logo from "../../../../../components/Footer/gillyLogo.png";
 
 const NewArrivalSlider = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     const getProducts = async () => {
       try {
+        setLoading(true);
         const res = await axios.get(
           "http://localhost:5000/api/products?category=newarrival"
         );
+        setLoading(false);
         setProducts(res.data);
         console.log("bigdiscount data ", res.data);
       } catch (err) {}
@@ -72,11 +77,22 @@ const NewArrivalSlider = () => {
             width: "95%",
           }}
         >
-          {products.map((data) => (
-            <SwiperSlide style={{ backgroundColor: "" }}>
-              <NewArrival data={data}></NewArrival>
-            </SwiperSlide>
-          ))}
+          {loading ? (
+            <div className="flex justify-center m-5 mt-16">
+              <div to="/" className="animate-bounce">
+                <img src={logo} className="mx-auto w-14" alt="logo" />
+              </div>
+              <div className="mt-10 -ml-12 pt-4 pr-4">Loading ...</div>
+            </div>
+          ) : (
+            <div>
+              {products.map((data) => (
+                <SwiperSlide style={{ backgroundColor: "" }}>
+                  <NewArrival data={data}></NewArrival>
+                </SwiperSlide>
+              ))}
+            </div>
+          )}
         </Swiper>
         <Card.Header
           className="border-0 text-right"

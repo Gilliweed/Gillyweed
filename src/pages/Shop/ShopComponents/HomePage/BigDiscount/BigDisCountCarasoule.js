@@ -10,17 +10,24 @@ import BigDiscountData from "../CardsData/BigDiscountData";
 import Icon from "@mui/icons-material/BrandingWatermark";
 import Btn from "../../../../../components/btn/btn";
 import axios from "axios";
+import logo from "../../../../../components/Footer/gillyLogo.png";
+
 SwiperCore.use([Autoplay, Navigation]);
 
 const cat = "bigdiscount";
 const BigDiscountSlider = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/products?category=bigdiscount");
+        setLoading(true);
+        const res = await axios.get(
+          "http://localhost:5000/api/products?category=bigdiscount"
+        );
         setProducts(res.data);
+        setLoading(false);
         console.log("bigdiscount data ", res.data);
       } catch (err) {}
     };
@@ -29,14 +36,7 @@ const BigDiscountSlider = () => {
   console.log("bigdiscount data ", products);
   return (
     <>
-      <div
-        className="mx-4 border-0 "
-        style={
-          {
-            // width: '95%',
-          }
-        }
-      >
+      <div className="mx-4 border-0 ">
         <div className="bg-indigo-600 rounded-t-3xl my-3 text-white">
           <Card.Header className="border-0">
             <div className="flex my-4">
@@ -74,11 +74,22 @@ const BigDiscountSlider = () => {
             width: "95%",
           }}
         >
-          {products.map((data) => (
-            <SwiperSlide style={{ backgroundColor: "" }}>
-              <BigDiscount data={data} />
-            </SwiperSlide>
-          ))}
+          {loading ? (
+            <div className="flex justify-center m-5 mt-16">
+              <div to="/" className="animate-bounce">
+                <img src={logo} className="mx-auto w-14" alt="logo" />
+              </div>
+              <div className="mt-10 -ml-12 pt-4 pr-4">Loading ...</div>
+            </div>
+          ) : (
+            <div>
+              {products.map((data) => (
+                <SwiperSlide style={{ backgroundColor: "" }}>
+                  <BigDiscount data={data} />
+                </SwiperSlide>
+              ))}
+            </div>
+          )}
         </Swiper>
         <Card.Header
           className="border-0 text-right"
