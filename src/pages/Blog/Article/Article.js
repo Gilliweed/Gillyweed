@@ -1,5 +1,5 @@
 import React from "react";
-import Art from "./article.component.jsx";
+import Art from "./article.component";
 import CategoriesS from "../SideBar/Categories.SideBar";
 import SearchBar from "../SideBar/SearchBar";
 import RecentNews from "../SideBar/RecentNews";

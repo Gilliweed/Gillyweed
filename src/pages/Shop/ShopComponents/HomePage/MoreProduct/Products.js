@@ -1,7 +1,10 @@
-import styled from 'styled-components';
-import  moreProduct  from '../CardsData/MoreProductsData';
-import Product from './ProductCard';
-import ProductList from '../../../ShopPages/MoreProductList';
+import styled from "styled-components";
+// import moreProduct from "../CardsData/MoreProductsData";
+import Product from "./ProductCard";
+// import ProductList from "../../../ShopPages/MoreProductList";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 
 const Container = styled.div`
   padding: 20px;
@@ -10,12 +13,68 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-const MoreProducts = () => {
+const MoreProducts = ({ cat, filter, sort }) => {
+  // console.log(cat, filter ,sort);
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const res = await axios.get(
+          cat
+            ? `http://localhost:5000/api/products?category=${cat}`
+            : `http://localhost:5000/api/products`
+        );
+        setProducts(res.data);
+        console.log(res.data);
+      } catch (err) {}
+    };
+    getProducts();
+  }, [cat]);
+
+  useEffect(() => {
+    cat &&
+      setFilteredProducts(
+        products.filter((item) =>
+          Object.entries(filter).every(([key, value]) =>
+            item[key].includes(value)
+          )
+        )
+      );
+  }, [products, cat, filter]);
+
+  useEffect(() => {
+    if (sort === "Newest") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) =>new Date(a.data.createdAt) - new Date(b.data.createdAt))
+      );
+    } else if (sort === "Price(asc)") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.data.price - b.data.price)
+      );
+    } else if (sort === "Price(desc)") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => b.data.price - a.data.price)
+      );
+    }
+  }, [sort]);
+   console.log("price ",filteredProducts);
   return (
     <Container>
-      {moreProduct.map((MoreProductsData) => (
-        <Product img = {MoreProductsData.img} title = {MoreProductsData.title} price = {MoreProductsData.price} desc = {MoreProductsData.desc}  />
-      ))}
+      {cat
+        ? filteredProducts.map((data) => (
+            <Product
+               data = {data}
+              
+            />
+          ))
+        : products.map((data) => (
+            <Product
+            data = {data}
+              
+            />
+          ))}
     </Container>
   );
 };

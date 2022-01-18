@@ -44,8 +44,7 @@ const Button = styled.button`
 const TopCategoriesCard = (props) => {
   return (
     <Container>
-      <NavLink to="/productDesc " exact style={{ color: 'black' }}>
-        
+      <NavLink to={`/moreProducts/${props.cat}`} exact style={{ color: 'black' }}>
       <Image src={props.img} 
       className = 'rounded-3xl p-2'/>
       <Info className="mt-40">

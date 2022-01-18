@@ -26,6 +26,7 @@ const TopCategoriesSlider = () => {
             img={product.img}
             para={product.text}
             head={product.h1}
+            cat = {product.cat}
           />
         ))}
       </Container>
@@ -34,13 +35,7 @@ const TopCategoriesSlider = () => {
         className="border-0 text-right"
         style={{ backgroundColor: "white" }}
       >
-        {/* <Card.Link className="text-right" href="#">
-          <Btn
-            link="/moreProducts"
-            title="More"
-            styles="bg-red-400 text-white"
-          />
-        </Card.Link> */}
+        
       </Card.Header>
     </>
   );

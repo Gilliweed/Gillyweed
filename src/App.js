@@ -24,7 +24,7 @@ import Article from './pages/Blog/Article/Article';
 
 import Cart from './pages/Shop/ShopPages/Cart';
 
-import Newsletter from './components/NewsLetter';
+
 
 import Admin from './pages/Admin/admin';
 
@@ -59,11 +59,9 @@ function App() {
 
           <Route exact path="/cart" element={<Cart />} />
 
-          <Route exact path="/moreProducts" element={<MoreProductList />} />
+          <Route exact path="/moreProducts/:category" element={<MoreProductList />} />
 
-          <Route exact path="/admin" element={<Admin />} />
-
-          <Route exact path="/productDesc" element={<ProductDesc />} />
+          <Route exact path="/productDesc/:id" element={<ProductDesc />} />
         </Routes>
         {/* <Newsletter /> */}
         <Footer />
