@@ -24,7 +24,7 @@ import Article from './pages/Blog/Article/Article';
 
 import Cart from './pages/Shop/ShopPages/Cart';
 
-
+import Uploads from './components/UploadImage/UploadProduct'
 
 import Admin from './pages/Admin/admin';
 
@@ -56,6 +56,8 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
 
           <Route exact path="/signIn" element={<SignIn />} />
+          
+          <Route exact path="/uploads" element={<Uploads />} />
 
           <Route exact path="/cart" element={<Cart />} />
 

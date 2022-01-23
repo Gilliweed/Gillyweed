@@ -41,8 +41,8 @@ const Option = styled.option``;
 const ProductList = () => {
   const location = useLocation();
   // fetch cat from params
-  const cat = location.pathname.split("/")[2];
-
+  const cat = (location.pathname.split("/")[2]);
+const title = cat.toUpperCase();
   // let apply filters, so we use hooks
   const [filters, setFilters] = useState({});
   const [sort, setSort] = useState({});
@@ -67,7 +67,7 @@ const ProductList = () => {
     <Container>
       <Navbar />
       {/*<Announcement /> */}
-      <Title className = "text-3xl">{cat}</Title>
+      <Title className = "text-3xl">{title}</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
