@@ -23,7 +23,7 @@ const Upload = () => {
   const uploadImage = async (base64EncodedImage) => {
     console.log(base64EncodedImage);
     try {
-      await fetch('/api/products/upload', {
+      await fetch('/api/products/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: base64EncodedImage }),

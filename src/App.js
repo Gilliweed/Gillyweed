@@ -24,9 +24,9 @@ import Article from './pages/Blog/Article/Article';
 
 import Cart from './pages/Shop/ShopPages/Cart';
 
-import Uploads from './components/UploadImage/UploadProduct'
+import Uploads from './components/UploadImage/UploadProduct';
 
-import Admin from './pages/Admin/admin';
+import Admin from './pages/Admin/main/admin';
 
 import MoreProductList from './pages/Shop/ShopPages/MoreProductList';
 
@@ -47,6 +47,8 @@ function App() {
 
           <Route exact path="/about" element={<About />} />
 
+          <Route exact path="/admin" element={<Admin />} />
+
           <Route exact path="/shop" element={<Shop />} />
 
           <Route exact path="/blog" element={<Blog />} />
@@ -56,12 +58,16 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
 
           <Route exact path="/signIn" element={<SignIn />} />
-          
+
           <Route exact path="/uploads" element={<Uploads />} />
 
           <Route exact path="/cart" element={<Cart />} />
 
-          <Route exact path="/moreProducts/:category" element={<MoreProductList />} />
+          <Route
+            exact
+            path="/moreProducts/:category"
+            element={<MoreProductList />}
+          />
 
           <Route exact path="/productDesc/:id" element={<ProductDesc />} />
         </Routes>
