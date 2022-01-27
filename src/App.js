@@ -32,10 +32,45 @@ import MoreProductList from './pages/Shop/ShopPages/MoreProductList';
 
 // import ProductDesc fro
 import ProductDesc from './pages/Shop/ShopPages/ProductDesc';
-
+import react, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css';
 
 function App() {
+
+  //creating function to load ip address from the API
+  const getData = async () => {
+    try {
+      const res = await axios.get('https://geolocation-db.com/json/');
+      // setIP(res.data.IPv4);
+      postIp(res.data.IPv4);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const postIp = async (data) => {
+    try {
+      fetch('http://localhost:5000/api/ip', {
+        method: 'post',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+
+        body: JSON.stringify({
+          ip: data,
+        }),
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+useEffect(() => {
+  getData();
+},[])
+ 
+
   return (
     <BrowserRouter>
       <main>
