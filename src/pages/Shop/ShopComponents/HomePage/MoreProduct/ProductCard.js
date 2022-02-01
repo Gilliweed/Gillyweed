@@ -1,16 +1,13 @@
-import {
-  ShoppingCartOutlined,
-} from "@mui/icons-material";
+import { ShoppingCartOutlined } from "@mui/icons-material";
 import { Button, Container, Card, Row, Col } from "react-bootstrap";
 import StarIcon from "@mui/icons-material/Star";
-
 import { NavLink } from "react-router-dom";
 
-const Product = ({data}) => {
+const Product = ({ data }) => {
   return (
     <>
-      <div className="pt-4 border-0">
-        <Card className="text-dark  border-0 hover:h-96">
+      <div className="p-4 border-0 ">
+        <Card className="text-dark  border-0 ">
           <NavLink to={`/productDesc/${data._id}`} exact>
             <div>
               <div className=" border-1 aspect-w-1 aspect-h-1  rounded-xl overflow-hidden xl:aspect-w-7 xl:aspect-h-8  hover:rounded-full">
@@ -21,22 +18,23 @@ const Product = ({data}) => {
                 />
               </div>
             </div>
-            <Card.ImgOverlay className=" text-dark border-0">
-              <Card.Title></Card.Title>
+            <Card.ImgOverlay className=" text-dark border-0 rounded-xl">
+              <Card.Title>
+                <div className="flex -mt-2 -ml-2 bg-white w-28">
+                  <StarIcon
+                    className="text-red-500 ml-1 "
+                    style={{ fontSize: "27px" }}
+                  />
+                  <p className="mt-0.5 ml-1 font-semibold"> 5.0 </p>
+                  <p className="mt-0.5 ml-1 text-slate-700"> (22) </p>
+                </div>
+              </Card.Title>
             </Card.ImgOverlay>
           </NavLink>
           <div className="rounded-b-xl">
             <div className="flex justify-between ml-1">
-              <div className="font-mono text-2xl font-semibold flex justify-center">
+              <div className="font-mono text-2xl font-semibold flex justify-left w-64">
                 {data.title}
-              </div>
-              <div className="flex justify-end pt-2 pl-2 pr-1">
-                <StarIcon
-                  className="text-red-500"
-                  style={{ fontSize: "27px" }}
-                />
-                <p className="mt-0.5 ml-1 font-semibold"> 5.0 </p>
-                <p className="mt-0.5 ml-1 text-slate-700"> (22) </p>
               </div>
             </div>
             <div className="w-56 flex justify-between ml-1 ">
@@ -55,11 +53,10 @@ const Product = ({data}) => {
                 ₹{data.price}
               </div>
               {/* <FavoriteBorderOutlined className = ""/> */}
-              <div className="my-1 mr-1 ml-2 px-2 bg-blue-500 text-white rounded-xl">
-                 {/* <Btn styles="bg-red-400 text-white"> */}
-                   Add to cart <ShoppingCartOutlined />
-                {/* </Btn>  */}
-              </div>
+
+              <Button className="my-1 mr-1 ml-2 px-2 bg-blue-500 text-white rounded-xl shadow-xl">
+                Add <ShoppingCartOutlined />
+              </Button>
             </div>
             <div className="flex justify-center"></div>
           </div>

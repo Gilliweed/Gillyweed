@@ -2,12 +2,15 @@ import { Add, Remove } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-// import Announcement from "../components/Announcement";
+
 import Navbar from "../ShopComponents/Navbar";
-// import Newsletter from "../components/Newsletter";
+import { ShoppingCartOutlined } from "@mui/icons-material";
+import { Button } from "react-bootstrap";
 import { mobile } from "../ShopComponents/responsive";
 import { publicRequest } from "../../../requestMethods";
 import logo from "../../../../src/components/Footer/gillyLogo.png";
+
+import { CartState } from "../context/contex";
 
 const Container = styled.div``;
 
@@ -109,16 +112,25 @@ const Amount = styled.span`
   margin: 0px 5px;
 `;
 
-const Button = styled.button`
-  padding: 15px;
-  border: 2px solid teal;
-  background-color: white;
-  cursor: pointer;
-  font-weight: 500;
-  &:hover {
-    background-color: #f8f4f4;
-  }
-`;
+// const Button = styled.button`
+//   padding: 15px;
+//   border: 2px solid teal;
+//   background-color: white;
+//   cursor: pointer;
+//   font-weight: 500;
+//   &:hover {
+//     background-color: #f8f4f4;
+//   }
+// `;
+// const ButtonRemove = styled.button`
+//   padding: 15px;
+//   border: 2px solid teal;
+//   cursor: pointer;
+//   font-weight: 500;
+//   &:hover {
+//     background-color: #f8f4f4;
+//   }
+// `;
 
 const Product = () => {
   const location = useLocation();
@@ -130,6 +142,7 @@ const Product = () => {
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
   const [loading, setLoading] = useState(false);
+  
 
   useEffect(() => {
     const getProduct = async () => {
@@ -153,8 +166,14 @@ const Product = () => {
     }
   };
 
+  const {
+    state: { cart },
+    dispatch,
+  } = CartState();
+
   console.log("nothing in ", product);
   console.log("id ", id);
+  console.log(cart);
   return (
     <Container>
       <Navbar />
@@ -167,8 +186,8 @@ const Product = () => {
         </div>
       ) : (
         <Wrapper>
-          <ImgContainer >
-            <Image src={product.img} className = "rounded-2xl" />
+          <ImgContainer>
+            <Image src={product.img} className="rounded-2xl" />
           </ImgContainer>
           <InfoContainer>
             <Title className="text-4xl">{product.title}</Title>
@@ -199,11 +218,61 @@ const Product = () => {
             </FilterContainer>
             <AddContainer>
               <AmountContainer>
-                <Remove onClick={() => handleQuantity("dec")} />
+                <Remove
+                  onClick={() => handleQuantity("dec")}
+                  // onChange={(e) =>
+                  //   dispatch({
+                  //     type: "CHANGE_CART_QTY",
+                  //     payload: {
+                  //       id: product._id,
+                  //       qty: { quantity },
+                  //     },
+                  //   })
+                  // }
+                />
                 <Amount>{quantity} </Amount>
-                <Add onClick={() => handleQuantity("inc")} />
+                <Add
+                  onClick={() => handleQuantity("inc")}
+                  // onChange={(e) =>
+                  //   dispatch({
+                  //     type: "CHANGE_CART_QTY",
+                  //     payload: {
+                  //       id: product._id,
+                  //       qty: { quantity },
+                  //     },
+                  //   })
+                  // }
+                />
               </AmountContainer>
-              <Button className = "rounded-2xl">ADD TO CART</Button>
+              {cart.some((p) => p._id === product._id) ? (
+                <Button
+                  variant="outline-danger"
+                  className="h-14 "
+                  onClick={() => {
+                    dispatch({
+                      type: "REMOVE_FROM_CART",
+                      payload: product,
+                    });
+                  }}
+                >
+                  Remove from Cart
+                </Button>
+              ) : (
+                <Button
+                  disabled={!product.inStock}
+                  variant="outline-success"
+                  className="h-14 "
+                  onClick={() => {
+                    dispatch({
+                      type: "ADD_TO_CART",
+                      payload: product,
+                    });
+                  }}
+                >
+                  {!product.inStock ? "Out of Stock" : " ADD TO CART "}
+                  <ShoppingCartOutlined />
+                </Button>
+              )}
             </AddContainer>
           </InfoContainer>
         </Wrapper>

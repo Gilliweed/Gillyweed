@@ -74,9 +74,9 @@ const MoreProducts = ({ cat, filter, sort }) => {
           <div className="mt-10 -ml-12 pt-4 pr-4">Loading ...</div>
         </div>
       ) : (
-        <Container>
+        <Container >
           {cat
-            ? filteredProducts.map((data) => <Product data={data} />)
+            ? filteredProducts.map((data) => <Product data={data}  />)
             : products.map((data) => <Product data={data} />)}
         </Container>
       )}

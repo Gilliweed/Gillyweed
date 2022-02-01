@@ -100,3 +100,10 @@ const Products = ({ cat, filters, sort }) => {
         : products
             .slice(0, 8)
             .map((item) => <Product item={item} key={item.id} />)}
+
+
+
+            ERROR in ./src/pages/Shop/ShopPages/ProductDesc.js 179:6-15
+export 'CartState' (imported as 'CartState') was not found in '../context/contex' (possible exports: Cartstate, default)
+ @ ./src/App.js 27:0-61 209:40-51
+ @ ./src/index.js 10:0-24 16:35-38
