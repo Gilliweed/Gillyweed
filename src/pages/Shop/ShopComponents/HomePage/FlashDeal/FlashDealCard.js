@@ -26,7 +26,7 @@ const FlashDealCard = ({data}) => {
         <div className="mx-2 rounded-xl z-auto">
           <div className=''>
             <div className="font-mono text-2xl font-semibold flex m-2 justify-center">
-              {data.title}
+              {data.title.substring(0,14)}
             </div>
             <div className="text-xl flex m-2 justify-center">₹{data.price}</div>
           </div>

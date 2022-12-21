@@ -10,13 +10,17 @@ export const cartReducer = (state, action) => {
         ...state,
         cart: state.cart.filter((c) => c._id !== action.payload._id),
       };
-    case "CHANGE_CART_QTY":
+    case "Increment": {
+      let updatedCart = state.cart.map((curElem) => {
+        if (curElem._id === action.payload) {
+          return { ...curElem, qty: curElem.qty + 1 };
+        }
+        return curElem;
+      });
       return {
-        ...state,
-        cart: state.cart.filter((c) =>
-          c._id === action.payload._id ? (c.qty = action.payload.qty) : c.qty
-        ),
+        ...state, cart: updatedCart
       };
+    }
 
     default:
       return state;

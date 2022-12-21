@@ -9,8 +9,10 @@ import { Button } from "react-bootstrap";
 import { mobile } from "../ShopComponents/responsive";
 import { publicRequest } from "../../../requestMethods";
 import logo from "../../../../src/components/Footer/gillyLogo.png";
-
+import { addProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
 import { CartState } from "../context/contex";
+import { useSelector } from "react-redux";
 
 const Container = styled.div``;
 
@@ -88,7 +90,7 @@ const FilterSizeOption = styled.option`
 `;
 
 const AddContainer = styled.div`
-  width: 50%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,52 +114,18 @@ const Amount = styled.span`
   margin: 0px 5px;
 `;
 
-// const Button = styled.button`
-//   padding: 15px;
-//   border: 2px solid teal;
-//   background-color: white;
-//   cursor: pointer;
-//   font-weight: 500;
-//   &:hover {
-//     background-color: #f8f4f4;
-//   }
-// `;
-// const ButtonRemove = styled.button`
-//   padding: 15px;
-//   border: 2px solid teal;
-//   cursor: pointer;
-//   font-weight: 500;
-//   &:hover {
-//     background-color: #f8f4f4;
-//   }
-// `;
-
 const Product = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
 
   const [product, setProduct] = useState([]);
   const [quantity, setQuantity] = useState(1);
-
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
   const [loading, setLoading] = useState(false);
-  
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    const getProduct = async () => {
-      try {
-        setLoading(true);
-        const res = await publicRequest.get("products/find/" + id);
-        // {`/productDesc/${data._id}`}
-        console.log("nothing in ", res.data);
-        setProduct(res.data);
-        setLoading(false);
-      } catch (err) {}
-    };
-    getProduct();
-  }, [id]);
-
+  const Cart = useSelector((state) => state.cart);
   const handleQuantity = (type) => {
     if (type === "dec") {
       quantity > 1 && setQuantity(quantity - 1);
@@ -166,14 +134,33 @@ const Product = () => {
     }
   };
 
-  const {
-    state: { cart },
-    dispatch,
-  } = CartState();
+  const handleClick = () => {
+    dispatch(addProduct({ ...product, quantity, color, size }));
+  };
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        setLoading(true);
+        const res = await publicRequest.get("products/find/" + id);
+        // {`/productDesc/${data._id}`}
+        // console.log("nothing in ", res.data);
+        setProduct(res.data);
+        setLoading(false);
+      } catch (err) {}
+    };
+    getProduct();
+  }, [id]);
 
-  console.log("nothing in ", product);
-  console.log("id ", id);
-  console.log(cart);
+  console.log("productaddproduct ", Cart, " ");
+
+  // const {
+  //   state: { cart },
+  //   dispatch,
+  // } = CartState();
+
+  // console.log("nothing in ", product);
+  // console.log("id ", id);
+  // console.log(cart);
   return (
     <Container>
       <Navbar />
@@ -218,61 +205,32 @@ const Product = () => {
             </FilterContainer>
             <AddContainer>
               <AmountContainer>
-                <Remove
-                  onClick={() => handleQuantity("dec")}
-                  // onChange={(e) =>
-                  //   dispatch({
-                  //     type: "CHANGE_CART_QTY",
-                  //     payload: {
-                  //       id: product._id,
-                  //       qty: { quantity },
-                  //     },
-                  //   })
-                  // }
-                />
+                <Remove onClick={() => handleQuantity("dec")} />
                 <Amount>{quantity} </Amount>
-                <Add
-                  onClick={() => handleQuantity("inc")}
-                  // onChange={(e) =>
-                  //   dispatch({
-                  //     type: "CHANGE_CART_QTY",
-                  //     payload: {
-                  //       id: product._id,
-                  //       qty: { quantity },
-                  //     },
-                  //   })
-                  // }
-                />
+                <Add onClick={() => handleQuantity("inc")} />
               </AmountContainer>
-              {cart.some((p) => p._id === product._id) ? (
-                <Button
-                  variant="outline-danger"
-                  className="h-14 "
-                  onClick={() => {
-                    dispatch({
-                      type: "REMOVE_FROM_CART",
-                      payload: product,
-                    });
-                  }}
-                >
-                  Remove from Cart
-                </Button>
-              ) : (
-                <Button
-                  disabled={!product.inStock}
-                  variant="outline-success"
-                  className="h-14 "
-                  onClick={() => {
-                    dispatch({
-                      type: "ADD_TO_CART",
-                      payload: product,
-                    });
-                  }}
-                >
-                  {!product.inStock ? "Out of Stock" : " ADD TO CART "}
-                  <ShoppingCartOutlined />
-                </Button>
-              )}
+              {/* {Cart.some((p) => p._id === product._id) ? ( */}
+              <div>
+                {Cart.products.some((p) => p._id === product._id) ? (
+                  <Button
+                    variant="outline"
+                    className="h-14  border-2 border-green-400 hover:bg-green-400 hover:border-green-600 hover:border-double"
+                  >
+                    Check Out
+                  </Button>
+                ) : (
+                  <Button
+                    disabled={!product.inStock}
+                    variant="outline-primary"
+                    className="h-12 "
+                    onClick={handleClick}
+                  >
+                    Add
+                    <ShoppingCartOutlined />
+                  </Button>
+                )}
+              </div>
+              {/* )}  */}
             </AddContainer>
           </InfoContainer>
         </Wrapper>

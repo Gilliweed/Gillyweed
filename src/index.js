@@ -6,14 +6,13 @@ import "../node_modules/slick-carousel/slick/slick-theme.css";
 import "../node_modules/slick-carousel/slick/slick.css";
 import App from "./App";
 import "./index.css";
-import Context from "./pages/Shop/context/contex";
+import { Provider } from "react-redux";
+import store from '../src/pages/Shop/redux/store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Context>
-      <App />
-    </Context>
-  </React.StrictMode>,
+  <Provider store = {store}>
+    <App />
+  </Provider>,
   document.getElementById("root")
 );
 

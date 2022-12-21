@@ -6,6 +6,9 @@ import Navbar from './ShopComponents/Navbar';
 // import MoreProductList from './ShopComponents/Products';
 // import NewsLetter from '../../components/NewsLetter';
 
+
+
+
 const Shop = () => {
   
   return (

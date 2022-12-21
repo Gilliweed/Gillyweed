@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { mobile } from "../ShopComponents/responsive";
 import { CartState } from "../context/contex";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const Container = styled.div``;
 
@@ -156,16 +157,13 @@ const Button = styled.button`
 `;
 
 const Cart = () => {
-  const {
-    state: { cart },
-    dispatch,
-  } = CartState();
+  const cart = useSelector((state) => state.cart);
   const [total, setTotal] = useState();
 
-  useEffect(() => {
-    setTotal(cart.reduce((acc, curr) => acc + curr.price * curr.qty, 0));
-  }, [cart]);
-  console.log("cart" + cart);
+  // useEffect(() => {
+  //   setTotal(cart.reduce((acc, curr) => acc + curr.price * curr.qty, 0));
+  // }, [cart]);
+  // console.log( cart);
   return (
     <Container>
       {/* <Navbar />
@@ -175,16 +173,16 @@ const Cart = () => {
         <Top>
           <TopButton>CONTINUE SHOPPING</TopButton>
           <TopTexts>
-            <TopText>Shopping Bag({cart.length})</TopText>
+            <TopText>Shopping Bag({Product.length})</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
           {/* <TopButton type="filled">CHECKOUT NOW</TopButton> */}
         </Top>
         <Bottom>
-          {cart.length > 0 ? (
+          {cart.products.length > 0 ? (
             <>
               <Info>
-                {cart.map((product) => (
+                {cart.products.map((product) => (
                   <Product className="p-2 m-4 border-1 -mt-4 border-black rounded-xl">
                     <ProductDetail>
                       <Image src={product.img} />
@@ -211,21 +209,29 @@ const Cart = () => {
                     <PriceDetail>
                       <Button
                         className="bg-white w-20 rounded-xl text-red-700 border-red-600 border-1 ml-52 -mt-20"
-                        onClick={() => {
-                          dispatch({
-                            type: "REMOVE_FROM_CART",
-                            payload: product,
-                          });
-                        }}
+                        // onClick={() => {
+                        //   dispatch({
+                        //     type: "REMOVE_FROM_CART",
+                        //     payload: product,
+                        //   });
+                        // }}
                       >
                         Remove
                       </Button>
                       <ProductAmountContainer>
-                        <Add />
-                        <ProductAmount>{product.qty}</ProductAmount>
+                        <Add
+                          // onClick={() => {
+                          //   dispatch({
+                          //     type: "Increment",
+                          //     payload: product,
+                          //   });
+                          // }}
+                       />
+                        <ProductAmount>{product.quantity}</ProductAmount>
                         <Remove />
                       </ProductAmountContainer>
-                      <ProductPrice>₹{product.price}</ProductPrice>
+                      <ProductPrice>Price: ₹{product.price}</ProductPrice>
+                      <ProductPrice>Total Price: ₹{product.quantity*product.price}</ProductPrice>
                     </PriceDetail>
                   </Product>
                 ))}
@@ -235,7 +241,7 @@ const Cart = () => {
                 <SummaryTitle>ORDER SUMMARY</SummaryTitle>
                 <SummaryItem>
                   <SummaryItemText>Subtotal</SummaryItemText>
-                  <SummaryItemPrice>₹{total}</SummaryItemPrice>
+                  <SummaryItemPrice>{cart.total}</SummaryItemPrice>
                 </SummaryItem>
                 <SummaryItem>
                   <SummaryItemText>Estimated Shipping</SummaryItemText>
@@ -247,7 +253,7 @@ const Cart = () => {
                 </SummaryItem>
                 <SummaryItem type="total">
                   <SummaryItemText>Total</SummaryItemText>
-                  <SummaryItemPrice>₹{total}</SummaryItemPrice>
+                  <SummaryItemPrice>₹{cart.total}</SummaryItemPrice>
                 </SummaryItem>
                 <Button className="bg-black text-white  rounded-xl w-full">
                   CHECKOUT NOW

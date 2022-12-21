@@ -11,22 +11,22 @@ const BigDiscountCard = ({data}) => {
       <Card className=" text-dark border-0">
         <NavLink to={`/productDesc/${data._id}`}  exact>
           <div>
-            <div className=" w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-xl overflow-hidden xl:aspect-w-7 xl:aspect-h-8  hover:rounded-full">
+            <div className=" w-full aspect-w-1 aspect-h-1  rounded-xl overflow-hidden xl:aspect-w-7 xl:aspect-h-8  hover:rounded-full">
               <img
                 src={data.img}
                 alt={data.img}
-                className="bg-gray w-full h-72 object-center object-contain z-40"
+                className="bg-gray w-full h-56 object-center object-contain z-40"
               />
             </div>
           </div>
-          <Card.ImgOverlay className=" text-dark border-0">
-            <Card.Title>12% off</Card.Title>
+          <Card.ImgOverlay className="tect-xl text-dark border-0">
+            <Card.Title className='text-xl mr-2'>12% off</Card.Title>
           </Card.ImgOverlay>
         </NavLink>
         <div className="mx-2 rounded-xl z-auto">
           <div className="">
-            <div className="font-mono text-2xl font-semibold flex m-2 ">
-              {data.title}
+            <div className="w-full font-mono text-xl font-semibold flex m-2 ">
+              {data.title.substring(0,15)}
             </div>
             <div className="font-mono  font-semibold flex m-2 ">
               {/* {data.desc} */}

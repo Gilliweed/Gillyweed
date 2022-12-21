@@ -12,7 +12,7 @@ const TopRatingCard = ({data}) => {
             <img
               src={data.img}
               alt={data.img}
-              className=" w-full h-96 object-center object-contain bg-gray z-40"
+              className=" w-full h-56 object-center object-contain bg-gray z-40"
             />
           </div>
         </div>

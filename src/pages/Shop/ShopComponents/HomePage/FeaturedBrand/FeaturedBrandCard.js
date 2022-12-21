@@ -13,7 +13,7 @@ const FlashDealCard = ({data}) => {
               <img
                 src={data.img}
                 alt={data.img}
-                className=" w-full h-72 object-center object-contain z-40"
+                className=" w-full h-56 object-center object-contain z-40"
               />
             </div>
           </div>
@@ -21,16 +21,16 @@ const FlashDealCard = ({data}) => {
             <Card.Title>{data.rating}</Card.Title>
           </Card.ImgOverlay>
         </NavLink>
-        <div className="mx-2 rounded-xl z-auto">
+        <div className="mt-2 rounded-xl z-auto">
           <div className="">
-            <div className="font-mono text-2xl font-semibold flex m-2 ">
-              {data.title}
+            <div className="font-mono text-xl font-semibold flex mt-2 ">
+              {data.title.substring(0,15)}
             </div>
-            <div className='m-2'>
+            <div className='m'>
               <p>Black And Grey</p>
             </div>
-            <div className="flex m-2 ">
-              <div className="text-xl ml-1">₹{data.price}</div>
+            <div className="flex m ">
+              <div className="text-xl ">₹{data.price}</div>
             </div>
           </div>
           <div className="flex m-2 justify-center">

@@ -23,20 +23,20 @@ const TopRatingCard = ({data}) => {
                 style={{ fontSize: "25px", color: "rgb(202 138 4 )" }}
               />
               <p className="mt-0.5 ml-1 font-semibold"> {data.rating} </p>
-              <p className="mt-0.5 ml-1 text-slate-700"> ({data.nocomments}) </p>
+              <p className="mt-0.5 ml-1 text-slate-700"> ({data.nocomments}56) </p>
             </Card.Title>
           </Card.ImgOverlay>
         </NavLink>
         <div className="relative -mt-6 rounded-b-xl  z-auto bg-blue-600 text-white">
           <div className="">
-            <div className="font-mono text-2xl font-semibold flex m-1 justify-center">
-              {data.title}
+            <div className="font-mono text-xl font-semibold flex m-1 justify-center">
+              {data.title.substring(0,15)}
             </div>
-            <div className="font-mono text-2xl font-semibold flex m-1 justify-center">
+            <div className="font-mono text-2xl font-semibold flex ml-8 ">
               ₹{data.price}
             </div>
             <div className="font-mono  flex m-1 justify-center">
-              {data.desc}
+              {data.desc.substring(0,40)}...
              
             </div>
             {/* <div className="text-xl flex m-1 justify-center">{data.price}</div> */}
